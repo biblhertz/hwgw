@@ -1,0 +1,187 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>HWGW – Sitemap</title>
+    <meta name="description" content="Start page of the series." />
+    <link
+      rel="icon"
+      type="image/png"
+      href="resources/images/HWGW_Edition_favicon.png"
+    />
+
+    <link rel="stylesheet" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-core.css" />
+    <link rel="stylesheet" href="resources/css/series-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-main-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
+
+    <script src="resources/scripts/hwgw/compress-header.js" />
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+
+    <style>
+      div ul a {
+          color: var(--hw-series-text-color);
+      }
+
+      div ul {
+          list-style: none;
+      }
+
+      div &gt; ul {
+          padding-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header id="header">
+        <a
+          class="series-logo"
+          href="${app}/index.html"
+          data-template="pages:parse-params"
+          aria-label="Startseite der Serie"
+        />
+      </header>
+      <main>
+        <div class="text-section">
+          <div>
+            <h1>Sitemap</h1>
+            <ul>
+              <li>
+                <a href="${app}/index.html" data-template="pages:parse-params"
+                  >Startseite</a
+                >
+              </li>
+
+              <li>
+                Schriften: Separate Unterverzeichnisse
+                <ul>
+                  <!--<li>
+                        <a href="${app}/s01/sitemap.html" data-template="pages:parse-params">Schriften 1 <cite>Prolegomena zu einer Psychologie der Architektur 1886</cite>
+                                            </a>
+                    </li>-->
+                  <li>
+                    <a
+                      href="${app}/s03/sitemap.html"
+                      data-template="pages:parse-params"
+                      >Schriften 3 <cite>Salomon Geßner 1889</cite>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="${app}/s04/sitemap.html"
+                      data-template="pages:parse-params"
+                      >Schriften 4
+                      <cite>Die Jugendwerke des Michelangelo 1891</cite>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>Archivalien</li>
+
+              <li>
+                Verzeichnisse
+                <ul>
+                  <li>
+                    <a
+                      href="${app}/indexes/bibliography.html"
+                      data-template="pages:parse-params"
+                      >Bibliografie</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="${app}/indexes/objects.html"
+                      data-template="pages:parse-params"
+                      >Objekte</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="${app}/indexes/organisations.html"
+                      data-template="pages:parse-params"
+                      >Organisationen</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="${app}/indexes/places.html"
+                      data-template="pages:parse-params"
+                      >Orte</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="${app}/indexes/persons.html"
+                      data-template="pages:parse-params"
+                      >Personen</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="${app}/project.html" data-template="pages:parse-params"
+                  >Projekt</a
+                >
+              </li>
+
+              <li>
+                <a href="${app}/notes.html" data-template="pages:parse-params"
+                  >Hinweise</a
+                >
+              </li>
+
+              <li>
+                <a href="${app}/search.html" data-template="pages:parse-params"
+                  >Suche</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="${app}/impressum.html"
+                  data-template="pages:parse-params"
+                  >Impressum</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="${app}/data-protection.html"
+                  data-template="pages:parse-params"
+                  >Datenschutz</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/series-footer.html"
+      />
+    </pb-page>
+    <div class="splash" />
+  </body>
+</html>

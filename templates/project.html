@@ -1,0 +1,305 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>HWGW – Projekt</title>
+    <meta name="description" content="Start page of the series." />
+    <link
+      rel="icon"
+      type="image/png"
+      href="resources/images/HWGW_Edition_favicon.png"
+    />
+
+    <link rel="stylesheet" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-core.css" />
+    <link rel="stylesheet" href="resources/css/series-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-main-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
+
+    <script src="resources/scripts/hwgw/compress-header.js" />
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+  </head>
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header id="header">
+        <a
+          class="series-logo"
+          href="${app}/index.html"
+          data-template="pages:parse-params"
+          aria-label="Startseite der Serie"
+        />
+        <a class="skip-link" href="#main">Springe zum Inhalt</a>
+        <a
+          class="skip-link"
+          href="${app}/sitemap.html"
+          data-template="pages:parse-params"
+          >Sitemap</a
+        >
+        <div>
+          <nav>
+            <ul>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Digitale Edition</a
+                >
+                <div class="dropdown-content">
+                  <ul
+                    data-template="lib:include"
+                    data-template-path="templates/series-volume-navigation.html"
+                  />
+                </div>
+              </li>
+              <li class="active-nav-item">
+                <a>Projekt</a>
+              </li>
+              <li>
+                <a href="${app}/notes.html" data-template="pages:parse-params"
+                  >Hinweise</a
+                >
+              </li>
+              <li>
+                <a
+                  href="${app}/search.html?query="
+                  data-template="pages:parse-params"
+                  >Suche</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main id="main">
+        <div class="text-section">
+          <div>
+            <h1>Projekt</h1>
+            <p>
+              Die Druckausgabe von Heinrich Wölfflins
+              <cite>Gesammelten Werken</cite> (HWGW) ist auf derzeit dreizehn
+              Bände angelegt und erscheint im Schwabe Verlag. Parallel dazu
+              werden die gedruckten Bände als frei zugängliche digitale Ausgabe
+              veröffentlicht. Wölfflins Werke werden durch massgebliche
+              Fachpersonen der Kunstgeschichte eingeleitet. Umfangreiche
+              wissenschaftliche Kommentare und Archivalien legen zudem Wölfflins
+              Methodik sowie die Genese und Rezeption seiner Werke offen.
+            </p>
+          </div>
+        </div>
+        <div class="text-section">
+          <div>
+            <h2>Die digitale Ausgabe</h2>
+            <p>
+              Die digitale Edition orientiert sich an den aktuellen Standards,
+              Methoden und Technologien der Digital Humanities und des Open
+              Access. Das HWGW-Portal auf der Publikationsplattform
+              <a href="https://humanitiesconnect.pub/" class="hw-external-link"
+                >HumanitiesConnect</a
+              >
+              erlaubt eine Erschliessung des Materials sowohl im Kontext der
+              Schriften Wölfflins als auch in Vernetzung mit anderen
+              Publikationsprojekten. Die digitale Edition ist ausserdem laufend
+              erweiterbar sowohl in der Tiefe der Annotation als auch in der
+              Breite der Materialien. Durch die Verknüpfung mit Normdaten für
+              Kunstwerke, Personen, Orte, Organisationen und Fachbegriffe bietet
+              die digitale Ausgabe eine maschinelle Indizierung sowie ein
+              Ausgabeformat, das Natural Language Processing erlaubt. Die
+              digitale Edition verlinkt digitale Quellen und ihre Metadaten im
+              Sinne des Semantic Web über Linked Open Data mit bestehenden
+              Referenznormdaten wie der Gemeinsamen Normdatei (GND) der
+              Deutschen Nationalbibliothek. Dank XML- und IIIF-Standards ist
+              eine nachhaltige und langfristige Verwendbarkeit der Daten sowie
+              ihre Interoperabilität gewährleistet.
+            </p>
+            <p>
+              Die HWGW-Plattform basiert auf
+              <a href="https://teipublisher.com/" class="hw-external-link"
+                >TEI Publisher</a
+              >
+              und wurde über die HTML-Templates gemäss den Bedürfnissen der
+              Edition umgestaltet. Für Inhaltsverzeichnisse und Indexeinträge
+              wurden spezifische API-Routen hinzugefügt. Die einzelnen Bände
+              sind in der Navigation jeweils in <em>Einleitung</em>,
+              <em>Text</em> und <em>Apparat</em> sowie auf Dateiebene
+              unterschieden. Damit können die Teile mit eigenen HTML-Templates
+              und ODD-Konfigurationen verknüpft und die unterschiedlichen
+              Bedürfnisse von Primär- und Sekundärtexten berücksichtigt werden.
+            </p>
+            <p>
+              Faksimiles wurden, sofern vorhanden, mit den entsprechenden
+              Bilddatenbanken verlinkt. Die Abbildungen sind für die digitale
+              Edition in bearbeiteter Form auf einem Bildserver der Bibliotheca
+              Hertziana abgelegt. Veröffentlichte Versionen der Plattform werden
+              über GitHub versioniert. Die digitale Aufbereitung der Texte
+              umfasst die Konvertierung von Microsoft-Word-Dateien zu TEI P5
+              mithilfe von
+              <a
+                href="https://github.com/TEIC/Stylesheets"
+                class="hw-external-link"
+                >TEI XSL Stylesheets</a
+              >
+              und einer Reihe projektspezifischer RegEx-Ersetzungen und
+              Transformationen. GND-Entitäten und Kunstwerke wurden
+              <a
+                href="https://www.e-editiones.org/posts/annotation-editor-released-with-new-tei-publisher-7-1-0/"
+                class="hw-external-link"
+                >mit TEI Publisher annotiert</a
+              >, die Bibliografie aufgrund der Siglen mehrheitlich durch
+              Ersetzungen. Das XML wurde für das Einfügen von IIIF-Links und
+              Seitenumbrüchen der Druckausgabe sowie für die Korrektur von
+              Fehlern in der Struktur direkt bearbeitet.
+            </p>
+          </div>
+        </div>
+        <div class="text-section">
+          <div>
+            <h2>Förderung</h2>
+            <p>
+              HWGW wurde an der UZH vom Schweizerischen Nationalfonds (SNF)
+              2015–2017 als Forschungsprojekt (<a
+                href="https://data.snf.ch/grants/grant/160081"
+                class="hw-external-link"
+                >160081</a
+              >) und 2017–2024 als Editionsprojekt finanziert (<a
+                href="https://data.snf.ch/grants/grant/157979"
+                class="hw-external-link"
+                >157979</a
+              >,
+              <a
+                href="https://data.snf.ch/grants/grant/198243"
+                class="hw-external-link"
+                >198243</a
+              >). Die Edition wird zudem seit 2017 von der Bibliotheca Hertziana
+              unterstützt (<a
+                href="https://www.biblhertz.it/de/dept-weddigen/woelfflin"
+                class="hw-external-link"
+                >BH-P-19-32</a
+              >). Des Weiteren erhielt die Edition die Förderung der Ernst
+              Göhner Stiftung, der UBS Kulturstiftung, der Max Kohler Stiftung
+              sowie der Stiftung für wissenschaftliche Forschung an der
+              Universität Zürich.
+            </p>
+          </div>
+        </div>
+        <div class="text-section">
+          <div>
+            <h2>Projektleitung</h2>
+            <ul>
+              <li>Prof. Dr. Tristan Weddigen</li>
+              <li>Prof. em. Dr. Oskar Bätschmann</li>
+              <li>PD Dr. Joris van Gastel</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-section">
+          <div>
+            <h2>Digitale Edition</h2>
+            <ul>
+              <li>Dr. Elisa Bastianello</li>
+              <li>Reto Baumgartner, MA</li>
+              <li>Maria Francesca Bocchi, doktorierend (ehem.)</li>
+              <li>Giorgia Crosilla, BA (ehem.)</li>
+              <li>Dr. Christine Grundig (ehem.)</li>
+              <li>Sven Meier, BA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-section">
+          <div>
+            <h2>Wissenschaftliche Bearbeitung</h2>
+            <ul>
+              <li>Noemi Bearth, MA (ehem.)</li>
+              <li>Dr. Teresa Ende</li>
+              <li>Dr. Elena Filippi</li>
+              <li>Dr. Elisabeth-Christine Gamer (ehem.)</li>
+              <li>Dr. Christine Grundig (ehem.)</li>
+              <li>Dr. Giovanna Targia</li>
+              <li>Dr. Jutta Teutenberg</li>
+              <li>Dr. Tobias Teutenberg</li>
+              <li>Dr. des. Karolina Zgraja (ehem.)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-section">
+          <div>
+            <h2>Hilfsassistentinnen</h2>
+            <ul>
+              <li>Nina Arnold, BA</li>
+              <li>Noemi Bearth, MA (ehem.)</li>
+              <li>Anja Martina Eichelberger, MA</li>
+              <li>Ilka Glückselig, MA (ehem.)</li>
+              <li>Nora Guggenbühler, MA (ehem.)</li>
+              <li>Leonora Larina Kugler, MA (ehem.)</li>
+              <li>Wanda Kupferschmid, MA (ehem.)</li>
+              <li>Lydia Lymbourides, BA (ehem.)</li>
+              <li>Colette Mathis, BA</li>
+              <li>Sonia Elena Neagoe, MA (ehem.)</li>
+              <li>Julia Vetter, BA (ehem.)</li>
+              <li>Leonie Florence Wohlgemuth, BA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-section">
+          <div>
+            <h2>Kooperationen</h2>
+            <ul>
+              <li>
+                <a href="https://www.s3it.uzh.ch" class="hw-external-link"
+                  >Science IT</a
+                >
+                der UZH
+              </li>
+              <li>
+                Zentrum Digitale Editionen &amp; Editionsanalytik (<a
+                  href="https://www.zde.uzh.ch/de.html"
+                  class="hw-external-link"
+                  >ZDE</a
+                >) der UZH
+              </li>
+              <li>
+                Consortium for Open Research Data in the Humanities (<a
+                  href="https://www.cordh.net/"
+                  class="hw-external-link"
+                  >CORDh</a
+                >)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-section">
+          <div>
+            <h2>Webdesign</h2>
+            <ul>
+              <li>
+                <a href="https://lm-kommunikation.de/" class="hw-external-link"
+                  >LMK – Büro für Kommunikationsdesign</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/series-footer.html"
+      />
+    </pb-page>
+    <div class="splash" />
+  </body>
+</html>

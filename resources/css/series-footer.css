@@ -1,0 +1,72 @@
+footer {
+  margin: 100px 46px 50px 46px;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: inherit;
+  gap: 6px;
+  align-items: end;
+}
+
+footer ul li {
+  width: 160px;
+  height: 28px;
+  vertical-align: middle;
+  flex: 1;
+  display: block;
+  padding: 3.5px;
+  text-align: right;
+  font: normal normal normal 0.94em/1.25 var(--pb-base-font-family);
+}
+
+footer ul li:first-of-type {
+  width: 160px;
+  height: 28px;
+  vertical-align: middle;
+  flex: 3;
+  display: block;
+  padding: 3.5px;
+  text-align: left;
+  font: normal normal normal 0.94em/1.25 var(--pb-base-font-family);
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer ul li a:hover,
+nav ul li a:active {
+  text-decoration: underline;
+}
+
+.humanities-connect-logo {
+  padding: 5px 0;
+  display: block;
+}
+.humanities-connect-logo img {
+  width: 250px;
+  height: 18px;
+  display: block;
+  content: var(--hc-logo);
+}
+
+span.hwgw-footer-published-by {
+  font-size: 0.94em;
+}
+
+@media (max-width: 900px) {
+  a.humanities-connect-logo {
+    font: normal normal 600 1.5em/1.3 var(--pb-base-font-family);
+  }
+}
+
+@media (max-width: 941px) {
+  footer {
+    margin: 50px 23px 50px 23px;
+  }
+}

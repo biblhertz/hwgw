@@ -1,0 +1,212 @@
+/* publication information */
+
+.hw-front-image {
+  float: left;
+  width: 420px;
+  max-width: 440px;
+  padding-right: 28px;
+  margin: 0;
+}
+
+.hw-front-image img {
+  width: 100%;
+  display: block;
+  padding-top: 2.5%;
+}
+
+.hw-front-image-caption {
+  margin-top: 2% !important;
+  color: var(--hw-series-image-caption-color);
+  font: normal normal 300 0.7em/1.5 "Noto Sans" !important;
+}
+
+.publication-section {
+  padding: 16px 0;
+}
+
+.publication-section > div {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 300;
+  max-width: var(--hw-series-width);
+  margin: 0 auto;
+  padding-left: 46px;
+  padding-right: 46px;
+}
+
+.publication-section h2 {
+  color: var(--hw-beige); /* TODO */
+  margin-bottom: 8px;
+}
+
+hr {
+  background-color: var(--hw-beige); /* TODO */
+  height: 2px;
+  margin-bottom: 8px;
+  border: none;
+}
+.publication-block {
+  background-color: var(--hw-series-publication-bg-color);
+  color: var(--hw-series-publication-text-color);
+  font-family: "Noto Serif" serif;
+  margin: 12px 0;
+}
+
+.unpublished-block {
+  background-color: var(--hw-series-publication-unpublished-bg-color);
+  margin: 12px 0;
+}
+
+.publication-block-top {
+  display: flex;
+}
+
+.publication-hr {
+  background-color: var(--hw-beige); /* TODO */
+  height: 2px;
+}
+
+h3 {
+  margin: 12px;
+}
+
+h3 a {
+  text-decoration: none;
+}
+
+h3 a:hover,
+h3 a:active {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.publication-title {
+  vertical-align: top;
+  flex-grow: 2;
+  flex-shrink: 2;
+  word-break: break-word;
+}
+
+.author-line {
+  color: var(--hw-volume-header-hw-color);
+  font-family: var(--pb-serif-font-family);
+  font-weight: normal;
+  font-size: 0.75em;
+  text-decoration: none;
+  display: block;
+}
+
+.title-line {
+  color: var(--hw-series-publication-text-color);
+  font-family: var(--pb-serif-font-family);
+  font-weight: normal;
+  font-size: 1em;
+  display: block;
+}
+
+.volume-line {
+  color: var(--hw-series-publication-text-color);
+  font-family: var(--pb-serif-font-family);
+  font-weight: normal;
+  font-size: 0.75em;
+  display: block;
+  text-transform: uppercase;
+}
+
+.publiation-logo {
+  background-image: url("../images/HWGW_logo.svg");
+  background-repeat: no-repeat;
+  min-width: var(--pb-logo-image-width);
+  min-height: var(--pb-logo-image-height);
+  flex-grow: 0;
+  margin-block: 16px;
+  margin-left: 16px;
+  margin-right: 0;
+}
+
+.publication-extras {
+  background-color: var(--hw-series-publication-details-bg-color);
+  display: flex;
+  flex-direction: row;
+  color: var(--hw-series-publication-text-color);
+}
+
+.publication-extras p {
+  margin-top: 0;
+}
+
+.publication-extras img {
+  height: 450px;
+  width: 300px;
+  margin-top: 1.7%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+}
+
+.publication-extras div {
+  display: flex;
+  flex: 1;
+  padding: 46px;
+  flex-direction: column;
+}
+
+details > summary {
+  cursor: pointer;
+  list-style: none;
+  height: 38px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+details[open] > summary {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"><path d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"/></svg>');
+}
+
+.publisher-link,
+.volume-link {
+  position: relative;
+  text-transform: uppercase;
+  padding: 12px;
+  width: 278px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.8em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.publisher-link {
+  background-color: var(--hw-series-publication-publisher-link-bg-color);
+  color: var(--hw-series-publication-publisher-link-text-color);
+  margin-bottom: 4%;
+}
+
+.volume-link {
+  color: var(--hw-series-publication-volume-link-text-color);
+  background-color: var(--hw-series-publication-volume-link-bg-color);
+}
+
+.arrow-link,
+.arrow-link1 {
+  width: 15%;
+  right: 0;
+  top: 10%;
+  display: block;
+  position: absolute;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.arrow-link {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgb(61, 90, 99)"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>');
+  background-position: right;
+}
+
+.arrow-link1 {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgb(176, 145, 137)"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>');
+  background-position: right;
+}

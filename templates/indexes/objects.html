@@ -1,0 +1,97 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>HWGW – Liste der Objekte</title>
+    <meta name="description" content="Start page of the series." />
+    <link
+      rel="icon"
+      type="image/png"
+      href="resources/images/HWGW_Edition_favicon.png"
+    />
+
+    <link rel="stylesheet" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-core.css" />
+    <link rel="stylesheet" href="resources/css/series-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-main-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
+
+    <script src="resources/scripts/hwgw/compress-header.js" />
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+
+    <style>
+      div ul a {
+          color: var(--hw-series-text-color);
+      }
+
+      div ul {
+          list-style: none;
+      }
+
+      div &gt; ul {
+          padding-left: 0;
+      }
+
+      a {
+          color: var(--hw-series-text-color);
+      }
+    </style>
+  </head>
+  <body>
+    <pb-document id="document1" path="register.xml" />
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header id="header">
+        <a
+          class="series-logo"
+          href="${app}/index.html"
+          data-template="pages:parse-params"
+          aria-label="Startseite der Serie"
+        />
+      </header>
+      <main>
+        <div class="text-section">
+          <div>
+            <h1>Einträge im Objektverzeichnis</h1>
+            <p>
+              Diese Übersicht listet alle Einträge aus dem Objektverzeichnis der
+              Serie. Für die Orientierung ausserhalb dient das
+              <a href="${app}/sitemap.html" data-template="pages:parse-params"
+                >Sitemap der Serie HWGW</a
+              >.
+            </p>
+            <pb-view
+              id="indexlist"
+              src="document1"
+              odd="woelfflin-index"
+              disable-history="true"
+              xpath="//listObject"
+            />
+          </div>
+        </div>
+      </main>
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/series-footer.html"
+      />
+    </pb-page>
+    <div class="splash" />
+  </body>
+</html>

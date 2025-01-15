@@ -1,0 +1,48 @@
+.content {
+  font-family: var(--pb-serif-font-family);
+}
+
+h1 {
+  margin-left: -120px;
+}
+
+article {
+  width: inherit !important;
+  max-width: 1220px !important;
+}
+
+th {
+  width: 300px;
+  padding: 0 2vh 8px 0;
+  vertical-align: top;
+  font-weight: inherit;
+  text-align: left;
+}
+
+td {
+  vertical-align: top;
+  padding: 0 0 8px 0;
+}
+
+.hw-internal-link {
+  color: inherit;
+  text-decoration-color: var(--hw-volume-text-link-decoration-color);
+}
+
+.hw-external-link {
+  color: inherit;
+  text-decoration-color: var(--hw-volume-text-link-decoration-color);
+}
+
+.hw-external-link:after {
+  content: "↗︎";
+  color: var(--hw-volume-text-link-decoration-color);
+  text-decoration: none;
+}
+
+@media (max-width: 941px) {
+  th {
+    width: unset;
+    padding: 0 16px 8px 0;
+  }
+}

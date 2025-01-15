@@ -1,0 +1,234 @@
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="resources/images/HWGW_Edition_favicon.png"
+    />
+
+    <title>HWGW – Suche</title>
+    <link rel="stylesheet" href="resources/css/theme.css" />
+
+    <link rel="stylesheet" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-core.css" />
+    <link rel="stylesheet" href="resources/css/series-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/search-main-layout.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
+
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+  </head>
+
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header>
+        <a
+          class="series-logo"
+          href="${app}/index.html"
+          data-template="pages:parse-params"
+          aria-label="Startseite der Serie"
+        />
+        <a class="skip-link" href="#search-options">Springe zum Suchformular</a>
+        <a class="skip-link" href="#result-marks">Springe zu den Resultaten</a>
+        <a
+          class="skip-link"
+          href="${app}/sitemap.html"
+          data-template="pages:parse-params"
+          >Sitemap</a
+        >
+        <div>
+          <nav>
+            <ul>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Digitale Edition</a
+                >
+                <div class="dropdown-content">
+                  <ul
+                    data-template="lib:include"
+                    data-template-path="templates/series-volume-navigation.html"
+                  />
+                </div>
+              </li>
+              <li>
+                <a href="${app}/project.html" data-template="pages:parse-params"
+                  >Projekt</a
+                >
+              </li>
+              <li>
+                <a href="${app}/notes.html" data-template="pages:parse-params"
+                  >Hinweise</a
+                >
+              </li>
+              <li class="active-nav-item">
+                <a
+                  href="${app}/search.html?query="
+                  data-template="pages:parse-params"
+                  >Suche</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="options-wrapper" id="side-panel">
+          <div style="height: 1px; overflow: hidden">
+            <h1>Suche</h1>
+          </div>
+          <paper-card>
+            <form class="search-panel" id="search-options">
+              <div class="card-content">
+                <h2 style="margin-bottom: 0">SUCHE NACH</h2>
+                <pb-search
+                  id="search-form"
+                  subscribe="search"
+                  data-template="pages:parse-params"
+                  value="${query}"
+                  submit-on-load="submit-on-load"
+                  place-holder=""
+                >
+                  <!--
+                            <div class="targets">
+                                <paper-checkbox name="field" value="text">Search sections</paper-checkbox>
+                                <paper-checkbox name="field" value="index">Search headings</paper-checkbox>
+                            </div>
+                   -->
+                  <details open="true()" id="details-filter">
+                    <summary />
+                    <h2>FILTER</h2>
+                    <pb-custom-form
+                      id="facets"
+                      url="api/search/facets"
+                      subscribe="results"
+                      event="pb-results-received"
+                      emit="search"
+                    />
+
+                    <!--
+                                    <pb-select-feature id="search-sort" name="sort" label="Sortierung" subscribe="search" emit="search" selected="0" items="[    
+                            {&#34;name&#34;: &#34;Default&#34;, &#34;properties&#34;: {&#34;sort&#34;: &#34;default&#34;}},     
+                            {&#34;name&#34;: &#34;Relevanz&#34;, &#34;properties&#34;: {&#34;sort&#34;: &#34;relevance&#34;}},     
+                            {&#34;name&#34;: &#34;Alphabetisch&#34;, &#34;properties&#34;: {&#34;sort&#34;: &#34;alphabetically&#34;}} 
+                        ]"/>
+                        -->
+                  </details>
+                </pb-search>
+              </div>
+            </form>
+          </paper-card>
+        </div>
+        <div class="search-main" id="results-mark">
+          <div class="result-pane">
+            <pb-paginate
+              per-page="20"
+              range="5"
+              subscribe="results"
+              found-label="{{count}} Einträge"
+            />
+
+            <div id="paginate-rule" />
+
+            <pb-load id="results" url="api/search" emit="results" />
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <ul>
+          <li>
+            <span class="hwgw-footer-label">Published by</span>
+            <a
+              class="humanities-connect-logo"
+              href="https://humanitiesconnect.pub/"
+              ><img
+                src="${app}/resources/images/logo_Humanitiesconnect.svg"
+                alt="Humanities Connect"
+                data-template="pages:parse-params"
+            /></a>
+          </li>
+          <li>
+            <a href="${app}/impressum.html" data-template="pages:parse-params"
+              >Impressum</a
+            >
+          </li>
+          <li>
+            <a
+              href="${app}/data-protection.html"
+              data-template="pages:parse-params"
+              >Datenschutz</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </pb-page>
+    <div class="splash" />
+    <script>
+                  const facets = document.getElementById('facets');
+                  if (facets) {
+                      facets.addEventListener('pb-custom-form-loaded', function(ev) {
+                          const elems = ev.detail.querySelectorAll('.facet');
+                          elems.forEach(facet =&gt; {
+                              facet.addEventListener('change', () =&gt; {
+                                  const table = facet.closest('table');
+                                  if (table) {
+                                      const nested = table.querySelectorAll('.nested .facet').forEach(nested =&gt; {
+                                          if (nested != facet) {
+                                              nested.checked = false;
+                                          }
+                                      });
+                                  }
+                                  facets._submit();
+                              });
+                          });
+                      });
+                  }
+      function changewiew() {
+          var screen_width = window.innerWidth;
+          var detailsElement = document.getElementById('details-filter');
+
+          if (detailsElement) {
+              if (screen_width &gt; 941) {
+                  // If the screen width is greater than 941 pixels, do nothing
+              } else {
+                  // If the screen width is 941 pixels or less
+
+                  // Remove the open attribute from detailsElement
+                  detailsElement.removeAttribute('open');
+
+                  // Change style for #details-filter &gt; summary
+                  var summaryElement = detailsElement.querySelector('summary');
+                  if (summaryElement) {
+                      summaryElement.style.display = 'block';
+                  }
+              }
+          }
+      }
+
+      // Add an event listener for window resize
+      window.addEventListener('resize', changewiew);
+
+      // Call changewiew initially to handle the initial screen size
+      changewiew();
+    </script>
+  </body>
+</html>

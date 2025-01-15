@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="resources/images/HWGW_Edition_favicon.png"
+    />
+
+    <title>Projektadministration</title>
+    <link rel="stylesheet" href="resources/css/theme.css" />
+
+    <link rel="stylesheet" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/search-main-layout.css" />
+
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+
+    <style>
+      main {
+        margin-top: 230px;
+        margin-left: 46px;
+        margin-right: 46px;
+      }
+
+      pb-login {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header>
+        <a
+          class="series-logo"
+          href="${app}/index.html"
+          data-template="pages:parse-params"
+        />
+      </header>
+
+      <main>
+        <h1>Admin page</h1>
+        <pb-login id="login" group="woelfflin">
+          <iron-icon slot="icon" icon="account-circle" />
+        </pb-login>
+        <pb-restricted class="upload-panel" login="login">
+          <paper-card>
+            <div class="card-content">
+              <h2>Edit ODD</h2>
+              <paper-listbox slot="dropdown-content">
+                <paper-item data-template="pages:edit-odd-list" />
+              </paper-listbox>
+              <pb-ajax
+                subscribe="transcription"
+                emit="transcription"
+                url="api/odd"
+                method="post"
+                data-template="pages:parse-params"
+                event="pb-refresh"
+                title="Recompile ODD"
+                data-i18n="[title]menu.admin.recompile"
+              >
+                <h3 slot="title">
+                  <pb-i18n key="menu.admin.recompile" />
+                </h3>
+                <paper-icon-button icon="icons:refresh" />
+                Recompile ODD
+              </pb-ajax>
+            </div>
+            <div class="card-content">
+              <h2>Download App</h2>
+              <pb-download url="api/apps/download">
+                <pb-i18n key="appgen.xar-download"
+                  >Download App as .xar</pb-i18n
+                >
+              </pb-download>
+            </div>
+            <div class="card-content">
+              <h2>Upload</h2>
+              <pb-upload
+                id="upload"
+                emit="docs"
+                accept=".xml, .tei, .odd, .docx, .mei"
+              />
+            </div>
+            <div class="card-content">
+              <h2>API endpoints</h2>
+              <paper-item>
+                <a
+                  href="${app}/api.html"
+                  data-template="pages:parse-params"
+                  target="_blank"
+                  >API Documentation</a
+                >
+              </paper-item>
+            </div>
+          </paper-card>
+        </pb-restricted>
+      </main>
+
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/series-footer.html"
+      />
+    </pb-page>
+    <div class="splash" />
+  </body>
+</html>

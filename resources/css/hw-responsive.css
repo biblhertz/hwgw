@@ -1,0 +1,269 @@
+@media (max-width: 374px) {
+  #hw,
+  #gw {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    margin-inline: 15px;
+  }
+
+  .document_HW_Ueberschrift2 {
+    font-size: 1.8em;
+    line-height: 1.3;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 941px) {
+  .tei-div9 > .tei-pb4,
+  .tei-div9 > .tei-milestone1 {
+    display: inline-block;
+  }
+
+  .document_HW_Ueberschrift2 {
+    margin-top: -50px;
+  }
+}
+
+/*responsive for screen size up to 941px width*/
+
+@media (max-width: 941px) {
+  body {
+    --pb-base-font-size: 14px;
+    --pb-content-font-size: 14px;
+    --pb-logo-image-width: 60px;
+    --pb-logo-image-height: 55px;
+  }
+
+  header {
+    height: 130px;
+    min-width: 320px;
+  }
+
+  .header {
+    padding: 12px 12px 0;
+  }
+
+  .toolbar {
+    height: fit-content;
+  }
+
+  header .logo {
+    margin-block: 12px;
+    margin-left: 12px;
+    margin-right: 0;
+  }
+
+  .hw-front-image img {
+    width: 60%;
+  }
+
+  .volume-cover img {
+    padding-top: unset;
+  }
+  .header-title {
+    margin: 9px 8px;
+  }
+
+  .werke {
+    line-height: 1.5;
+  }
+
+  #schriften {
+    letter-spacing: 1.33px;
+  }
+
+  .burger-dropdown {
+    display: initial;
+  }
+
+  .pages-responsive {
+    display: initial;
+  }
+
+  .hamburger {
+    display: block;
+    background-color: var(--hw-beige); /* TODO */
+  }
+
+  .hamburger i {
+    padding-block: 0;
+    padding-inline: 5px;
+    font-size: 30px;
+  }
+
+  nav {
+    max-width: 100%;
+    position: fixed;
+    left: -100%;
+  }
+
+  nav > ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav .toolbar-item {
+    z-index: 2;
+  }
+
+  menu {
+    display: none;
+  }
+
+  .dropdown-content {
+    position: relative;
+    width: 100%;
+  }
+
+  .breadcrumbs {
+    display: none;
+  }
+  main {
+    flex-direction: column;
+    margin: 23px;
+  }
+
+  main > article {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hw-modern-pb,
+  .hw-original-pb,
+  .tei-milestone1,
+  .tei-pb4 {
+    display: none;
+  }
+  .document_HW_Untertitel2 {
+    margin: 0;
+  }
+
+  aside {
+    display: none;
+  }
+  footer ul li ul {
+    padding-top: 0px;
+  }
+  i.material-icons {
+    padding: 2px;
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-height: 1200px) and (max-height: 1500px) {
+  .hw-tabs {
+    height: 808px;
+  }
+
+  pb-tabs {
+    top: 200px;
+    height: 856px;
+  }
+}
+
+@media only screen and (min-height: 1200px) and (max-height: 1500px) and (min-width: 1921px) {
+  /* ultra wide but not high */
+  .hw-tabs {
+    height: 708px;
+  }
+
+  pb-tabs {
+    top: 300px;
+    height: 756px;
+  }
+}
+
+@media only screen and (min-height: 1500px) {
+  .hw-tabs {
+    height: 808px;
+  }
+
+  pb-tabs {
+    top: 300px;
+    height: 856px;
+  }
+}
+/*responsive for screens bigger than 1920px width*/
+
+@media (min-width: 1921px) {
+  body {
+    --pb-base-font-size: 20px;
+    --pb-content-font-size: 20px;
+    --pb-logo-image-width: 131px;
+    --pb-logo-image-height: 119px;
+  }
+
+  header .logo {
+    margin-block: 25px;
+    margin-left: 25px;
+    margin-right: 0;
+  }
+
+  .header-title {
+    margin: 22px 21px;
+  }
+
+  .werke {
+    line-height: 1.6;
+  }
+
+  #schriften {
+    letter-spacing: 1.71px;
+  }
+
+  .toolbar {
+    height: 40px;
+  }
+
+  nav {
+    max-width: 564px;
+  }
+
+  menu {
+    max-width: 657px;
+  }
+
+  .nav-head-button,
+  .menu-head-button {
+    padding: 8px 5px;
+    height: 24px; /* 40px - 8px - 8px */
+  }
+
+  main > article {
+    max-width: 55vw;
+  }
+
+  .document_HW_Ueberschrift2 {
+    margin-top: -75px;
+  }
+
+  .hw-float-column {
+    margin-left: -100px;
+  }
+
+  .btn-zoom {
+    transform: translate(0px, -8px);
+    width: 40px;
+  }
+
+  .btn-pages {
+    height: 40px;
+  }
+
+  i.material-icons {
+    padding: 6px 4px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 550px) {
+  .volume-cover img {
+    display: none;
+  }
+}

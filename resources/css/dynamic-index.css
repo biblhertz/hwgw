@@ -1,0 +1,53 @@
+.index-entry {
+  margin-bottom: 6px;
+}
+
+.index-entry-title {
+  margin: 0;
+  font-size: 13pt;
+  margin-left: -120px;
+}
+
+.index-entry-content {
+  margin-left: 10px;
+  font-size: 13pt;
+}
+
+.index-entry-content p {
+  margin: 0;
+}
+
+.index-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: var(--hw-series-text-color);
+  text-decoration-color: var(--hw-volume-text-link-decoration-color);
+}
+
+.hw-person {
+  font-weight: 400;
+  color: var(--hw-person-color);
+}
+
+.hw-organisation {
+  font-weight: 400;
+  color: var(--hw-organisation-color);
+}
+
+.hw-place {
+  font-weight: 400;
+  color: var(--hw-place-color);
+}
+
+.hw-bibl {
+  font-weight: 400;
+  color: var(--hw-bibl-color);
+}
+
+.hw-object {
+  font-weight: 400;
+  color: var(--hw-object-color);
+}

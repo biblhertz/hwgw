@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@teipublisher/pb-components": "2.24.1",
+    "openseadragon": "4.1.0",
+    "tify": "^0.28.1"
+  },
+  "name": "hwgw",
+  "version": "0.8.0",
+  "description": "Heinrich Wölfflin: Gesammelte Werke"
+}

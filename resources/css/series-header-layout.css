@@ -1,0 +1,119 @@
+.dropdown-content::-webkit-scrollbar-thumb {
+  background: var(--hw-green-header);
+}
+body {
+  margin: 0;
+}
+
+header {
+  height: 150px; /* Big font size */
+  width: calc(100% - 92px);
+  padding: 40px 46px 18px 46px;
+  position: fixed; /* Fixed position - sit on top of the page */
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: height 0.6s; /* Add a transition effect (when scrolling - and font size is decreased) */
+}
+
+.narrow-header {
+  height: 80px;
+  padding-top: 40px;
+}
+
+.narrow-header .series-logo {
+  width: 160px;
+  height: 68px;
+}
+
+.series-logo {
+  background-size: contain;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  width: 320px;
+  height: 136px;
+  display: block;
+  min-width: 160px;
+
+  transition: height 0.6s; /* Add a transition effect (when scrolling - and font size is decreased) */
+  transition: width 0.6s; /* Add a transition effect (when scrolling - and font size is decreased) */
+}
+
+nav {
+  width: 45vw;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: inherit;
+  gap: 6px;
+}
+
+nav > ul > li {
+  width: 160px;
+  height: 27.8px;
+  vertical-align: middle;
+  flex: 1;
+  display: block;
+  font: normal normal normal 0.94em/1.25 var(--pb-base-font-family);
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 4.5px;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+  text-decoration: underline;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 3px 6px #00000029;
+  z-index: 1;
+  padding: 20px;
+  font: normal normal 300 0.94em/1.6 var(--pb-base-font-family);
+  text-align: left;
+}
+
+.dropdown:hover > .dropdown-content,
+.dropdown:focus-within > .dropdown-content,
+.dropdown > .dropdown-content:hover,
+.dropdown > .dropdown-content:focus {
+  display: block;
+  visibility: visible;
+}
+
+.dropdown:hover,
+.dropdown:focus-within {
+  cursor: pointer;
+}
+
+.dropdown-content > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skip-link {
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  box-shadow: 0px 3px 6px #00000029;
+  position: absolute;
+  transform: translateY(-1000px);
+  transition: transform 0.3s;
+}
+
+.skip-link:focus {
+  transform: translateY(0%);
+}

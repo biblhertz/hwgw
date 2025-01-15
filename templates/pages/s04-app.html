@@ -1,0 +1,419 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>HWGW: Schriften 4 Jugendwerke. Apparat</title>
+    <meta name="description" content="Wölfflin - books" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="resources/images/favicon.ico"
+    />
+    <link rel="icon" type="image/png" href="resources/images/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/theme.css" />
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-core.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/volume-header-colour.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-main-layout.css" />
+    <link rel="stylesheet" href="resources/css/volume-main-colour.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-responsive.css" />
+
+    <script src="resources/scripts/hwgw/hamburger.js" />
+    <script src="resources/scripts/hwgw/page-title.js" />
+
+    <!-- webfont tied to Adobe-->
+    <link rel="stylesheet" href="https://use.typekit.net/mkk8aec.css" />
+    <!-- Google icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+    <style>
+      .content {
+        font-family: var(var(--pb-serif-font-family));
+      }
+
+      pb-navigation:not([disabled]) + #previousPart {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+      id-hash="true"
+      url-ignore="selectors,odd,tab"
+    >
+      <pb-document id="document1" data-template="pages:pb-document" />
+
+      <header>
+        <div class="header">
+          <a
+            href="${app}/index.html"
+            class="logo"
+            data-template="pages:parse-params"
+            aria-label="Startseite der Serie"
+          />
+          <div
+            data-template="lib:include"
+            data-template-path="templates/s04/header-title.html"
+          />
+          <div>
+            <a class="skip-link" href="#main-text">Springe zum Haupttext</a>
+            <a class="skip-link" href="#comments">Springe zu Kommentaren</a>
+            <a
+              class="skip-link"
+              href="${app}/s04/sitemap.html"
+              data-template="pages:parse-params"
+              >Band-Sitemap</a
+            >
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <nav role="navigation">
+            <ul>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Einleitung</a
+                >
+                <div class="dropdown-content">
+                  <div class="toc">
+                    <a href="../s04/s04-in.xml" class="toc-other-part-title"
+                      >Kunstgeschichte nach Reproduktionen. Zu Wölfflins
+                      formanalytischen Anfängen</a
+                    >
+                    <ul
+                      data-template="lib:include"
+                      data-template-path="templates/s04/toc-in.html"
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Text</a
+                >
+                <div class="dropdown-content">
+                  <div class="toc">
+                    <a href="../s04/s04-ed.xml" class="toc-other-part-title"
+                      >Die Jugendwerke des Michelangelo</a
+                    >
+                    <ul
+                      data-template="lib:include"
+                      data-template-path="templates/s04/toc-ed.html"
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown toolbar-item">
+                <a
+                  class="nav-head structure-link nav-head-button selected-toolbar-item"
+                  href="#"
+                  >Apparat</a
+                >
+                <div class="dropdown-content">
+                  <span id="title-in-toc">Apparat</span>
+                  <pb-load
+                    id="toc"
+                    class="toc"
+                    url="api/document/{doc}/contents?target=transcription&amp;icons=true"
+                    expand="expand"
+                    src="document1"
+                    auto="auto"
+                  >
+                  </pb-load>
+                </div>
+              </li>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Index</a
+                >
+                <div
+                  data-template="lib:include"
+                  data-template-path="templates/volume-header-index-links.html"
+                />
+              </li>
+            </ul>
+          </nav>
+          <pb-navigation
+            class="btn-pages pages-responsive"
+            emit="transcription"
+            keyboard="left"
+            subscribe="transcription"
+            direction="backward"
+            unit="page"
+          >
+            <i class="material-icons">chevron_left</i>
+            <!-- <paper-icon-button icon="icons:chevron-left" aria-label="Jump back to previous text" style="color: white; padding: 0;"/> -->
+          </pb-navigation>
+          <div class="burger-dropdown">
+            <div class="hamburger">
+              <i class="material-icons" id="material-icons">menu</i>
+            </div>
+            <div class="burger-dropdown-content">
+              <ul>
+                <li>
+                  <a
+                    href="${app}/${collection}/${collection}-in.xml"
+                    data-template="pages:parse-params"
+                    >Einleitung<span class="arrow-link-white" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="${app}/${collection}/${collection}-ed.xml"
+                    data-template="pages:parse-params"
+                    >Text<span class="arrow-link-white" />
+                  </a>
+                </li>
+                <li>
+                  Apparat:
+                  <pb-load
+                    id="toc2"
+                    class="toc"
+                    url="api/document/{doc}/contents?target=transcription&amp;icons=true"
+                    expand="expand"
+                    src="document1"
+                    auto="auto"
+                  >
+                  </pb-load>
+                </li>
+                <li>
+                  <a
+                    href="${app}/search.html?query=&amp;facet-environment=Index&amp;facet-volume=${collection}"
+                    data-template="pages:parse-params"
+                    >Index<span class="arrow-link-white" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="${app}/search.html?query=&amp;facet-environment=Text&amp;facet-volume=${collection}"
+                    data-template="pages:parse-params"
+                    >Suche<span class="arrow-link-white" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <pb-navigation
+            class="btn-pages pages-responsive"
+            emit="transcription"
+            keyboard="right"
+            subscribe="transcription"
+            direction="forward"
+            unit="page"
+          >
+            <i class="material-icons">chevron_right</i>
+            <!-- <paper-icon-button icon="icons:chevron-right" aria-label="Jump forward to next text" style="color: white; padding: 0;"/> -->
+          </pb-navigation>
+          <menu>
+            <ul>
+              <li class="dropdown toolbar-item">
+                <div style="display: flex">
+                  <a
+                    href="#"
+                    class="menu-head structure-link menu-head-button"
+                    style="flex: 1"
+                    >Seiten</a
+                  >
+                  <pb-navigation
+                    class="btn-pages"
+                    style="margin-right: 5px"
+                    emit="transcription"
+                    keyboard="left"
+                    subscribe="transcription"
+                    direction="backward"
+                    unit="page"
+                  >
+                    <i class="material-icons">chevron_left</i>
+                    <!-- <paper-icon-button icon="icons:chevron-left" aria-label="Jump back to previous text" style="color: white; padding: 0;"/> -->
+                  </pb-navigation>
+                  <a
+                    href="${app}/${collection}/s04-ed.xml#s04-pg126"
+                    id="previousPart"
+                    style="margin-right: 5px"
+                    class="btn-pages"
+                    data-template="pages:parse-params"
+                  >
+                    <i class="material-icons">chevron_left</i>
+                  </a>
+
+                  <pb-navigation
+                    class="btn-pages"
+                    emit="transcription"
+                    keyboard="right"
+                    subscribe="transcription"
+                    direction="forward"
+                    unit="page"
+                  >
+                    <i class="material-icons">chevron_right</i>
+                    <!-- <paper-icon-button icon="icons:chevron-right" aria-label="Jump forward to next text" style="color: white; padding: 0;"/> -->
+                  </pb-navigation>
+                </div>
+                <div class="dropdown-content">
+                  <div id="page-list">
+                    <ul
+                      data-template="lib:include"
+                      data-template-path="templates/s04/pages.html"
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="toolbar-item">
+                <div class="menu-head menu-head-button" style="display: flex">
+                  <pb-zoom
+                    class="btn-zoom"
+                    emit="transcription"
+                    direction="out"
+                    icon="icons:remove"
+                    aria-label="Decrease font size"
+                  />
+                  <span style="margin-inline: 8px">Zoom</span>
+                  <pb-zoom
+                    class="btn-zoom"
+                    emit="transcription"
+                    direction="in"
+                    icon="icons:add"
+                    aria-label="Increase font size"
+                  />
+                </div>
+              </li>
+              <li class="dropdown toolbar-item">
+                <a href="#" class="menu-head structure-link menu-head-button"
+                  >Einstellungen</a
+                >
+                <div class="dropdown-content">
+                  <form
+                    data-template="lib:include"
+                    data-template-path="templates/volume-header-settings.html"
+                  />
+                </div>
+              </li>
+              <li class="toolbar-item">
+                <div style="display: flex; justify-content: center">
+                  <a
+                    href="${app}/search.html?query=&amp;facet-environment=Text&amp;facet-volume=${collection}"
+                    class="menu-head structure-link menu-head-button"
+                    data-template="pages:parse-params"
+                    >Suche</a
+                  >
+                  <i
+                    class="material-icons"
+                    style="transform: rotate(90deg); font-size: 20px !important"
+                    >search</i
+                  >
+                </div>
+              </li>
+            </ul>
+          </menu>
+        </div>
+      </header>
+
+      <div class="breadcrumbs">
+        <pb-view
+          id="breadcrumbs"
+          src="document1"
+          subscribe="transcription"
+          emit="transcription"
+          odd="woelfflin-meta"
+        >
+          <pb-param name="mode" value="breadcrumbs" />
+        </pb-view>
+      </div>
+
+      <main class="content-body">
+        <article id="main-text">
+          <div id="view1wrapper" class="content">
+            <pb-view
+              id="view1apparatus"
+              src="document1"
+              column-separator=".tei-cb"
+              append-footnotes="append-footnotes"
+              subscribe="transcription"
+              emit="transcription"
+              odd="woelfflin-apparatus"
+            />
+          </div>
+
+          <pb-navigation
+            class="bottom-weiter"
+            emit="transcription"
+            subscribe="transcription"
+            direction="forward"
+            unit="page"
+            >weiter</pb-navigation
+          >
+        </article>
+
+        <aside>
+          <pb-tabs>
+            <paper-tab slot="tab">Kommentar und Anmerkungen</paper-tab>
+            <paper-tab slot="tab">Transkriptionsrichtlinien</paper-tab>
+            <paper-tab slot="tab">Index</paper-tab>
+            <div slot="page" class="hw-tabs" id="comments">
+              <pb-view
+                id="comment-tab"
+                src="document1"
+                subscribe="transcription"
+                odd="woelfflin-apparatus-comments"
+              />
+            </div>
+            <div slot="page" class="hw-tabs">
+              <div
+                data-template="lib:include"
+                data-template-path="templates/transcription-note.html"
+              />
+            </div>
+            <div slot="page" class="hw-tabs">
+              <pb-view
+                id="index-tab"
+                src="document1"
+                subscribe="transcription"
+                odd="woelfflin-index-entry-list"
+              />
+            </div>
+          </pb-tabs>
+        </aside>
+      </main>
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/volume-footer.html"
+      />
+    </pb-page>
+
+    <div class="splash" />
+  </body>
+
+  <script>
+    window.addEventListener('load', function (event) {
+        pbEvents.subscribe('pb-highlight-on', 'letter', (ev) =&gt; {
+            document.getElementsByTagName("pb-tabs")[0].setAttribute("selected", "0");
+        }, false);
+    });
+  </script>
+</html>

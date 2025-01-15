@@ -1,0 +1,174 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Custom API",
+    "description": "This is the place to add your own path endpoints"
+  },
+  "servers": [
+    {
+      "description": "Endpoint for testing on localhost",
+      "url": "http://localhost:8080/exist/apps/hwgw"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      },
+      "cookieAuth": {
+        "type": "apiKey",
+        "name": "teipublisher.com.login",
+        "in": "cookie"
+      }
+    }
+  },
+  "paths": {
+    "/api/search": {
+      "get": {
+        "summary": "Run a search on all TEI Publisher collections (replacing the native TEI Publisher search)",
+        "operationId": "csearch:search",
+        "x-error-handler": "vapi:handle-error",
+        "tags": ["search"],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "Query string",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "field",
+            "in": "query",
+            "description": "The field to query",
+            "schema": {
+              "type": "string",
+              "default": "text"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "description": "Start offset of the first item to show from the result set",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "per-page",
+            "in": "query",
+            "description": "Number of items to show on one page",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            }
+          },
+          {
+            "name": "doc",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results returned",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/registerentry/{entryId}": {
+      "get": {
+        "summary": "List occurrences for an index entry",
+        "description": "Retrieve content of an index entry",
+        "operationId": "cindex:register-entry",
+        "x-error-handler": "vapi:handle-error",
+        "parameters": [
+          {
+            "name": "entryId",
+            "in": "path",
+            "schema": {
+              "type": "string",
+              "example": "A"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Categories and places to display",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hashresolver": {
+      "get": {
+        "summary": "tbd",
+        "description": "tba",
+        "operationId": "vapi:html",
+        "x-error-handler": "vapi:handle-error",
+        "parameters": [
+          {
+            "name": "file",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "resolver"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Categories and places to display",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "cookieAuth": []
+    },
+    {
+      "basicAuth": []
+    }
+  ]
+}

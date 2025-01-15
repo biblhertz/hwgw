@@ -1,0 +1,456 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://dlib.biblhertz.it/iiif/hchwgw04/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "Die Jugendwerke des Michelangelo",
+  "metadata": [
+    {
+      "label": "Titel",
+      "value": "Michelangelo Jugendwerke"
+    },
+    {
+      "label": "Verfügbar gemacht durch",
+      "value": "<span><a href=\"https://www.biblhertz.it\">BHMPI Rome</a></span>"
+    },
+    {
+      "label": "ePIC Handle",
+      "value": "<span><a href=\"http://hdl.handle.net/21.11153/5733-9b19-d1a3\">21.11153/5733-9b19-d1a3</a></span>"
+    }
+  ],
+  "thumbnail": {
+    "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0001.jp2/full/80,100/0/default.jpg",
+    "@type": "dctypes:Image",
+    "format": "image/jpeg",
+    "service": {
+      "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0001.jp2",
+      "profile": "http://iiif.io/api/image/2/level2.json"
+    }
+  },
+  "viewingDirection": "left-to-right",
+  "viewingHint": "paged",
+  "license": "http://creativecommons.org/licenses/by-nc/4.0/",
+  "attribution": "Provided by Bibliotheca Hertziana \u2013 Max Planck Institute for Art History, Rome.",
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0014",
+          "@type": "sc:Canvas",
+          "label": "Einl. Abb. 1",
+          "height": 2942,
+          "width": 1942,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0014.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 2942,
+                "width": 1942,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0014.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0014"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0015",
+          "@type": "sc:Canvas",
+          "label": "Einl. Abb. 2",
+          "height": 7376,
+          "width": 5640,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0015.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 7376,
+                "width": 5640,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0015.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0015"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0016",
+          "@type": "sc:Canvas",
+          "label": "Einl. Abb. 3",
+          "height": 7222,
+          "width": 4813,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0016.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 7222,
+                "width": 4813,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0016.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0016"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0001",
+          "@type": "sc:Canvas",
+          "label": "Abb. 1",
+          "height": 2920,
+          "width": 2013,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0001.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 2920,
+                "width": 2013,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0001.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0001"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0002",
+          "@type": "sc:Canvas",
+          "label": "Abb. 2",
+          "height": 2320,
+          "width": 2910,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0002.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 2320,
+                "width": 2910,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0002.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0002"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0003",
+          "@type": "sc:Canvas",
+          "label": "Abb. 3",
+          "height": 2918,
+          "width": 2280,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0003.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 2918,
+                "width": 2280,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0003.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0003"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0004",
+          "@type": "sc:Canvas",
+          "label": "Abb. 4",
+          "height": 9172,
+          "width": 3859,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0004.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 9172,
+                "width": 3859,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0004.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0004"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0005",
+          "@type": "sc:Canvas",
+          "label": "Abb. 5",
+          "height": 3750,
+          "width": 2629,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0005.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3750,
+                "width": 2629,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0005.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0005"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0006",
+          "@type": "sc:Canvas",
+          "label": "Abb. 6",
+          "height": 4233,
+          "width": 2621,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0006.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 4233,
+                "width": 2621,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0006.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0006"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0007",
+          "@type": "sc:Canvas",
+          "label": "Abb. 7",
+          "height": 2976,
+          "width": 2221,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0007.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 2976,
+                "width": 2221,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0007.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0007"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0008",
+          "@type": "sc:Canvas",
+          "label": "Abb. 8",
+          "height": 5257,
+          "width": 4513,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0008.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5257,
+                "width": 4513,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0008.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0008"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0009",
+          "@type": "sc:Canvas",
+          "label": "Abb. 9",
+          "height": 5759,
+          "width": 4665,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0009.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5759,
+                "width": 4665,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0009.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0009"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0010",
+          "@type": "sc:Canvas",
+          "label": "Abb. 10",
+          "height": 3739,
+          "width": 2922,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0010.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3739,
+                "width": 2922,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0010.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0010"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0011",
+          "@type": "sc:Canvas",
+          "label": "Abb. 11",
+          "height": 4000,
+          "width": 2805,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0011.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 4000,
+                "width": 2805,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0011.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0011"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0012",
+          "@type": "sc:Canvas",
+          "label": "Abb. 12",
+          "height": 5725,
+          "width": 4406,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0012.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5725,
+                "width": 4406,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0012.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0012"
+            }
+          ]
+        },
+        {
+          "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0013",
+          "@type": "sc:Canvas",
+          "label": "Abb. 13",
+          "height": 5729,
+          "width": 4457,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0013.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5729,
+                "width": 4457,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlib2.biblhertz.it/iiif/2/hchwgw04@0013.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://dlib2.biblhertz.it/iiif/2/hchwgw04/canvas/p0013"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

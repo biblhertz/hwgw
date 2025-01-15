@@ -1,0 +1,75 @@
+footer {
+  padding: 23px;
+}
+
+footer .logo {
+  background-image: url("../images/HWGW_logo_RGB_cropped.png");
+
+  width: var(--pb-logo-image-width);
+  height: var(--pb-logo-image-height);
+  display: block;
+  margin: 20px;
+}
+
+/*
+*/
+
+footer > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 6px;
+  color: var(--hw-volume-text-color);
+}
+
+footer > ul > li {
+  padding: 3.5px;
+  font: normal normal 300 0.94em/1.25 var(--pb-base-font-family);
+}
+
+footer > ul > li:first-of-type {
+  padding: 3.5px;
+  font: normal normal 300 0.94em/1.25 var(--pb-base-font-family);
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: var(--hw-volume-text-color);
+}
+
+footer ul li a:hover,
+nav ul li a:active {
+  text-decoration: underline;
+}
+
+.humanities-connect-logo {
+  padding: 5px 0;
+  display: block;
+}
+.humanities-connect-logo img {
+  width: 250px;
+  height: 18px;
+  display: block;
+  content: var(--hc-logo);
+}
+
+span.hwgw-footer-label {
+  font-size: 14px;
+}
+
+footer ul li ul {
+  display: flex;
+  list-style-type: none;
+  max-width: 800px;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+@media (max-width: 941px) {
+  a.humanities-connect-logo {
+    font: normal normal 600 1.5em/1.3em var(--pb-base-font-family);
+  }
+  span.hwgw-footer-label {
+    font-size: 0.94em;
+  }
+}

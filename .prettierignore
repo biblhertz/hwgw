@@ -1,0 +1,12 @@
+build
+node_modules
+.DS_Store
+resources/scripts/*.js
+resources/scripts/*.map
+resources/images/leaflet
+resources/images/openseadragon
+resources/i18n/common
+resources/css/*leaflet*
+resources/css/*prismjs*
+resources/css/*tify*
+resources/lib

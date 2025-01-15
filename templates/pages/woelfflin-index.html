@@ -1,0 +1,306 @@
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="resources/images/HWGW_Edition_favicon.png"
+    />
+
+    <title data-template="config:app-title" />
+    <meta name="description" content="Wölfflin - Index" />
+
+    <link rel="stylesheet" type="text/css" href="resources/fonts/font.css" />
+    <link rel="stylesheet" href="resources/css/theme.css" />
+
+    <link rel="stylesheet" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-core.css" />
+    <link rel="stylesheet" href="resources/css/series-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-main-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
+
+    <script src="resources/scripts/compress-header.js" />
+
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+    <style>
+      [unresolved] {
+        display: none;
+      }
+    </style>
+    <custom-style>
+      <style include="pb-common-styles">
+        body {
+            --pb-link-theme: {
+                text-decoration: none;
+                color: var(--hw-series-text-color);
+            };
+
+            --pb-view-height: calc(100vh - 180px);
+        }
+
+        main {
+            margin-top: 230px;
+        }
+
+        #view1 {
+            font-family: var(--pb-base-font-family);
+            flex: 2 0;
+            font-size: 13pt;
+            line-height: 1.42857143;
+            max-width: 60vw;
+            margin: 8px 16px;
+            // height: var(--pb-view-height);
+            overflow: auto;
+            scrollbar-width: unset;
+
+            display: none;
+        }
+
+        .breadcrumbs .grid-add {
+            float: right;
+        }
+
+        .breadcrumb:link, .breadcrumb:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .breadcrumb:before {
+            content: '&gt;';
+            padding: 0 8px;
+            font-weight: bold;
+        }
+        .breadcrumb:first-child::before {
+            content: none;
+        }
+
+        a {
+          color: var(--hw-series-text-color);
+          text-decoration-color: var(--hw-volume-text-link-decoration-color);
+        }
+
+        .breadcrumb:last-child {
+          font-weight: 600;
+        }
+
+        .anmerkungen:first-child::before {
+            content: "Anm. ";
+        }
+
+        .anmerkungen:not(:last-child):after {
+            content: ",\00a0";
+        }
+
+        .anmerkungen {
+            display: inline-block;
+        }
+
+        .anmerkungen a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .vol-title {
+          text-decoration: none;
+        }
+
+        .anmerkungen-list {
+            display: inline-block;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+      </style>
+    </custom-style>
+
+    <script>
+      if (window.location.hash) {
+        var elmnt = document.getElementById(window.location.hash);
+        elmnt.scrollIntoView();
+      }
+    </script>
+  </head>
+
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+      id-hash="true"
+    >
+      <pb-document id="document1" data-template="pages:pb-document" />
+
+      <header>
+        <a
+          class="series-logo"
+          href="${app}/index.html"
+          data-template="pages:parse-params"
+          aria-label="Startseite der Serie"
+        />
+        <a class="skip-link" href="#main">Springe zum Inhalt</a>
+        <a
+          class="skip-link"
+          href="${app}/sitemap.html"
+          data-template="pages:parse-params"
+          >Sitemap</a
+        >
+        <div>
+          <nav>
+            <ul>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Digitale Edition</a
+                >
+                <div class="dropdown-content">
+                  <ul
+                    data-template="lib:include"
+                    data-template-path="templates/series-volume-navigation.html"
+                  />
+                </div>
+              </li>
+              <li>
+                <a href="${app}/project.html" data-template="pages:parse-params"
+                  >Projekt</a
+                >
+              </li>
+              <li>
+                <a href="${app}/notes.html" data-template="pages:parse-params"
+                  >Hinweise</a
+                >
+              </li>
+              <li>
+                <a href="${app}/search.html" data-template="pages:parse-params"
+                  >Suche</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main id="main">
+        <pb-view
+          id="view1"
+          src="document1"
+          column-separator=".tei-cb"
+          append-footnotes="append-footnotes"
+          subscribe="transcription"
+          emit="transcription"
+          odd="woelfflin-index"
+        />
+
+        <div class="text-section">
+          <pb-load
+            id="entry"
+            url="api/registerentry/{id}"
+            expand="true"
+            subscribe="entry"
+          >
+            ...
+          </pb-load>
+        </div>
+      </main>
+
+      <!--
+        <section class="content-body">
+
+            <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription" odd="woelfflin-index"/>
+
+            <aside>
+            
+                <pb-load id="entry" url="api/registerentry/{id}" expand="true" subscribe="entry">
+                <pb-i18n key="dialogs.loading">Loading</pb-i18n>
+            </pb-load>
+            
+            </aside>
+        </section>
+-->
+
+      <footer>
+        <ul>
+          <li>
+            <span class="hwgw-footer-label">Published by</span>
+            <a
+              class="humanities-connect-logo"
+              href="https://humanitiesconnect.pub/"
+            >
+              <img
+                src="${app}/resources/images/logo_Humanitiesconnect.svg"
+                alt="Humanities Connect"
+                data-template="pages:parse-params"
+              />
+            </a>
+          </li>
+          <li>Version <span data-template="pages:version" /></li>
+          <li>
+            <a href="${app}/sitemap.html" data-template="pages:parse-params"
+              >Sitemap</a
+            >
+          </li>
+          <li>
+            <a href="${app}/impressum.html" data-template="pages:parse-params"
+              >Impressum</a
+            >
+          </li>
+          <li>
+            <a
+              href="${app}/data-protection.html"
+              data-template="pages:parse-params"
+              >Datenschutz</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </pb-page>
+    <div class="splash" />
+  </body>
+  <script>
+
+    function load() {
+
+        if(window.location.hash) {
+            let param = window.location.hash.split("#")[1];
+
+            if (!param.startsWith('index-')) {
+                pbEvents.emit('pb-load', 'entry', {params: {id: param}});
+            }
+        } else {
+          // Fragment doesn't exist
+        }
+
+        pbEvents.subscribe('pb-update', 'transcription', (ev) =&gt; {
+            // For page title use the link name in the hidden entry list
+            const pageTitle = ev.detail.root.querySelector(window.location.hash);
+            if (pageTitle) {
+                document.title = pageTitle.getElementsByTagName('a')[0].innerText;
+            }
+
+        }, false);
+
+    };
+
+    window.addEventListener('load', function (event) {
+        load();
+    });
+
+    window.addEventListener('popstate', function (event) {
+        load();
+    });
+
+    window.addEventListener('pb-refresh', function (event) {
+        load();
+    });
+  </script>
+</html>

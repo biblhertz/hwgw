@@ -1,0 +1,90 @@
+<form>
+  <!--
+  <pb-toggle-feature emit="transcription" subscribe="transcription" name="view" on="page" off="div" default="on" init-from-view="init-from-view">
+    Seitenansicht
+  </pb-toggle-feature>
+  -->
+
+  <!-- TODO i18n for values -->
+
+  <h4>Annotationen anzeigen</h4>
+
+  <pb-select-feature
+    id="select-pers"
+    name="pers"
+    label="Personen"
+    selected="0"
+    initializing="true"
+    subscribe="transcription"
+    emit="transcription"
+    items="[          {&#34;name&#34;: &#34;erste Nennung im Absatz&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-person-toggle-first&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-person-toggle-other&#34;, &#34;state&#34;: true}]},     {&#34;name&#34;: &#34;alle &#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-person-toggle-first&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-person-toggle-other&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}]},             {&#34;name&#34;: &#34;keine&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-person-toggle-first&#34;, &#34;state&#34;: true}, {&#34;selector&#34;: &#34;.hw-person-toggle-other&#34;, &#34;state&#34;: true}]}   ]"
+  />
+
+  <pb-select-feature
+    id="select-org"
+    name="org"
+    label="Organisationen"
+    selected="0"
+    initializing="true"
+    subscribe="transcription"
+    emit="transcription"
+    items="[          {&#34;name&#34;: &#34;erste Nennung im Absatz&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-organisation-toggle-first&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-organisation-toggle-other&#34;, &#34;state&#34;: true}]},     {&#34;name&#34;: &#34;alle&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-organisation-toggle-first&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-organisation-toggle-other&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}]},             {&#34;name&#34;: &#34;keine&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-organisation-toggle-first&#34;, &#34;state&#34;: true}, {&#34;selector&#34;: &#34;.hw-organisation-toggle-other&#34;, &#34;state&#34;: true}]}   ]"
+  />
+
+  <pb-select-feature
+    id="select-place"
+    name="place"
+    label="Orte"
+    selected="0"
+    initializing="true"
+    subscribe="transcription"
+    emit="transcription"
+    items="[          {&#34;name&#34;: &#34;erste Nennung im Absatz&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-place-toggle-first&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-place-toggle-other&#34;, &#34;state&#34;: true}]},     {&#34;name&#34;: &#34;alle&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-place-toggle-first&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-place-toggle-other&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}]},             {&#34;name&#34;: &#34;keine&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-place-toggle-first&#34;, &#34;state&#34;: true}, {&#34;selector&#34;: &#34;.hw-place-toggle-other&#34;, &#34;state&#34;: true}]}   ]"
+  />
+
+  <pb-select-feature
+    id="select-obj"
+    name="obj"
+    label="Objekte"
+    selected="0"
+    initializing="true"
+    subscribe="transcription"
+    emit="transcription"
+    items="[          {&#34;name&#34;: &#34;erste Nennung im Absatz&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-object-toggle-first&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-object-toggle-other&#34;, &#34;state&#34;: true}]},     {&#34;name&#34;: &#34;alle&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-object-toggle-first&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-object-toggle-other&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}]},             {&#34;name&#34;: &#34;keine&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-object-toggle-first&#34;, &#34;state&#34;: true}, {&#34;selector&#34;: &#34;.hw-object-toggle-other&#34;, &#34;state&#34;: true}]}   ]"
+  />
+
+  <pb-select-feature
+    id="select-bibl"
+    name="bibl"
+    label="Bibliografie"
+    selected="0"
+    initializing="true"
+    subscribe="transcription"
+    emit="transcription"
+    items="[          {&#34;name&#34;: &#34;alle&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-bibl-toggle&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}]},             {&#34;name&#34;: &#34;keine&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-bibl-toggle&#34;, &#34;state&#34;: true}]}]"
+  />
+
+  <pb-select-feature
+    id="select-pb"
+    name="pb"
+    label="Steitenumbrüche"
+    selected="0"
+    initializing="true"
+    subscribe="transcription"
+    emit="transcription"
+    items="[         {&#34;name&#34;: &#34;alle&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-inline-pb&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}, {&#34;selector&#34;: &#34;.hw-float-pb&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}]},             {&#34;name&#34;: &#34;nur am Seitenrand&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-inline-pb&#34;, &#34;state&#34;: true}, {&#34;selector&#34;: &#34;.hw-float-pb&#34;, &#34;state&#34;: false, &#34;command&#34;: &#34;disable&#34;}]},       {&#34;name&#34;: &#34;keine&#34;, &#34;selectors&#34;: [{&#34;selector&#34;: &#34;.hw-inline-pb&#34;, &#34;state&#34;: true}, {&#34;selector&#34;: &#34;.hw-float-pb&#34;, &#34;state&#34;: true}]}  ]"
+  />
+
+  <br />
+
+  <!--        <input type="checkbox" id="vehicle2" name="vehicle2"/>
+        <label for="vehicle2"> s/w Ansicht</label>
+                <br/> -->
+
+  <!-- hash sign because pb-download defaults to html instead of xml -->
+  <pb-download type="#" src="document1" dialog="downloadDialog">
+    <paper-button alt="View source">
+      <iron-icon icon="icons:code" /> XML herunterladen
+    </paper-button>
+  </pb-download>
+</form>

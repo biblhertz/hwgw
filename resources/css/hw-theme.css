@@ -1,0 +1,45 @@
+body {
+  --pb-base-font-family: "Noto Sans", sans-serif;
+  --pb-serif-font-family: "Noto Serif", serif;
+  --pb-heading-font-family: "Noto Sans", sans-serif;
+  --pb-base-font-weight: 300;
+
+  --pb-color-primary: #303030;
+
+  --pb-logo-image-width: 60px;
+  --pb-logo-image-height: 60px;
+
+  --pb-menubar-background-color: #b09189;
+  --pb-color-lighter: #b09189;
+  --pb-color-focus: #d9c6bd;
+
+  --pb-color-primary: #303030;
+  --pb-color-inverse: #f0f0f0;
+  --pb-drawer-background-color: var(--pb-color-inverse);
+  --pb-footnote-color: #303030;
+  --pb-lang-input-color: var(--pb-color-inverse);
+  --pb-lang-label-color: var(--pb-color-inverse);
+  --pb-link-color: black;
+  --pb-highlight-color: #b6c9d9;
+  --paper-input-container-focus-color: var(--pb-color-focus);
+  font: var(--pb-base-font);
+  color: var(--pb-color-primary);
+
+  --pb-facsimile-height: calc(100vh - 270px);
+}
+
+.logo {
+  background-image: url("../images/Logo_HW-inverted.svg");
+}
+
+.logo-name {
+  color: #3d5a63;
+}
+
+.logo-title {
+  color: white;
+}
+
+.splash {
+  background-image: url("../images/Logo_HW.svg");
+}

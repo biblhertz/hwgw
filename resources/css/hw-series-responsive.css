@@ -1,0 +1,247 @@
+/*responsive for screen size up to 941px width*/
+
+@media (max-width: 941px) {
+  body {
+    --hw-series-left-indent: 0px;
+    --hw-series-width: 1220px;
+    --pb-logo-image-width: 16vw;
+    --pb-logo-image-height: 10vh;
+    --pb-base-font-size: 14px;
+    --pb-content-font-size: 14px;
+  }
+
+  h1,
+  h2 {
+    font: normal normal 300 1.8em/1.5 var(--pb-base-font-family);
+    margin-bottom: 1%;
+  }
+
+  header,
+  .narrow-header {
+    height: 80px;
+    width: calc(100% - 46px);
+    padding: 23px 23px 0px 23px;
+  }
+
+  .narrow-header .series-logo,
+  .series-logo {
+    width: 160px;
+    height: 68px;
+    min-width: 160px;
+  }
+
+  header > div {
+    width: 100%;
+  }
+
+  nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: var(--hw-series-bg-color);
+  }
+
+  nav > ul > li {
+    width: calc((100% - 18px) / 4);
+    height: 25.45px;
+    font: normal normal normal 0.81em/1.25 var(--pb-base-font-family);
+  }
+  .arrow-link,
+  .arrow-link1 {
+    width: 10%;
+  }
+  .dropdown-content {
+    width: auto;
+  }
+  main {
+    margin-top: 160px;
+  }
+  .hw-front-image {
+    float: initial;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-right: 0;
+    margin-left: 0;
+    margin-bottom: 5%;
+  }
+
+  .hw-front-image img {
+    margin: 0 auto;
+    object-fit: unset;
+    width: 280px;
+    height: 350px;
+    object-position: unset;
+    padding-top: 0;
+  }
+
+  .publication-section > div {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .publiation-logo {
+    min-width: 9vw;
+    max-width: 13vw;
+    min-height: 6vh;
+  }
+
+  #t-section-main {
+    padding: 0.2% 23px;
+  }
+  .text-section > div {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .text-section p,
+  .text-section ul {
+    font: normal normal 300 1em/2 var(--pb-base-font-family);
+  }
+
+  .publisher-link {
+    margin-bottom: 4%;
+  }
+
+  .publication-extras {
+    flex-direction: column;
+  }
+
+  .publication-extras div {
+    padding: 23px;
+  }
+  .publication-extras > div:first-child {
+    margin: 0% auto;
+  }
+
+  .publication-extras div:nth-child(2) {
+    padding: 0 23px 23px;
+  }
+  .publication-extras img {
+    margin-bottom: 6%;
+    height: 350px;
+    width: 229px;
+  }
+  .publication-title {
+    font-size: 0.9em;
+  }
+
+  .publisher-link,
+  .volume-link {
+    width: 219px;
+    padding: 6px;
+    font-size: 0.7em;
+  }
+
+  .text-section h2,
+  .text-section h1 {
+    margin: 11px 0;
+  }
+  #orthography h2 {
+    margin: 0 0 11px 0;
+  }
+  .text-section > div {
+    font-size: 0.8em;
+  }
+  footer {
+    margin: 46px 23px;
+  }
+}
+
+/*responsive for screens bigger than 1920px width*/
+
+@media (min-width: 1921px) {
+  nav {
+    width: 50vw;
+  }
+  body {
+    font-size: 20px;
+    --hw-series-left-indent: 140px;
+    --hw-series-width: 1440px;
+  }
+
+  nav > ul > li {
+    height: 32.5px;
+  }
+
+  footer {
+    margin: 100px 46px 50px 46px;
+  }
+
+  .dropdown-content {
+    width: 300px;
+  }
+}
+
+@media (max-width: 430px) {
+  .publication-logo {
+    min-width: var(--pb-logo-image-width);
+  }
+
+  h3 {
+    font: normal normal 400 1.1em/1.2 var(--pb-base-font-family);
+  }
+}
+
+@media (max-width: 325px) {
+  html {
+    overflow-x: hidden;
+  }
+  header {
+    padding: 0;
+    height: 80px;
+    width: 90%;
+    margin: 10% 5%;
+    position: relative;
+  }
+  main {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 550px) {
+  .hw-front-image img {
+    width: 240px;
+    height: unset;
+  }
+  .publication-extras img {
+    display: none;
+  }
+
+  .publication-extras > div:first-child {
+    padding: 0 23px 23px;
+    margin: 0;
+  }
+  .publisher-link,
+  .volume-link {
+    width: 95%;
+    padding: 2%;
+  }
+  .publication-extras {
+    flex-direction: column-reverse;
+  }
+
+  footer ul {
+    gap: 3px;
+    width: inherit;
+    align-items: unset;
+    justify-content: unset;
+    font-size: 0.85em;
+  }
+
+  footer ul li {
+    text-align: unset;
+  }
+
+  .text-section p,
+  p {
+    font: normal normal 300 14px/1.8 var(--pb-base-font-family);
+  }
+
+  .publication-extras div:nth-child(2) {
+    padding: 23px;
+  }
+  h1,
+  h2 {
+    font: normal normal 300 24px/1.5 var(--pb-base-font-family);
+  }
+}

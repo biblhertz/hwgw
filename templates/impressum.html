@@ -1,0 +1,132 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>HWGW – Impressum</title>
+    <meta name="description" content="Start page of the series." />
+    <link
+      rel="icon"
+      type="image/png"
+      href="resources/images/HWGW_Edition_favicon.png"
+    />
+
+    <link rel="stylesheet" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-core.css" />
+    <link rel="stylesheet" href="resources/css/series-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-main-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
+
+    <script src="resources/scripts/hwgw/compress-header.js" />
+  </head>
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header id="header">
+        <a
+          class="series-logo"
+          href="${app}/index.html"
+          data-template="pages:parse-params"
+          aria-label="Startseite der Serie"
+        />
+        <a class="skip-link" href="#main">Springe zum Inhalt</a>
+        <a
+          class="skip-link"
+          href="${app}/sitemap.html"
+          data-template="pages:parse-params"
+          >Sitemap</a
+        >
+        <div>
+          <nav>
+            <ul>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Digitale Edition</a
+                >
+                <div class="dropdown-content">
+                  <ul
+                    data-template="lib:include"
+                    data-template-path="templates/series-volume-navigation.html"
+                  />
+                </div>
+              </li>
+              <li>
+                <a href="${app}/project.html" data-template="pages:parse-params"
+                  >Projekt</a
+                >
+              </li>
+              <li>
+                <a href="${app}/notes.html" data-template="pages:parse-params"
+                  >Hinweise</a
+                >
+              </li>
+              <li>
+                <a
+                  href="${app}/search.html?query="
+                  data-template="pages:parse-params"
+                  >Suche</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main id="main">
+        <div class="text-section">
+          <div>
+            <h1>Impressum</h1>
+            <p>
+              <cite>Heinrich Wölfflin – Gesammelte Werke</cite>
+            </p>
+
+            <p>woelfflin@biblhertz.it</p>
+
+            <p>
+              <a class="hw-external-link" href="https://humanitiesconnect.pub"
+                >HumanitiesConnect</a
+              >
+            </p>
+
+            <p>
+              Bibliotheca Hertziana – Max-Planck-Institut für Kunstgeschichte<br />
+              Via Gregoriana 28<br />
+              00187 Rom
+            </p>
+
+            <p>
+              <a
+                href="https://www.biblhertz.it/de/dept-weddigen/woelfflin"
+                class="hw-external-link"
+                >Projektseite bei der BHMPI</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.woelfflin.uzh.ch/de.html"
+                class="hw-external-link"
+                >Projektseite bei der UZH</a
+              >
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/series-footer.html"
+      />
+    </pb-page>
+    <div class="splash" />
+  </body>
+</html>

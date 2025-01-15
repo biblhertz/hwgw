@@ -1,0 +1,49 @@
+{
+  "hwgw": {
+    "title": "Foo",
+    "annotations": "Annotationen",
+    "content": "Inhalt",
+    "context": "Kontext",
+    "indexes": "Index",
+    "occurrences": "Vorkommen",
+    "volume": "Band",
+    "index": {
+      "author": "Autorin/Autor bzw. Künstlerin/Künstler",
+      "bibliography": "Bibliographie",
+      "object": "Objekt",
+      "objects": "Objekte",
+      "organization": "Organisation",
+      "organizations": "Organisationen",
+      "people": "Personen",
+      "person": "Person",
+      "place": "Ort",
+      "places": "Orte",
+      "type": "Typ",
+      "provenience": "Ort"
+    },
+    "genre": {
+      "apparatus": "Apparat",
+      "commentaryToDocuments": "Kommentar (Dokumente)",
+      "commentaryToEdition": "Kommentar (Edition)",
+      "documents": "Dokumente",
+      "edition": "Editionstext",
+      "index": "Index",
+      "introduction": "Einleitung"
+    },
+    "tabs": {
+      "commentary": "Kommentar",
+      "commentaryNotes": "Kommentar und Anmerkungen",
+      "ednote": "Editorische Notiz",
+      "facsimiles": "Faksimiles",
+      "figures": "Abbildungen",
+      "notes": "Anmerkungen"
+    },
+    "viewModes": {
+      "pageBreaks": "Seitenumbrüche",
+      "hideRepeated": "Wiederholungen ausblenden",
+      "showAll": "Alle anzeigen",
+      "hideAll": "Alle verbergen",
+      "hideInText": "Im Text verbergen"
+    }
+  }
+}

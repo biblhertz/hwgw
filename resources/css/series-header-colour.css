@@ -1,0 +1,55 @@
+header {
+  color: var(--hw-series-text-color);
+  background-color: var(--hw-series-bg-color);
+}
+
+.series-logo {
+  background-image: var(--hw-series-logo);
+}
+
+.splash {
+  background-image: var(--hw-series-logo);
+}
+
+nav > ul > li {
+  background-color: var(--hw-series-nav-element-bg-color);
+  color: var(--hw-series-nav-element-text-color);
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+nav > ul > li:first-child {
+  box-shadow: none;
+}
+
+nav ul li a {
+  color: white;
+}
+
+.active-nav-item {
+  background-color: var(--hw-series-nav-selected-bg-color);
+  color: var(--hw-series-nav-selected-text-color);
+}
+
+.dropdown .nav-head-button:hover,
+.dropdown .nav-head-button:focus {
+  color: var(--hw-series-nav-dropdown-text-color);
+  background-color: var(--hw-series-nav-dropdown-bg-color);
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.dropdown-content {
+  color: var(--hw-series-nav-dropdown-text-color);
+  background-color: var(--hw-series-nav-dropdown-bg-color);
+  box-shadow: 0px 3px 6px #00000029;
+  min-height: 10vh;
+  max-height: 40vh;
+}
+
+.dropdown-content a {
+  color: inherit;
+}
+
+.skip-link {
+  background-color: var(--hw-series-nav-element-bg-color);
+  color: var(--hw-series-nav-element-text-color);
+}

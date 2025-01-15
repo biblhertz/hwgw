@@ -1,0 +1,469 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "http://example.org/iiif/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "Salomon Gessner",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "Salomon Gessner"
+    },
+    {
+      "label": "Verfügbar gemacht durch",
+      "value": "<span><a href=\"https://www.biblhertz.it\">BHMPI Rome</a></span>"
+    }
+  ],
+  "viewingDirection": "left-to-right",
+  "viewingHint": "paged",
+  "license": "http://creativecommons.org/licenses/by-nc/4.0/",
+  "attribution": "Provided by Bibliotheca Hertziana \u2013 Max Planck Institute for Art History, Rome.",
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FEinleitung_Abb_1.jp2",
+          "@type": "sc:Canvas",
+          "label": "Einl. Abb. 1",
+          "height": 4123,
+          "width": 2533,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FEinleitung_Abb_1.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 4123,
+                "width": 2533,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FEinleitung_Abb_1.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FEinleitung_Abb_1.jp2"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FEinleitung_Abb_2.2jp",
+          "@type": "sc:Canvas",
+          "label": "Einl. Abb. 2",
+          "height": 3746,
+          "width": 5198,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FEinleitung_Abb_2.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3746,
+                "width": 5198,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FEinleitung_Abb_2.jp2",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FEinleitung_Abb_2.jp2"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_01bis.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 1",
+          "height": 3164,
+          "width": 5216,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_01bis.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3164,
+                "width": 5216,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_01bis.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_01bis.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_02.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 2",
+          "height": 7105,
+          "width": 5391,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_02.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 7105,
+                "width": 5391,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_02.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_02.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_03.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 3",
+          "height": 5043,
+          "width": 9687,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_03.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5043,
+                "width": 9687,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_03.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_03.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_04.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 4",
+          "height": 5011,
+          "width": 8347,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_04.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5011,
+                "width": 8347,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_04.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_04.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_05.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 5",
+          "height": 2819,
+          "width": 7090,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_05.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 2819,
+                "width": 7090,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_05.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_05.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_06.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 6",
+          "height": 3408,
+          "width": 8633,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_06.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3408,
+                "width": 8633,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_06.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_06.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_07.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 7",
+          "height": 5471,
+          "width": 4132,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_07.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5471,
+                "width": 4132,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_07.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_07.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_08.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 8",
+          "height": 4889,
+          "width": 5697,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_08.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 4889,
+                "width": 5697,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_08.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_08.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_09.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 9",
+          "height": 13685,
+          "width": 8361,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_09.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 13685,
+                "width": 8361,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_09.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_09.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_10.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 10",
+          "height": 12898,
+          "width": 19778,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_10.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 12898,
+                "width": 19778,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_10.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_10.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_11bis.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 11",
+          "height": 11919,
+          "width": 17678,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_11bis.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 11919,
+                "width": 17678,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_11bis.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_11bis.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_12.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 12",
+          "height": 12411,
+          "width": 16035,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_12.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 12411,
+                "width": 16035,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_12.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_12.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_13.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 13",
+          "height": 13304,
+          "width": 19148,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_13.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 13304,
+                "width": 19148,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_13.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_13.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_14.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 14",
+          "height": 4496,
+          "width": 4177,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_14.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 4496,
+                "width": 4177,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_14.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_14.tif"
+            }
+          ]
+        },
+        {
+          "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_15.tif",
+          "@type": "sc:Canvas",
+          "label": "Abb. 15",
+          "height": 3716,
+          "width": 8658,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_15.tif/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3716,
+                "width": 8658,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_15.tif",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://hertz-foto-os1.biblhertz.it/iiif/2/dpub%2Fhwgw_03%2FAbb_15.tif"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

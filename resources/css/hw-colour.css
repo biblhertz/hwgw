@@ -1,0 +1,197 @@
+body {
+  --hw-beige: #b09189;
+  --hw-green: #3d5a63;
+
+  --hw-near-white: #f1f1f1;
+
+  --hw-lighter-green: #516b73;
+
+  --hw-lighter-green-2: #57717b;
+
+  --hw-lighter-beige: #c8b2ac;
+
+  --bibl-hertz-red: #8e1c15;
+
+  /* above is already checked */
+
+  --hw-tab-box-color: #eff1f2; /*background color in the aside*/
+  /*other customize values*/
+  --hw-green-header: #6f8a93;
+  --hw-beige-header: #be9c93;
+  --hw-dropdown-nav-bg-color: #edf1f2;
+  --hw-dropdown-menu-bg-color: #60777f;
+  --hw-tab-box-text-color: #0b424e;
+  --hw-btn-green: #99acb2;
+  --hw-blueish-gray: #d6dcde;
+  --hw-breadcrumbs: #a5b8be;
+
+  --hw-light-gray: #e1e5e7;
+
+  /* tei publishe variables */
+
+  /*--pb-splash-background-color: var(--pb-color-inverse); is this needed?*/
+  --pb-color-primary: var(--hw-green); /*text color in the body*/
+  --pb-color-inverse: #ffffff; /*text color in the tools*/
+  --pb-color-lighter: #0b424e; /*text color in the aside's notes*/
+  /*--pb-color-focus: #f6a623; what is this?*/
+  /*--pb-drawer-background-color: var(--pb-color-inverse); do we need these value? (it was the background color of the left menu into the old verison)*/
+  --pb-menubar-background-color: #35424b;
+  --pb-menubar-color: var(--pb-color-inverse);
+  --pb-toolbar-background-color: var(--hw-green);
+  --pb-toolbar-color: var(--pb-color-primary);
+  --pb-link-color: var(--hw-green);
+  --pb-footnote-color: var(--pb-color-primary);
+
+  /*are the following values needed?
+    --pb-lang-input-color: var(--pb-color-inverse);
+    --pb-lang-label-color: var(--pb-color-inverse);
+    
+    --pb-link-font-family: var(--pb-serif-font-family);
+    --pb-highlight-color: #F9E976;
+    --paper-input-container-focus-color: var(--pb-color-focus);*/
+
+  /* colours by context */
+  --hw-volume-text-color: var(--hw-green);
+  --hw-volume-text-bg-color: white;
+  --hw-series-text-color: var(--hw-green);
+  --hw-series-bg-color: white;
+
+  --hw-volume-nav-dropdown-bg-color: var(--hw-dropdown-nav-bg-color);
+  --hw-volume-nav-dropdown-text-color: var(--hw-green);
+  --hw-series-nav-dropdown-bg-color: var(--hw-dropdown-nav-bg-color);
+  --hw-series-nav-dropdown-text-color: var(--hw-green);
+
+  --hw-volume-nav-selected-bg-color: white;
+  --hw-volume-nav-selected-text-color: var(--hw-green);
+  --hw-series-nav-selected-bg-color: var(--hw-green-header);
+  --hw-series-nav-selected-text-color: white;
+
+  --hw-volume-overview-bg-color: var(--hw-light-gray);
+
+  --hw-series-logo: url("../images/HWGW_logo_RGB_cropped.png");
+  --hc-logo: url("../images/logo_Humanitiesconnect.svg");
+
+  --hw-tabs-text-color: var(--hw-tab-box-text-color);
+  --hw-tabs-bg-color: var(--hw-tab-box-color);
+  --hw-tabs-unselected-bg-color: #d6dcde;
+
+  --hw-search-option-bg-color: #be9c9322;
+  --hw-search-option-count-text-color: #808080;
+  --hw-search-checkbox-color: var(--hw-green);
+  --hw-search-checkbox-bg-color: white;
+  --hw-search-input-color: var(--hw-green);
+  --hw-search-suggestions-bg-color: lightgrey;
+
+  /* colors that appear in the text */
+  --hw-bibl-color: #006dbc;
+  --hw-object-color: #3a9667;
+  --hw-organisation-color: #8a0000;
+  --hw-person-color: #8a0000;
+  --hw-place-color: #8a0000;
+
+  --hw-corrected-color: lightgrey;
+
+  --hw-general-dropdown-color: var(--hw-tab-box-color);
+
+  --hw-original-edition-text-color: var(--hw-green);
+  --hw-original-edition-element-color: var(--hw-green);
+  --hw-modern-edition-text-color: var(--hw-beige);
+  --hw-modern-edition-element-color: var(--hw-beige);
+
+  /* mode agnostic */
+
+  --hw-breadcrumbs-color: #a5b8be;
+
+  --hw-volume-text-link-decoration-color: #99acb2;
+
+  --hw-volume-header-bg-color: var(--hw-green);
+  --hw-volume-header-text-color: white;
+
+  --hw-volume-header-hw-color: var(--hw-beige-header);
+  --hw-volume-header-gw-color: var(--pb-color-inverse);
+
+  --hw-volume-nav-element-bg-color: var(--hw-beige-header);
+  --hw-volume-nav-element-text-color: white;
+  --hw-volume-menu-element-bg-color: var(--hw-green-header);
+  --hw-volume-menu-element-text-color: white;
+  --hw-volume-menu-dropdown-bg-color: var(--hw-dropdown-menu-bg-color);
+  --hw-volume-menu-dropdown-text-color: white;
+
+  --hw-volume-narrow-nav-bg-color: var(--hw-beige);
+  --hw-volume-narrow-nav-text-color: white;
+
+  --hw-volume-pagination-button-color: var(--hw-btn-green);
+
+  --hw-series-text-link-decoration-color: #99acb2;
+
+  --hw-series-nav-element-bg-color: var(--hw-beige-header);
+  --hw-series-nav-element-text-color: white;
+
+  --hw-series-publication-text-color: white;
+  --hw-series-publication-bg-color: var(--hw-green);
+  --hw-series-publication-unpublished-bg-color: #6f8a93;
+  --hw-series-publication-details-bg-color: #6f8a93;
+  --hw-series-image-caption-color: #99acb2;
+
+  --hw-series-publication-publisher-link-text-color: var(--hw-green);
+  --hw-series-publication-publisher-link-bg-color: #d6dcde;
+  --hw-series-publication-volume-link-text-color: white;
+  --hw-series-publication-volume-link-bg-color: var(--hw-green);
+
+  /* colors that appear in the text */
+  --hw-modern-edition-element-text-color: white;
+  --hw-original-edition-element-text-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --hw-volume-text-color: var(
+      --hw-near-white
+    ); /*link to --pb-color-primary or global variable */
+    --hw-volume-text-bg-color: var(--hw-lighter-green);
+    --hw-series-text-color: white;
+    --hw-series-bg-color: var(--hw-lighter-green);
+
+    --hw-volume-nav-dropdown-bg-color: var(--hw-lighter-green-2);
+    --hw-volume-nav-dropdown-text-color: white;
+    --hw-series-nav-dropdown-bg-color: var(--hw-lighter-green-2);
+    --hw-series-nav-dropdown-text-color: white;
+
+    --hw-volume-nav-selected-bg-color: var(--hw-lighter-green);
+    --hw-volume-nav-selected-text-color: white;
+    --hw-series-nav-selected-bg-color: var(--hw-green-header);
+    --hw-series-nav-selected-text-color: white;
+
+    --hw-volume-overview-bg-color: var(--hw-lighter-green);
+
+    --hw-series-logo: url("../images/HWGW_logo_RGB_cropped_on_dark.png");
+    --hc-logo: url("../images/logo_Humanitiesconnect_dark.svg");
+
+    --hw-tabs-text-color: var(--hw-near-white);
+    --hw-tabs-bg-color: var(--hw-lighter-green-2);
+    --hw-tabs-unselected-bg-color: #496771;
+
+    --hw-search-option-bg-color: var(--hw-green);
+    --hw-search-option-count-text-color: white;
+    --hw-search-checkbox-color: white;
+    --hw-search-checkbox-bg-color: black;
+    --hw-search-input-color: white;
+    --hw-search-suggestions-bg-color: var(--hw-lighter-green);
+
+    /* colors that appear in the text */
+    --hw-bibl-color: #a6d4f5;
+    --hw-object-color: #8fccad;
+    --hw-organisation-color: #fcc5c5;
+    --hw-person-color: #fcc5c5;
+    --hw-place-color: #fcc5c5;
+
+    --hw-corrected-color: var(--hw-green);
+
+    --hw-general-dropdown-color: var(--hw-lighter-green-2);
+
+    --hw-original-edition-text-color: var(--hw-btn-green);
+    --hw-original-edition-element-color: var(--hw-btn-green);
+    --hw-modern-edition-text-color: var(--hw-lighter-beige);
+    --hw-modern-edition-element-color: var(--hw-beige);
+  }
+}

@@ -1,0 +1,784 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>HWGW – Hinweise</title>
+    <meta name="description" content="Start page of the series." />
+    <link
+      rel="icon"
+      type="image/png"
+      href="resources/images/HWGW_Edition_favicon.png"
+    />
+
+    <link rel="stylesheet" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-core.css" />
+    <link rel="stylesheet" href="resources/css/series-header-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/series-main-layout.css" />
+    <link rel="stylesheet" href="resources/css/series-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
+
+    <script src="resources/scripts/hwgw/compress-header.js" />
+  </head>
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header id="header">
+        <a
+          class="series-logo"
+          href="${app}/index.html"
+          data-template="pages:parse-params"
+          aria-label="Startseite der Serie"
+        />
+        <a class="skip-link" href="#main">Springe zum Inhalt</a>
+        <a
+          class="skip-link"
+          href="${app}/sitemap.html"
+          data-template="pages:parse-params"
+          >Sitemap</a
+        >
+        <div>
+          <nav>
+            <ul>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Digitale Edition</a
+                >
+                <div class="dropdown-content">
+                  <ul
+                    data-template="lib:include"
+                    data-template-path="templates/series-volume-navigation.html"
+                  />
+                </div>
+              </li>
+              <li>
+                <a href="${app}/project.html" data-template="pages:parse-params"
+                  >Projekt</a
+                >
+              </li>
+              <li class="dropdown toolbar-item active-nav-item">
+                <a class="nav-head nav-head-button">Hinweise</a>
+                <div class="dropdown-content">
+                  <ul>
+                    <li>
+                      <a href="#orthography">Orthografie und Interpunktion</a>
+                    </li>
+                    <li>
+                      <a href="#pagination">Paginierung </a>
+                    </li>
+                    <li>
+                      <a href="#typography">Typografie </a>
+                    </li>
+                    <li>
+                      <a href="#comment-numbers">Anmerkungen</a>
+                    </li>
+                    <li>
+                      <a href="#quotes">Zitate </a>
+                    </li>
+                    <li>
+                      <a href="#transcription-manuscripts"
+                        >Transkriptionsregeln für handschriftliches Material
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#transcription-print"
+                        >Transkriptionsregeln für gedrucktes Material</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#figures">Abbildungen </a>
+                    </li>
+                    <li>
+                      <a href="#comments">Kommentar </a>
+                    </li>
+                    <li>
+                      <a href="#sources">Dokumente und Quellen </a>
+                    </li>
+                    <li>
+                      <a href="#search-and-index">Suche und Index </a>
+                    </li>
+                    <li>
+                      <a href="#annotations"
+                        >Annotation von Objekten, Personen, Orten und
+                        Organisationen</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#corrections">Korrigenda </a>
+                    </li>
+                    <li>
+                      <a href="#abbreviations">Verwendete Abkürzungen</a>
+                    </li>
+                    <li>
+                      <a href="#sigla">Verwendete Siglen </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="${app}/search.html?query="
+                  data-template="pages:parse-params"
+                  >Suche</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main id="main">
+        <div style="height: 1px; overflow: hidden">
+          <h1>Hinweise</h1>
+        </div>
+
+        <div class="text-section" id="orthography">
+          <div>
+            <h2>Orthografie und Interpunktion</h2>
+            <p>
+              In der digitalen Edition sind die Orthografie und Interpunktion
+              der Originalausgabe Wölfflins, das heisst der ersten Druckfassung,
+              übernommen. Offenkundige Druckfehler sind im Apparat verzeichnet
+              und lassen sich per Mouseover anzeigen.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="pagination">
+          <div>
+            <h2>Paginierung</h2>
+            <p>
+              Seitenwechsel werden mit «|» markiert. Die Seitenzahl mit der
+              entsprechenden Jahreszahl der Originalausgabe respektive der
+              Druckedition erscheint in der Randleiste der digitalen Edition.
+              Über die Einstellungen können die Seitenwechsel ausgeblendet
+              werden.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="typography">
+          <div>
+            <h2>Typografie</h2>
+            <p>
+              In der digitalen Edition sind Passagen des Primärtexts durch
+              <i>Kursivierung</i> oder
+              <em class="gesperrt">Sperrsatz</em>
+              hervorgehoben. Diese Hervorhebungen sind auf Wölfflin selbst
+              zurückzuführen und wurden dem Original entsprechend übernommen.
+            </p>
+            <p>
+              Texte in Fraktur (zeitgenössische Publikationen wie z.B.
+              Rezensionen) werden in der gedruckten sowie in der digitalen
+              Edition in Antiqua dargestellt. Sofern diese Texte zur
+              Hervorhebung Passagen in Antiqua enthalten, werden diese in der
+              Edition kursiviert.
+            </p>
+            <p>
+              Die in den Einleitungen und Kommentaren der Edition genannten
+              Titel von Kunstwerken, Büchern und Zeitschriften, Ausstellungen
+              und Projekten stehen kursiv. Nicht kursiviert werden dagegen
+              Gebäude, Institutionen, Organisationen, Parteien, Künstlergruppen
+              und Orte.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="comment-numbers">
+          <div>
+            <h2>Anmerkungen</h2>
+            <p>
+              Haupttext und Fussnoten Wölfflins sind durch wissenschaftliche
+              Kommentare erschlossen. Während die Zählung von Wölfflins
+              Fussnoten in der Originalausgabe auf jeder Seite in arabischen
+              Ziffern jeweils neu bei «1» beginnt (<sup>1</sup>, <sup>2</sup>,
+              <sup>3</sup>), wird sie in der gedruckten wie auch in der
+              digitalen Edition stattdessen in römischen Ziffern wiedergegeben
+              (<sup>I</sup>, <sup>II</sup>, <sup>III</sup>). Die Anmerkungen des
+              Kommentars werden fortlaufend in arabischen Ziffern (<sup
+                class="sup-beige"
+                >1</sup
+              >, <sup class="sup-beige">2</sup>, <sup class="sup-beige">3</sup>)
+              nummeriert.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="quotes">
+          <div>
+            <h2>Zitate</h2>
+            <p>
+              Zitate werden in doppelter Anführung («…») wiedergegeben. Zitate
+              innerhalb von Zitaten stehen in einfachen Anführungszeichen (‹…›).
+              Bei der Wiedergabe von Zitatfragmenten wird auf vorangehende oder
+              nachfolgende Auslassungszeichen ([...]) verzichtet. Das
+              Satzzeichen wird dem Schlusszeichen nachgestellt. Lange Zitate
+              werden eingerückt und stehen ohne Anführungszeichen.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="transcription-manuscripts">
+          <div>
+            <h2>Transkriptionsregeln für handschriftliches Material</h2>
+            <p>
+              Das für den Apparat der Edition (Kommentar, dokumentarischer
+              Anhang) berücksichtigte handschriftliche Archivmaterial, wie
+              Manuskripte, Wölfflins Annotationen im Autorenexemplar,
+              Aufzeichnungen in Notizheften sowie Briefe Wölfflins und seiner
+              Zeitgenossen, wurde nach den unten aufgeführten Regeln
+              transkribiert. Die in den Archivalien verwendeten Abkürzungen
+              wurden beibehalten, aber in einigen Fällen zugunsten einer
+              besseren Leserlichkeit in geschweiften Klammern vervollständigt.
+              Reduplikationszeichen sowie stenografische Zeichen wurden
+              stillschweigend aufgelöst.
+            </p>
+            <table>
+              <tr>
+                <td>&lt;&gt;</td>
+                <td>unleserliches Wort oder unleserlicher Satzteil</td>
+              </tr>
+              <tr>
+                <td>&lt;T&gt;ext</td>
+                <td>unsicher entzifferter Buchstabe</td>
+              </tr>
+              <tr>
+                <td>&lt;Text&gt;</td>
+                <td>
+                  schwer leserliches oder unleserliches Wort, wo möglich aus dem
+                  semantischen Zusammenhang rekonstruiert
+                </td>
+              </tr>
+              <tr>
+                <td>{Text}</td>
+                <td>Ergänzung</td>
+              </tr>
+              <tr>
+                <td>
+                  <del>Text</del>
+                </td>
+                <td>
+                  durchgestrichene Textpassage, z.B. im Zusammenhang mit einer
+                  Sofortkorrektur
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <sup>Text</sup>
+                </td>
+                <td>
+                  nachträglich in einen bestehenden Text eingefügter
+                  Textbestandteil
+                </td>
+              </tr>
+              <tr>
+                <td>/</td>
+                <td>Zeilenumbruch</td>
+              </tr>
+              <tr>
+                <td>//</td>
+                <td>Absatz</td>
+              </tr>
+              <tr>
+                <td>
+                  <u>Text</u>
+                </td>
+                <td>einfache Unterstreichng</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <u class="u-styled">Text</u>
+                </td>
+                <td>doppelt unterstrichene Passage</td>
+              </tr>
+            </table>
+            <p>
+              Bei den <cite>Dokumenten</cite> entfällt die o.g. Kennzeichnung
+              von Zeilenumbrüchen, Silbentrennungen und Absätzen zugunsten einer
+              besseren Lesbarkeit. Absätze werden typografisch dargestellt.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="transcription-print">
+          <div>
+            <h2>Transkriptionsregeln für gedrucktes Material</h2>
+            <p>
+              Grundsätzlich wurde die originale Schreibweise der Vorlage,
+              einschliesslich Hervorhebungen etc., übernommen. Ergänzungen,
+              Auslassungen oder Korrekturen sind durch eckige Klammern
+              gekennzeichnet. Falls im Originaltext selbst eckige Klammern
+              verwendet werden, sind Ergänzungen, Auslassungen und Korrekturen
+              analog zur Vorgehensweise bei handschriftlichem Material durch
+              geschweifte Klammern gekennzeichnet.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="figures">
+          <div>
+            <h2>Abbildungen</h2>
+            <p>
+              Ziel der Edition ist es, die ursprünglichen Abbildungsvorlagen zu
+              recherchieren, die Wölfflin für seine Publikationen verwendete,
+              diese zu reproduzieren und im Abbildungsverzeichnis nachzuweisen.
+            </p>
+            <p>
+              Wölfflin legte grossen Wert auf die Bebilderung seiner Bücher und
+              Lehrveranstaltungen und trug dafür im Laufe seines Lebens eine
+              umfangreiche Sammlung von Fotografien und Glasdiapositiven
+              zusammen, die er teils auf Reisen erwarb, teils bei Alinari,
+              Bruckmann und anderen Verlagen bestellte oder anfertigen liess.
+              Für die Bebilderung seiner Publikationen verwendete er ausserdem
+              Druckgrafiken aus Büchern sowie eigene Skizzen.
+            </p>
+            <p>
+              Ein Teil der von Wölfflin verwendeten fotografischen Vorlagen, die
+              zum Teil mit Annotationen, Stempeln oder Druckanweisungen versehen
+              sind, befindet sich in seinem fotografischen Nachlass in der
+              Mediathek des Kunsthistorischen Instituts der Universität Zürich,
+              andere können im Bildarchiv des Bruckmann-Verlags in München
+              nachgewiesen werden. Die für die Bebilderung verwendeten
+              Zeichnungen von der Hand Wölfflins stammen aus seinen
+              Skizzenbüchern, die als Teil seines wissenschaftlichen Nachlasses
+              in der Universitätsbibliothek Basel verwahrt werden.
+            </p>
+            <p>
+              Wenn die jeweilige Vorlage einer Abbildung nicht ermittelt werden
+              konnte, wurden Scans nach der jeweiligen Originalausgabe
+              angefertigt. Die Nachweise zu den für die Edition verwendeten
+              Abbildungsvorlagen sind im Abbildungsnachweis des Apparats
+              aufgeführt und lassen sich per Mouseover anzeigen.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="comments">
+          <div>
+            <h2>Kommentar</h2>
+            <p>
+              Der Kommentar dient der wissenschaftlichen Erschliessung und
+              historisch-kritischen Kontextualisierung von Wölfflins Werken. Er
+              enthält Erläuterungen, Literatur- und Abbildungsnachweise sowie
+              den Nachweis von direkten und indirekten Zitaten. Die von Wölfflin
+              angegebenen Belegstellen wurden überprüft und, wo nötig, ergänzt.
+              Sofern die Nachweise Wölfflins eindeutig zu identifizieren sind,
+              wird auf die von ihm verwendeten Ausgaben verwiesen. Andernfalls
+              werden die heute massgeblichen Ausgaben angegeben. Sämtliche
+              fremdsprachige Zitate wurden für den Kommentar übersetzt, wobei
+              die jeweils aktuellen Ausgaben zugrunde gelegt wurden. Sofern
+              nicht anders vermerkt, handelt es sich um Übersetzungen der
+              jeweiligen Verantwortlichen des Kommentars. Des Weiteren enthält
+              der Kommentar Verweise und Anmerkungen zum Druckmanuskript
+              und/oder Autorenexemplar sowie gegebenenfalls zu den zu Lebzeiten
+              Wölfflins erschienenen späteren Auflagen.
+            </p>
+            <p>
+              Zentraler Bestandteil des Kommentars sind Wölfflins
+              handschriftliche Aufzeichnungen (Notizhefte, Notizen und
+              Skizzenbücher), seine Korrespondenz sowie zusätzliche, für die
+              Kontextualisierung relevante archivalische Dokumente wie
+              Verlagsverträge etc. Die Archivalien werden im Kommentar mit
+              Abkürzungen (für Archive, Bibliotheken und Sammlungen) und den
+              dazugehörigen Bestandssignaturen angegeben, die via Mouseover
+              sowie in der Liste <cite>Verwendete Siglen</cite> aufgelöst
+              werden. Sofern die angegebenen Archivalien im dokumentarischen
+              Anhang enthalten sind, lassen sie sich per Link öffnen.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="sources">
+          <div>
+            <h2>Dokumente und Quellen</h2>
+            <p>
+              Die für die Edition zusammengetragenen und transkribierten
+              Dokumente werden zum grossen Teil erstmals veröffentlicht. Jeder
+              Band enthält eine vollständige Auflistung aller verwendeten
+              Archivbestände.
+            </p>
+            <p>
+              Der dokumentarische Anhang (<cite>Dokumente</cite>) jedes
+              Editionsbandes enthält Materialien zur Entstehungsgeschichte und
+              Rezeption des jeweiligen Werkes Wölfflins in chronologischer
+              Reihenfolge: Auszüge aus Briefen und Postkarten, eine Auswahl von
+              Notizen und Notizhefteinträgen sowie Rezensionen. Diese Dokumente
+              sind mit ihren jeweiligen Erwähnungen in den Anmerkungen der
+              Einleitung sowie im Kommentar zu Wölfflins Werk verlinkt und
+              abrufbar.
+            </p>
+            <p>
+              Die Transkription der Dokumente folgt den oben angeführten
+              <a class="hw-internal-link" href="#transcription-manuscripts">
+                <cite>Transkriptionsregeln für handschriftliches Material</cite>
+              </a>
+              oder
+              <a class="hw-internal-link" href="#transcription-print">
+                <cite>Transkriptionsregeln für gedrucktes Material</cite> </a
+              >. Offenkundige Satzfehler wurden stillschweigend korrigiert. Der
+              dazugehörige wissenschaftliche Kommentar folgt den oben
+              angeführten Regeln.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="search-and-index">
+          <div>
+            <h2>Suche und Index</h2>
+            <p>
+              Zusätzlich zur Navigation über die Gliederung sind alle in der
+              digitalen Edition enthaltenen Texte bzw. Textteile auch
+              bandübergreifend über die Volltextsuche und den Index erreichbar.
+              Alle Texte der digitalen Edition sind für die Suche mit den
+              Angaben zum dazugehörigen Editionsband und zum jeweiligen Kontext
+              (<cite>Einleitung</cite>, <cite>Kommentar</cite>,
+              <cite>Dokumente</cite> etc.) versehen, damit bandspezifisch
+              zwischen Primär- und Sekundärtexten unterschieden werden kann. Bei
+              Indexeinträgen von Objekten (Werke der Architektur, Malerei,
+              Zeichnung, Druckgrafik, Kunsthandwerk), Orten oder Personen
+              dagegen steht die Bandangabe für die Nennung im entsprechenden
+              Editionsband und dient dazu, die Einträge auf diejenigen, die für
+              einen Band relevant sind, zu reduzieren.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="annotations">
+          <div>
+            <h2>Annotation von Objekten, Personen, Orten und Organisationen</h2>
+            <p>
+              Die Annotation als Form der Datenanreicherung innerhalb der
+              digitalen Edition ermöglicht die Index-Suche und vereinfacht die
+              Lesbarkeit und Zugänglichkeit der Inhalte. Durch die Verwendung
+              von Normdaten wird die Nachnutzbarkeit und Interoperabilität der
+              Daten nachhaltig gewährleistet.
+            </p>
+            <p>
+              Die Annotation von Objekten (Werke der Architektur, Malerei,
+              Zeichnung, Druckgrafik, Kunsthandwerk) und Personen in der
+              digitalen Edition bildet das Personen- und Objektverzeichnis der
+              gedruckten Edition (<cite>Verzeichnis der erwähnten Objekte</cite>
+              und <cite>Personenverzeichnis</cite>) vollständig ab. Darüber
+              hinaus sind in der digitalen Edition Orte und Organisationen
+              annotiert.
+            </p>
+            <p>
+              Alle Annotationen sind mit dem Index verlinkt und über die
+              Index-Suche auffindbar. In den Einstellungen kann die farbige
+              Markierung der Annotationen verborgen oder auf die jeweils erste
+              Erwähnung innerhalb eines Absatzes reduziert werden. Im Falle von
+              Objekten ohne Urhebernennung ist die Person, soweit bekannt,
+              ebenfalls markiert und über die Index-Suche zusammen mit dem
+              Objekt auffindbar.
+            </p>
+            <p>
+              Die Normdaten für Personen, Orte und Organisationen entstammen der
+              GND. Fehlende Einträge wurden wo nötig in der GND nachgetragen
+              oder bei unzureichender Eignung lokal erfasst. Kunstwerke wurden
+              ausschliesslich lokal annotiert.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="corrections">
+          <div>
+            <h2>Korrigenda</h2>
+            <p>
+              Im Zuge der digitalen Aufbereitung wurden am Text der Druckedition
+              minimale Eingriffe vorgenommen: Zum einen wurden inhaltliche
+              Fehler korrigiert, zum anderen formale Fehler behoben, um die
+              Korrektheit und Einheitlichkeit des Textes zu gewährleisten. Die
+              Eingriffe in den Text der Druckausgabe sind jeweils markiert,
+              wobei die Version der Druckausgabe durch Mouseover angezeigt
+              werden kann. Alle Korrekturen werden bei Projektabschluss
+              gesammelt und unter
+              <cite>Korrigenda</cite> aufgeführt.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-section" id="abbreviations">
+          <div>
+            <h2>Verwendete Abkürzungen</h2>
+            <table>
+              <tr>
+                <td>Abdr.</td>
+                <td>Abdruck</td>
+              </tr>
+              <tr>
+                <td>abgedr.</td>
+                <td>abgedruckt</td>
+              </tr>
+              <tr>
+                <td>abgew.</td>
+                <td>abgewandelt</td>
+              </tr>
+              <tr>
+                <td>abgew. Zit.</td>
+                <td>abgewandeltes Zitat</td>
+              </tr>
+              <tr>
+                <td>Anm.</td>
+                <td>Anmerkung</td>
+              </tr>
+              <tr>
+                <td>Ausst.-Kat.</td>
+                <td>Ausstellungskatalog</td>
+              </tr>
+              <tr>
+                <td>Bd.</td>
+                <td>Band</td>
+              </tr>
+              <tr>
+                <td>Bde.</td>
+                <td>Bände</td>
+              </tr>
+              <tr>
+                <td>bes.</td>
+                <td>besonders</td>
+              </tr>
+              <tr>
+                <td>bez.</td>
+                <td>bezeichnet</td>
+              </tr>
+              <tr>
+                <td>d.h.</td>
+                <td>das heisst</td>
+              </tr>
+              <tr>
+                <td>ders.</td>
+                <td>derselbe</td>
+              </tr>
+              <tr>
+                <td>durchges.</td>
+                <td>durchgesehen</td>
+              </tr>
+              <tr>
+                <td>ebd.</td>
+                <td>ebenda</td>
+              </tr>
+              <tr>
+                <td>eigtl.</td>
+                <td>eigentlich</td>
+              </tr>
+              <tr>
+                <td>Einl.</td>
+                <td>Einleitung</td>
+              </tr>
+              <tr>
+                <td>erw.</td>
+                <td>erweitert</td>
+              </tr>
+              <tr>
+                <td>etc.</td>
+                <td>et cetera</td>
+              </tr>
+              <tr>
+                <td>gek.</td>
+                <td>gekürztes</td>
+              </tr>
+              <tr>
+                <td>Zit.</td>
+                <td>Zitat</td>
+              </tr>
+              <tr>
+                <td>Fn.</td>
+                <td>Fussnote</td>
+              </tr>
+              <tr>
+                <td>fol.</td>
+                <td>Folio</td>
+              </tr>
+              <tr>
+                <td>frz.</td>
+                <td>französisch</td>
+              </tr>
+              <tr>
+                <td>HW</td>
+                <td>Heinrich Wölfflin</td>
+              </tr>
+              <tr>
+                <td>Inv.</td>
+                <td>Inventarnummer</td>
+              </tr>
+              <tr>
+                <td>Kat.</td>
+                <td>Katalog</td>
+              </tr>
+              <tr>
+                <td>Kat.Nr.</td>
+                <td>Katalognummer</td>
+              </tr>
+              <tr>
+                <td>lt.</td>
+                <td>laut</td>
+              </tr>
+              <tr>
+                <td>Nachdr.</td>
+                <td>Nachdruck</td>
+              </tr>
+              <tr>
+                <td>Nh.</td>
+                <td>Notizheft</td>
+              </tr>
+              <tr>
+                <td>NL</td>
+                <td>Nachlass</td>
+              </tr>
+              <tr>
+                <td>Nr.</td>
+                <td>Nummer</td>
+              </tr>
+              <tr>
+                <td>o.A.</td>
+                <td>ohne Angabe</td>
+              </tr>
+              <tr>
+                <td>o.D.</td>
+                <td>ohne Datumsangabe</td>
+              </tr>
+              <tr>
+                <td>o.g.</td>
+                <td>oben genannt</td>
+              </tr>
+              <tr>
+                <td>o.J.</td>
+                <td>ohne Jahresangabe</td>
+              </tr>
+              <tr>
+                <td>o.O.</td>
+                <td>ohne Ortsangabe</td>
+              </tr>
+              <tr>
+                <td>o.S.</td>
+                <td>ohne Seitenangabe</td>
+              </tr>
+              <tr>
+                <td>o.V.</td>
+                <td>ohne Verlagsangabe</td>
+              </tr>
+              <tr>
+                <td>OPAC</td>
+                <td>Online Public Access Catalogue</td>
+              </tr>
+              <tr>
+                <td>p.</td>
+                <td>Pagina</td>
+              </tr>
+              <tr>
+                <td>r</td>
+                <td>recto</td>
+              </tr>
+              <tr>
+                <td>s.</td>
+                <td>siehe</td>
+              </tr>
+              <tr>
+                <td>S.</td>
+                <td>Seite</td>
+              </tr>
+              <tr>
+                <td>u.</td>
+                <td>und</td>
+              </tr>
+              <tr>
+                <td>u.a.</td>
+                <td>und andere</td>
+              </tr>
+              <tr>
+                <td>überarb.</td>
+                <td>überarbeitet</td>
+              </tr>
+              <tr>
+                <td>usw.</td>
+                <td>und so weiter</td>
+              </tr>
+              <tr>
+                <td>v</td>
+                <td>verso</td>
+              </tr>
+              <tr>
+                <td>V.</td>
+                <td>Vers</td>
+              </tr>
+              <tr>
+                <td>vgl.</td>
+                <td>vergleiche</td>
+              </tr>
+              <tr>
+                <td>v.Chr.</td>
+                <td>vor Christus</td>
+              </tr>
+              <tr>
+                <td>wörtl.</td>
+                <td>wörtlich</td>
+              </tr>
+              <tr>
+                <td>wörtl.Zit.</td>
+                <td>wörtliches Zitat</td>
+              </tr>
+              <tr>
+                <td>Z.</td>
+                <td>Zeile</td>
+              </tr>
+              <tr>
+                <td>z.B.</td>
+                <td>zum Beispiel</td>
+              </tr>
+              <tr>
+                <td>Zit.</td>
+                <td>Zitat</td>
+              </tr>
+              <tr>
+                <td>zus.gez.Zit.</td>
+                <td>zusammengezogenes Zitat</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="text-section" id="sigla">
+          <div>
+            <h2>Verwendete Siglen</h2>
+            <p>
+              Die vorliegende Edition verwendet in den Anmerkungen zur
+              Einleitung und im Kommentar anstelle von ausführlichen
+              Literaturangaben Siglen nach folgendem Schema:
+              <br />Autor(en)/Herausgeber Jahreszahl [Originaljahr] Kurztitel.
+            </p>
+            <p>
+              Die Siglen werden im Literaturverzeichnis aufgelöst, wobei jede
+              Sigle mit der dazugehörigen vollständigen Angabe verlinkt ist und
+              per Mouseover angezeigt werden kann.
+            </p>
+            <p>
+              Gleiches gilt für den Nachweis von Archivmaterial, das in
+              abgekürzter Form durch die jeweilige Institution und
+              Bestandssignatur nachgewiesen wird (z.B. UB BS, NL 95, III G 19).
+              Für die Notizbücher Wölfflins (UB BS, NL 95, Nachtrag 1973, I 1 a)
+              wird die Abkürzung «Nh.» verwendet. Per Mouseover lässt sich die
+              vollständige Archivangabe mit der dazugehörigen Bestandssignatur
+              anzeigen.
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/series-footer.html"
+      />
+    </pb-page>
+    <div class="splash" />
+  </body>
+</html>

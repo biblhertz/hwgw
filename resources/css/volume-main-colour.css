@@ -1,0 +1,35 @@
+pb-page {
+  color: var(--hw-volume-text-color);
+  background-color: var(--hw-volume-text-bg-color);
+}
+
+.volume-overview-main {
+  background-color: var(--hw-volume-overview-bg-color);
+  margin: 0;
+  padding: 35px;
+}
+
+/*breadcrumbs*/
+.breadcrumbs {
+  background-color: var(--hw-volume-text-bg-color);
+}
+
+/*aside things*/
+
+pb-tabs {
+  background-color: var(--hw-tabs-unselected-bg-color);
+  color: var(--hw-tabs-text-color);
+  box-shadow: 3px 3px 6px #00000029;
+
+  --tify-body-bg: var(--hw-tabs-unselected-bg-color);
+  --tify-text-color: var(--hw-green);
+  --tify-header-bg: var(--hw-volume-pagination-button-color);
+}
+
+.iron-selected {
+  background-color: var(--hw-tabs-bg-color); /* colour when active */
+}
+
+paper-tab {
+  box-shadow: 3px 3px 6px #00000029;
+}

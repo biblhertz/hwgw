@@ -1,0 +1,132 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+body {
+  font-family: var(--pb-base-font-family);
+  color: var(--hw-series-text-color);
+  background-color: var(--hw-series-bg-color);
+  --hw-series-left-indent: 120px;
+  --hw-series-width: 1220px;
+}
+
+main {
+  margin-top: 200px;
+  min-height: calc(100vh - 450px);
+}
+
+/*
+pb-paginate {
+    position: fixed;
+    z-index: 8;
+    background-color: white;
+}
+*/
+
+.text-section > div {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0 auto;
+  padding-left: calc(120px + 46px);
+  padding-right: 46px;
+  max-width: var(--hw-series-width);
+}
+
+#t-section-main {
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 300;
+  max-width: var(--hw-series-width);
+}
+.text-section ul {
+  list-style-type: none;
+  padding: 0 inherit 0 0;
+  margin: 0;
+}
+.text-section div > ul {
+  padding-left: 0;
+}
+
+.gesperrt {
+  letter-spacing: 0.2em;
+  font-style: normal;
+}
+
+.sup-beige {
+  color: var(--hw-modern-edition-text-color);
+}
+
+.u-styled {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
+
+#t-section-main {
+  padding: 0.2% 46px;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.text-section h2,
+.text-section h1 {
+  margin-left: calc(0px - var(--hw-series-left-indent));
+}
+
+.text-section p,
+.text-section ul {
+  font: normal normal 300 1em/2 var(--pb-base-font-family);
+  margin-top: 0;
+  margin-bottom: 1%;
+}
+
+h1,
+h2 {
+  font: normal normal 300 2.25em/1.5 var(--pb-base-font-family);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h3 {
+  font: normal normal 400 1.3em/1.2 var(--pb-base-font-family);
+  margin-top: 0;
+}
+
+.hw-unmarked-link {
+  color: inherit;
+  text-decoration-color: var(--hw-series-text-link-decoration-color);
+  text-decoration: none;
+}
+
+.hw-internal-link {
+  color: inherit;
+  text-decoration-color: var(--hw-series-text-link-decoration-color);
+}
+
+.hw-external-link {
+  color: inherit;
+  text-decoration-color: var(--hw-series-text-link-decoration-color);
+}
+
+.hw-external-link:after {
+  content: "↗︎";
+  color: var(--hw-series-text-link-decoration-color);
+  text-decoration: none;
+}
+
+tr,
+td {
+  vertical-align: top;
+}

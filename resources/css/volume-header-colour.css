@@ -1,0 +1,155 @@
+header {
+  background-color: var(--hw-volume-header-bg-color);
+
+  /* background of pb-select-feature dropdown */
+  --paper-listbox-background-color: var(--hw-green-header);
+
+  /* color of options of pb-select-feature dropdown */
+  --primary-text-color: white;
+
+  /* color of label in pb-select-feature */
+  --paper-input-container-color: lightgray;
+
+  /* color of label in pb-select-feature after clicking*/
+  --paper-input-container-focus-color: white;
+
+  --paper-checkbox-unchecked-background-color: white;
+  --paper-checkbox-unchecked-color: gray;
+  --paper-checkbox-checked-color: var(--hw-beige); /* TODO */
+}
+
+header .logo {
+  background-image: url("../images/HWGW_logo.svg");
+}
+
+#hw {
+  color: var(--hw-volume-header-hw-color);
+}
+
+#gw {
+  color: var(--hw-volume-header-gw-color);
+}
+
+#volume-title {
+  color: var(--hw-volume-header-text-color);
+}
+
+/*toolbar*/
+
+nav .toolbar-item {
+  background-color: var(--hw-volume-nav-element-bg-color);
+  color: var(--hw-volume-nav-element-text-color);
+}
+
+menu .toolbar-item {
+  background-color: var(--hw-volume-menu-element-bg-color);
+  color: var(--hw-volume-menu-element-text-color);
+}
+
+.dropdown .nav-head-button:hover,
+.dropdown .nav-head-button:focus {
+  color: var(--hw-volume-nav-dropdown-text-color);
+  background-color: var(--hw-volume-nav-dropdown-bg-color);
+}
+
+.dropdown .menu-head-button:hover,
+.dropdown .menu-head-button:focus {
+  color: var(--hw-volume-menu-dropdown-text-color);
+  background-color: var(--hw-volume-menu-dropdown-bg-color);
+}
+
+.toolbar {
+  background-color: var(--hw-volume-header-bg-color);
+  color: var(--hw-volume-header-text-color);
+}
+
+.selected-toolbar-item {
+  color: var(--hw-volume-nav-selected-text-color) !important;
+  background-color: var(--hw-volume-nav-selected-bg-color);
+}
+
+.btn-pages {
+  background-color: var(--hw-volume-pagination-button-color);
+}
+
+.btn-zoom {
+  background-color: inherit;
+  color: var(--hw-volume-header-text-color);
+}
+
+i.material-icons {
+  color: var(--hw-volume-header-text-color);
+}
+
+nav .dropdown-content {
+  background-color: var(--hw-volume-nav-dropdown-bg-color);
+  color: var(--hw-volume-nav-dropdown-text-color);
+}
+
+menu .dropdown-content {
+  background-color: var(--hw-volume-menu-dropdown-bg-color);
+  color: var(--hw-volume-menu-dropdown-text-color);
+}
+
+#select-pers {
+  --paper-input-container-color: var(--hw-person-color);
+}
+
+#select-org {
+  --paper-input-container-color: var(--hw-organisation-color);
+}
+
+#select-obj {
+  --paper-input-container-color: var(--hw-object-color);
+}
+
+#select-place {
+  --paper-input-container-color: var(--hw-place-color);
+}
+
+#select-bibl {
+  --paper-input-container-color: var(--hw-bibl-color);
+}
+
+#select-pb {
+  --paper-input-container-color: var(--hw-modern-edition-text-color);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* TODO */
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+  background: var(--hw-volume-text-link-decoration-color);
+}
+
+/* narrow */
+.burger-dropdown-content {
+  background-color: var(--hw-volume-narrow-nav-bg-color);
+  color: var(--hw-volume-narrow-nav-text-color);
+}
+
+#toc2 a {
+  color: white; /* TODO */
+}
+
+.skip-link {
+  background-color: var(--hw-volume-nav-element-bg-color);
+  color: var(--hw-volume-nav-element-text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toc pb-link a {
+    color: white; /* TODO */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--hw-volume-text-bg-color);
+  }
+}

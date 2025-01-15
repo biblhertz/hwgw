@@ -1,0 +1,49 @@
+{
+  "hwgw": {
+    "title": "Foo",
+    "annotations": "Annotations",
+    "content": "Content",
+    "context": "Context",
+    "indexes": "Indexes",
+    "occurrences": "Occurrences",
+    "volume": "Volume",
+    "index": {
+      "author": "Author resp. Creator",
+      "bibliography": "Bibliography",
+      "object": "Object",
+      "objects": "Objects",
+      "organization": "Organization",
+      "organizations": "Organizations",
+      "people": "People",
+      "person": "Person",
+      "place": "Place",
+      "places": "Places",
+      "type": "Type",
+      "provenience": "Place"
+    },
+    "genre": {
+      "apparatus": "Apparatus",
+      "commentaryToDocuments": "Comments (documents)",
+      "commentaryToEdition": "Comments (edition)",
+      "documents": "Documents",
+      "edition": "Edition text",
+      "index": "Index",
+      "introduction": "Introduction"
+    },
+    "tabs": {
+      "commentary": "Comments",
+      "commentaryNotes": "Comments and notes",
+      "ednote": "Editorial note",
+      "facsimiles": "Facsimiles",
+      "figures": "Figures",
+      "notes": "Notes"
+    },
+    "viewModes": {
+      "pageBreaks": "Page breaks",
+      "hideRepeated": "Hide repetitions",
+      "showAll": "Show all",
+      "hideAll": "Hide all",
+      "hideInText": "Hide in text"
+    }
+  }
+}

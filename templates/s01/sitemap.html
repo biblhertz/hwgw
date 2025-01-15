@@ -1,0 +1,139 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>
+      Sitemap für Prolegomena zu einer Psychologie der Architektur 1886
+    </title>
+    <meta name="description" content="Wölfflin - books" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="resources/images/favicon.ico"
+    />
+    <link rel="icon" type="image/png" href="resources/images/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/theme.css" />
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-core.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/volume-header-layout.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-main-colour.css" />
+    <link rel="stylesheet" href="resources/css/volume-main-layout.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-responsive.css" />
+
+    <!-- webfont tied to Adobe-->
+    <link rel="stylesheet" href="https://use.typekit.net/mkk8aec.css" />
+    <!-- Google icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+    <style>
+      main {
+          display: unset;
+      }
+
+      main a {
+          color: var(--hw-series-text-color);
+      }
+
+      .sitemap ul {
+          list-style: none;
+      }
+
+      .sitemap &gt; ul {
+          padding-left: 0;
+      }
+
+      .sitemap &gt; ul &gt; li {
+          margin-top: 1em;
+      }
+
+      .sitemap &gt; ul &gt; li &gt; a {
+          font-size: larger;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header>
+        <div class="header">
+          <a
+            href="${app}/index.html"
+            class="logo"
+            data-template="pages:parse-params"
+            aria-label="Startseite der Serie"
+          />
+          <div class="header-title">
+            <a href="index.html" class="structure-link">
+              <span id="hw">Heinrich Wölfflin</span>
+              <span id="gw">Gesammelte Werke</span>
+            </a>
+            <br />
+            <a
+              id="volume-title"
+              href="${app}/s01/index.html"
+              data-template="pages:parse-params"
+              class="structure-link"
+            >
+              <span class="werke"
+                >Prolegomena zu einer Psychologie der Architektur</span
+              >
+              <span class="werke">1886</span>
+              <br />
+              <span id="schriften">Schriften 1</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-body">
+        <div class="sitemap">
+          <h1>
+            Sitemap für
+            <cite>Prolegomena zu einer Psychologie der Architektur 1886</cite>
+          </h1>
+          <p>
+            Diese Übersicht beschreibt den Band
+            <emph>Schriften 1 Prolegomena</emph>. Für die Orientierung
+            ausserhalb dient das
+            <a data-template="pages:parse-params" href="${app}/sitemap.html"
+              >Sitemap der Serie HWGW</a
+            >.
+          </p>
+
+          <ul />
+        </div>
+      </main>
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/volume-footer.html"
+      />
+    </pb-page>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  --pb-base-font-family: "Noto Sans", "Roboto", "Noto", sans-serif;
+  --pb-serif-font-family: "Noto Serif", "Junicode", "Georgia", "Times New Roman",
+    serif;
+  --pb-heading-font-family: "Noto Sans", Verdana, "Helvetica", sans-serif;
+
+  --pb-base-font-size: 16px;
+  --pb-content-font-size: 16px;
+
+  --pb-logo-image-width: 94px;
+  --pb-logo-image-height: 85px;
+
+  --pb-heading-font-family: "Noto Sans", "Roboto", "Noto", sans-serif;
+  --pb-heading-font-weight: 700;
+  --pb-heading-line-height: 28px;
+
+  --pb-view-max-width: 1440px;
+
+  --pb-footnote-font-size: 60%;
+}
