@@ -179,6 +179,18 @@
   }
 }
 
+@media only screen and (max-height: 1200px) and (max-height: 1500px) and (min-width: 1921px) {
+  /* ultra wide but not high at all */
+  .hw-tabs {
+    height: 408px;
+  }
+
+  pb-tabs {
+    top: 250px;
+    height: 458px;
+  }
+}
+
 @media only screen and (min-height: 1500px) {
   .hw-tabs {
     height: 808px;
