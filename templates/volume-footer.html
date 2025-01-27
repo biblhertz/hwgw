@@ -2,12 +2,13 @@
   <ul>
     <li>
       <span class="hwgw-footer-label">Published by</span>
-      <a class="humanities-connect-logo" href="https://humanitiesconnect.pub/"
-        ><img
+      <a class="humanities-connect-logo" href="https://humanitiesconnect.pub/">
+        <img
           src="${app}/resources/images/logo_Humanitiesconnect.svg"
           alt="Humanities Connect"
           data-template="pages:parse-params"
-      /></a>
+        />
+      </a>
     </li>
     <li>
       <ul>
@@ -26,7 +27,17 @@
             >Datenschutz</a
           >
         </li>
-        <li>Version <span data-template="pages:version" /></li>
+        <li>
+          <pb-view
+            id="last-change"
+            src="document1"
+            xpath="//teiHeader/revisionDesc/listChange/change[1]"
+            view="single"
+            odd="woelfflin-meta"
+            disable-history="true"
+            subscribe="transcription"
+          />
+        </li>
       </ul>
     </li>
   </ul>

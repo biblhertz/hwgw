@@ -65,6 +65,11 @@ footer ul li ul {
   padding-left: 0;
 }
 
+#last-change {
+  font: normal normal 300 0.94em/1.25 var(--pb-base-font-family);
+  margin: 0;
+}
+
 @media (max-width: 941px) {
   a.humanities-connect-logo {
     font: normal normal 600 1.5em/1.3em var(--pb-base-font-family);

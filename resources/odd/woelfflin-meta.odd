@@ -3,7 +3,7 @@
                     
                     
                  
-                   <desc>Critical Edition with commentaries</desc></title></titleStmt>
+                    <desc>Critical Edition with commentaries</desc></title></titleStmt>
             <publicationStmt>
                 <publisher>eXistSolutions GmbH</publisher>
                 <availability>
@@ -167,6 +167,8 @@
                 
                 </outputRendition>
             </model>
-        </modelSequence></elementSpec></schemaSpec>
+        </modelSequence></elementSpec><elementSpec ident="change" mode="add"><model behaviour="inline">
+            <param name="content" value="'Letzte Änderung: ' || string-join(reverse(tokenize(@when, '-')), '.')"/>
+        </model></elementSpec></schemaSpec>
         </body>
     </text></TEI>
