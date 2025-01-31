@@ -35,7 +35,7 @@
             <model predicate="string-length(normalize-space(string-join(.//node() intersect (.//pb, following::pb, .//node()[last()])[1]/preceding::node(), ''))) &gt; 0 and $parameters?view='div' and preceding::pb and count(ancestor::div) &lt; 2" behaviour="inline" cssClass="hw-float-column hw-modern-pb hw-float-pb">
                 <desc>In division view, if a chapter starts in the middle of the page, extract the last page break from the previous chapter. This is determined by the content between the chapter start and the first page break from there. Formally this should be identical to the definition of page break but the mark in the text is absent.</desc>
                 <param name="onpage" value="concat(preceding::pb[1]/@ed, ': S. ', preceding::pb[1]/@n)"/>
-                <param name="popup" value="concat(root($parameters?root)//teiHeader//seriesStmt, ', S. ', preceding::pb[1]/@n, '.')"/>
+                <param name="popup" value="concat(root($parameters?root)//teiHeader//sourceDesc/bibl[@type='printed_edition'], ', S. ', preceding::pb[1]/@n, '.')"/>
                 <param name="id" value="@xml:id"/>
                 <pb:template xmlns="" xml:space="preserve"><pb-popover id="altref_19"><span slot="default" id="[[id]]">[[onpage]]</span><template slot="alternate" id="[[id]]"><div class="hw-pb-modern">
                             [[popup]]</div></template></pb-popover></pb:template>

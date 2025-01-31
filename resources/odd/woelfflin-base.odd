@@ -50,7 +50,7 @@
             </model>
             <model behaviour="inline" cssClass="hw-float-column hw-modern-pb hw-float-pb">
                 <desc>Indicate the page number on the right side in a floating element.</desc>
-                <param name="pb-alt" value="concat(root($parameters?root)//teiHeader//seriesStmt, ', S. ', @n, '.')"/>
+                <param name="pb-alt" value="concat(root($parameters?root)//teiHeader//sourceDesc/bibl[@type='printed_edition'], ', S. ', @n, '.')"/>
                 <param name="id" value="@xml:id"/>
                 <param name="pb" value="concat(@ed,' : S. ', @n)"/>
                 <pb:template xmlns="" xml:space="preserve"><pb-popover id="altref_19"><span slot="default" id="[[id]]">[[pb]]</span><template slot="alternate" id="[[id]]"><div class="hw-pb-modern">
@@ -550,9 +550,11 @@
             
             
             
+            
             padding-left: 0;
             list-style-type: none;
                         
+            
             
             
             
@@ -593,9 +595,11 @@
             
             
             
+            
             padding-left: 0;
             list-style-type: none;
                         
+            
             
             
             
@@ -681,8 +685,10 @@
             
             
             
+            
             font-size: 50%;
 vertical-align: top;
+            
             
             
             
@@ -719,8 +725,6 @@ vertical-align: top;
             <param name="name" value="text()"/>
             <param name="prefix" value="'geb. '"/>
             <pb:template xmlns="" xml:space="preserve"> [[prefix]] [[name]]</pb:template>
-        </model><model behaviour="inline"/></elementSpec><elementSpec ident="divGen" mode="add">
-        <model behaviour="block"/>
-    </elementSpec></schemaSpec>
+        </model><model behaviour="inline"/></elementSpec><elementSpec ident="divGen" mode="add"><model behaviour="block"/></elementSpec></schemaSpec>
         </body>
     </text></TEI>
