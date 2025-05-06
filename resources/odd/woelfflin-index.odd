@@ -61,7 +61,7 @@
                 
                 <elementSpec ident="bibl" mode="change"><model predicate="@type=&#34;full&#34;" behaviour="inline">
             <desc>Description in dropdown.</desc>
-            <param name="link" value="concat(&#34;../register.xml#&#34;, parent::bibl/@xml:id)"/>
+            <param name="link" value="concat(&#34;../bibliography.xml#&#34;, parent::bibl/@xml:id)"/>
             <param name="desc" value="node()"/>
             <pb:template xmlns="" xml:space="preserve"><p>[[desc]]</p>
 <p><a href="[[link]]" class="hw-internal-link">Index</a></p></pb:template>
@@ -78,7 +78,7 @@
         </model><model predicate="@corresp" behaviour="inline" cssClass="hw-bibl hw-bibl-toggle">
             <desc>Reference to another index entry, with dropdown.</desc>
             <param name="default" value="string()"/>
-            <param name="alternate" value="id(@corresp, doc($global:data-root || '/register.xml'))/bibl[@type='full']"/>
+            <param name="alternate" value="id(@corresp, doc($global:data-root || '/registers/bibliography.xml'))/bibl[@type='full']"/>
             <param name="persistent" value="true()"/>
             <pb:template xmlns="" xml:space="preserve"><pb-popover>
   <span slot="default">[[default]]</span>
@@ -88,7 +88,7 @@
             <desc>List of entries for sitemap</desc>
             <param name="shorttitle" value="title[@type='short']/string()"/>
             <param name="id" value="@xml:id"/>
-            <pb:template xmlns="" xml:space="preserve"><span><a href="../register.xml#[[id]]">[[shorttitle]]</a></span></pb:template>
+            <pb:template xmlns="" xml:space="preserve"><span><a href="../bibliography.xml#[[id]]">[[shorttitle]]</a></span></pb:template>
         </model></elementSpec>
                 
                 <elementSpec ident="title" mode="change"><model predicate="$parameters?header='short'" behaviour="block"/><model predicate="@type='short'" behaviour="heading" cssClass="index-entry-title"/><modelSequence predicate="parent::titleStmt/parent::fileDesc">
@@ -161,10 +161,12 @@
             <param name="death" value="death"/>
             <param name="note" value="note/string()"/>
             <param name="id" value="@xml:id"/>
-            <param name="idno" value="idno"/>
+            <param name="gnd" value="idno[@type=&#34;GND&#34;]"/>
             <param name="dash" value="if (birth or death) then '–' else ''"/>
             <param name="nee" value="persName[@type=&#34;nee&#34;]"/>
             <param name="alter" value="persName[@type=&#34;alternative&#34;]"/>
+            <param name="viaf" value="idno[@type=&#34;VIAF&#34;]"/>
+            <param name="ulan" value="idno[@type=&#34;ULAN&#34;]"/>
             <pb:template xmlns="" xml:space="preserve">
                             <h1 class="index-entry-title">[[name]]</h1>
                             <div class="index-entry-content">
@@ -172,7 +174,7 @@
                               <p>[[alter]]</p>
                                 <p>[[birth]] [[dash]] [[death]]</p>
                                 <p>[[note]]</p>
-                                <p>[[idno]]</p>
+                                <p>[[gnd]] [[viaf]] [[ulan]]</p>
                             </div>
                         </pb:template>
         </model><model predicate="parent::listPerson" behaviour="listItem" cssClass="index-entry">
@@ -273,7 +275,7 @@
             <param name="name" value="orgName[@type='main']/string()"/>
             <param name="link" value="concat(&#34;register.xml?id=index-pers#&#34;, @xml:id)"/>
             <param name="id" value="@xml:id"/>
-            <pb:template xmlns="" xml:space="preserve"><span><a href="../register.xml#[[id]]">[[name]]</a></span>                     </pb:template>
+            <pb:template xmlns="" xml:space="preserve"><span><a href="../oganisations.xml#[[id]]">[[name]]</a></span>                     </pb:template>
         </model></elementSpec>
 
             <elementSpec ident="idno" mode="add"><modelSequence predicate="@type='GND'">
@@ -281,7 +283,18 @@
                 <param name="uri" value="concat('https://explore.gnd.network/gnd/', string())"/>
                 <param name="content" value="concat('GND: ', string())"/>
             </model>
+        </modelSequence><modelSequence predicate="@type='VIAF'">
+            <model behaviour="link" cssClass="hw-external-link">
+                <param name="uri" value="concat('https://viaf.org/de/viaf/', string())"/>
+                <param name="content" value="concat('VIAF: ', string())"/>
+            </model>
+        </modelSequence><modelSequence predicate="@type='ULAN'">
+            <model behaviour="link" cssClass="hw-external-link">
+                <param name="uri" value="concat('https://vocab.getty.edu/ulan/', string())"/>
+                <param name="content" value="concat('ULAN: ', string())"/>
+            </model>
         </modelSequence></elementSpec>
-            <elementSpec ident="relatedItem" mode="change"><model behaviour="inline"/></elementSpec></schemaSpec>
+            <elementSpec ident="relatedItem" mode="change"><model behaviour="inline"/></elementSpec>
+            </schemaSpec>
         </body>
     </text></TEI>

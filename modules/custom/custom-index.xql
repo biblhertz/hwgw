@@ -29,7 +29,7 @@ declare function api:occurrences($entryId) {
     }
     let $query := ()
     let $entry := collection($config:data-root)//*[@xml:id=$entryId]
-    let $volumes := ('s03', 's04')
+    let $volumes := ('s01', 's03', 's04')
     return
         <div>{
             if (exists(collection($config:data-root)//tei:div[ft:query(., $query, $facets)])) then
@@ -112,7 +112,7 @@ declare function api:objects-per-person($entryId) {
         "filter-rewrite": "yes"
     }
     let $query := ()
-    let $entries := doc($config:data-root || "/register.xml")//tei:object[ft:query(., $query, $facets)]
+    let $entries := doc($config:data-root || "/registers/objects.xml")//tei:object[ft:query(., $query, $facets)]
 
     return 
         if (count($entries) > 0) then
@@ -139,7 +139,7 @@ declare function api:bibl-per-person($entryId) {
         "filter-rewrite": "yes"
     }
     let $query := ()
-    let $entries := doc($config:data-root || "/register.xml")//tei:listBibl/tei:bibl[ft:query(., $query, $facets)]
+    let $entries := doc($config:data-root || "/registers/bibliography.xml")//tei:listBibl/tei:bibl[ft:query(., $query, $facets)]
 
     return 
         if (count($entries) > 0) then

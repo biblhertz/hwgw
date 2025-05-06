@@ -23,7 +23,7 @@ declare variable $config:app-root :=
 (:~
  : The root of the collection hierarchy containing data.
  :)
-declare variable $config:data-root := "/db/apps/hwgw-data/data";
+declare variable $config:data-root := "/db/apps/hw-anno/data";
 
 (:~
  : The root of the collection hierarchy containing registers data.

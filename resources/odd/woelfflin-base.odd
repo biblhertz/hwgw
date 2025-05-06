@@ -233,13 +233,13 @@
         </model></elementSpec>
          
                 <elementSpec ident="bibl" mode="change"><model predicate="@type=&#34;full&#34;" behaviour="inline" cssClass="hw-annotation-dropdown-content">
-            <param name="link" value="concat(&#34;../register.xml#&#34;, parent::bibl/@xml:id)"/>
+            <param name="link" value="concat(&#34;../registers/bibliography.xml#&#34;, parent::bibl/@xml:id)"/>
             <param name="desc" value="node()"/>
             <pb:template xmlns="" xml:space="preserve">                            <p>[[desc]]</p>
                             <p><a href="[[link]]" class="hw-internal-link">Index</a></p>
                         </pb:template>
         </model><model predicate="parent::listBibl" behaviour="inline" cssClass="hw-annotation-dropdown-content">
-            <param name="link" value="concat(&#34;../register.xml#&#34;, parent::bibl/@xml:id)"/>
+            <param name="link" value="concat(&#34;../registers/bibliography.xml#&#34;, parent::bibl/@xml:id)"/>
             <param name="desc" value="bibl[@type='full']/node()"/>
             <param name="name" value="title[@type='short']/node()"/>
             <pb:template xmlns="" xml:space="preserve">                            <p><strong>[[name]]</strong></p>
@@ -247,7 +247,7 @@
                             <p><a href="[[link]]" class="hw-internal-link">Index</a></p></pb:template>
         </model><model predicate="@corresp" behaviour="alternate" cssClass="hw-bibl hw-bibl-toggle">
             <param name="default" value="."/>
-            <param name="alternate" value="id(@corresp, doc($global:data-root || '/register.xml'))/bibl[@type='full']"/>
+            <param name="alternate" value="id(@corresp, doc($global:data-root || '/registers/bibliography.xml'))/bibl[@type='full']"/>
             <param name="persistent" value="true()"/>
         </model></elementSpec>
                 
@@ -327,35 +327,35 @@
             <desc>Hide person annotations in bibliographic links when those are highlighted.</desc>
         </model><model predicate="@type=&#34;person&#34; and @ref=preceding-sibling::rs/@ref" behaviour="alternate" cssClass="hw-person hw-person-toggle-other">
             <param name="default" value="."/>
-            <param name="alternate" value="id(@ref, doc($global:data-root || '/register.xml'))"/>
+            <param name="alternate" value="id(@ref, doc($global:data-root || '/registers/persons.xml'))"/>
             <param name="persistent" value="true()"/>
         </model><model predicate="@type=&#34;person&#34;" behaviour="alternate" cssClass="hw-person hw-person-toggle-first">
             <param name="default" value="."/>
             <param name="persistent" value="true()"/>
-            <param name="alternate" value="id(@ref, doc($global:data-root || '/register.xml'))"/>
+            <param name="alternate" value="id(@ref, doc($global:data-root || '/registers/persons.xml'))"/>
         </model><model predicate="@type=&#34;organisation&#34; and @ref=preceding-sibling::rs/@ref" behaviour="alternate" cssClass="hw-organisation hw-organisation-toggle-other">
             <param name="default" value="."/>
-            <param name="alternate" value="id(@ref, doc($global:data-root || '/register.xml'))"/>
+            <param name="alternate" value="id(@ref, doc($global:data-root || '/registers/organizations.xml'))"/>
             <param name="persistent" value="true()"/>
         </model><model predicate="@type=&#34;organisation&#34;" behaviour="alternate" cssClass="hw-organisation hw-organisation-toggle-first">
             <param name="default" value="."/>
-            <param name="alternate" value="id(@ref, doc($global:data-root || '/register.xml'))"/>
+            <param name="alternate" value="id(@ref, doc($global:data-root || '/registers/organizations.xml'))"/>
             <param name="persistent" value="true()"/>
         </model><model predicate="@type=&#34;object&#34; and @ref=preceding-sibling::rs/@ref" behaviour="alternate" cssClass="hw-object hw-object-toggle-other">
             <param name="default" value="."/>
-            <param name="alternate" value="id(@ref, doc($global:data-root || '/register.xml'))"/>
+            <param name="alternate" value="id(@ref, doc($global:data-root || '/registers/objects.xml'))"/>
             <param name="persistent" value="true()"/>
         </model><model predicate="@type=&#34;object&#34;" behaviour="alternate" cssClass="hw-object hw-object-toggle-first">
             <param name="default" value="."/>
             <param name="persistent" value="true()"/>
-            <param name="alternate" value="id(@ref, doc($global:data-root || '/register.xml'))"/>
+            <param name="alternate" value="id(@ref, doc($global:data-root || '/registers/objects.xml'))"/>
         </model><model predicate="@type=&#34;place&#34; and @ref=preceding-sibling::rs/@ref" behaviour="alternate" cssClass="hw-place hw-place-toggle-other">
             <param name="default" value="."/>
-            <param name="alternate" value="id(@ref, doc($global:data-root || '/register.xml'))"/>
+            <param name="alternate" value="id(@ref, doc($global:data-root || '/registers/places.xml'))"/>
             <param name="persistent" value="true()"/>
         </model><model predicate="@type=&#34;place&#34;" behaviour="alternate" cssClass="hw-place hw-place-toggle-first">
             <param name="default" value="."/>
-            <param name="alternate" value="id(@ref, doc($global:data-root || '/register.xml'))"/>
+            <param name="alternate" value="id(@ref, doc($global:data-root || '/registers/places.xml'))"/>
             <param name="persistent" value="true()"/>
         </model><model predicate="@ref=preceding-sibling::rs/@ref" behaviour="inline"/></elementSpec>
                 <elementSpec ident="person" mode="add"><model behaviour="inline" cssClass="hw-annotation-dropdown-content">
@@ -363,7 +363,7 @@
             <param name="birth" value="birth"/>
             <param name="death" value="death"/>
             <param name="note" value="note/string()"/>
-            <param name="link" value="concat(&#34;../register.xml#&#34;, @xml:id)"/>
+            <param name="link" value="concat(&#34;../registers/persons.xml#&#34;, @xml:id)"/>
             <param name="dash" value="if (birth or death) then '–' else ''"/>
             <param name="nee" value="persName[@type='nee']"/>
             <param name="alter" value="persName[@type='alternative']"/>
@@ -410,7 +410,7 @@
             <param name="city" value="note/placeName[@type='settlement']/string()"/>
             <param name="building" value="if (note/placeName[@type='address']) then concat(': ', note/placeName[@type='address']/string()) else ''"/>
             <param name="desc" value="note/p/string()"/>
-            <param name="link" value="concat(&#34;../register.xml#&#34;, @xml:id)"/>
+            <param name="link" value="concat(&#34;../registers/objects.xml#&#34;, @xml:id)"/>
             <param name="hwtitle" value="if (head[@type='hw']) then concat(' {HW: ', head[@type='hw']/string(), '}') else ''"/>
             <param name="date" value="note/date/string()"/>
             <param name="larger" value="if (note/term and note/objectName) then note/objectName/string() else if (note/objectName) then concat(': ', note/objectName/string()) else ''"/>
@@ -427,7 +427,7 @@
             <param name="name" value="placeName/string()"/>
             <param name="note" value="note/string()"/>
             <param name="country" value="country/string()"/>
-            <param name="link" value="concat(&#34;../register.xml#&#34;, @xml:id)"/>
+            <param name="link" value="concat(&#34;../registers/places.xml#&#34;, @xml:id)"/>
             <pb:template xmlns="" xml:space="preserve">
                             <p><strong>[[name]]</strong></p>
                             <p>[[country]]</p>
@@ -438,7 +438,7 @@
 
                 <elementSpec ident="org" mode="add"><model behaviour="block" cssClass="hw-annotation-dropdown-content">
             <param name="name" value="orgName/string()"/>
-            <param name="link" value="concat(&#34;../register.xml#&#34;, @xml:id)"/>
+            <param name="link" value="concat(&#34;../registers/organizations.xml#&#34;, @xml:id)"/>
             <pb:template xmlns="" xml:space="preserve">
                             <p><strong>[[name]]</strong></p>
                             <p><a href="[[link]]" class="hw-internal-link">Index</a></p>
@@ -551,9 +551,19 @@
             
             
             
+            
+            
+            
+            
+            
             padding-left: 0;
             list-style-type: none;
                         
+            
+            
+            
+            
+            
             
             
             
@@ -596,9 +606,19 @@
             
             
             
+            
+            
+            
+            
+            
             padding-left: 0;
             list-style-type: none;
                         
+            
+            
+            
+            
+            
             
             
             
@@ -686,8 +706,18 @@
             
             
             
+            
+            
+            
+            
+            
             font-size: 50%;
 vertical-align: top;
+            
+            
+            
+            
+            
             
             
             

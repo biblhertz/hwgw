@@ -109,8 +109,8 @@ declare %private function api:show-hits($request as map(*), $hits as item()*, $d
                 <div>
                     <div class="breadcrumbs">
                         <a class="breadcrumb" href="./">HWGW</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">Index</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">
+                        <a class="breadcrumb" href="registers/bibliography.xml#{$hit/@xml:id}">Index</a>
+                        <a class="breadcrumb" href="registers/bibliography.xml#{$hit/@xml:id}">
                             <span class="hw-bibl">{$hit/tei:title[@type='short']/data()}</span>
                         </a>
                     </div>
@@ -124,8 +124,8 @@ declare %private function api:show-hits($request as map(*), $hits as item()*, $d
                 <div>
                     <div class="breadcrumbs">
                         <a class="breadcrumb" href="./">HWGW</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">Index</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">
+                        <a class="breadcrumb" href="registers/objects.xml#{$hit/@xml:id}">Index</a>
+                        <a class="breadcrumb" href="registers/objects.xml#{$hit/@xml:id}">
                             <span class="hw-object">{$hit/tei:head[@type='main']/data()}</span>
                         </a>
                     </div>    
@@ -177,8 +177,8 @@ declare %private function api:show-hits($request as map(*), $hits as item()*, $d
                 <div>
                     <div class="breadcrumbs">
                         <a class="breadcrumb" href="./">HWGW</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">Index</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">
+                        <a class="breadcrumb" href="registers/organisations.xml#{$hit/@xml:id}">Index</a>
+                        <a class="breadcrumb" href="registers/organisations.xml#{$hit/@xml:id}">
                             <span class="hw-organisation">{$hit/tei:orgName[@type='main']/data()}</span>
                         </a>
                     </div>
@@ -192,8 +192,8 @@ declare %private function api:show-hits($request as map(*), $hits as item()*, $d
                 <div>
                     <div class="breadcrumbs">
                         <a class="breadcrumb" href="./">HWGW</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">Index</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">
+                        <a class="breadcrumb" href="registers/persons.xml#{$hit/@xml:id}">Index</a>
+                        <a class="breadcrumb" href="registers/persons.xml#{$hit/@xml:id}">
                             <span class="hw-person">{$hit/tei:persName[@type='main']/data()}</span>
                         </a>
                     </div>
@@ -229,8 +229,8 @@ declare %private function api:show-hits($request as map(*), $hits as item()*, $d
                 <div>
                     <div class="breadcrumbs">
                         <a class="breadcrumb" href="./">HWGW</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">Index</a>
-                        <a class="breadcrumb" href="register.xml#{$hit/@xml:id}">
+                        <a class="breadcrumb" href="registers/places.xml#{$hit/@xml:id}">Index</a>
+                        <a class="breadcrumb" href="registers/places.xml#{$hit/@xml:id}">
                             <span class="hw-place">{$hit/tei:placeName[@type='main']/data()}</span>
                         </a>
                     </div>

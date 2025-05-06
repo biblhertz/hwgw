@@ -356,7 +356,7 @@ declare variable $config:context-path :=
 (:~
  : The root of the collection hierarchy containing data.
  :)
-declare variable $config:data-root := "/db/apps/hwgw-data/data";
+declare variable $config:data-root := "/db/apps/hw-anno/data";
 
 (:~
  : The root of the collection hierarchy whose files should be displayed
