@@ -161,12 +161,10 @@
             <param name="death" value="death"/>
             <param name="note" value="note/string()"/>
             <param name="id" value="@xml:id"/>
-            <param name="gnd" value="idno[@type=&#34;GND&#34;]"/>
             <param name="dash" value="if (birth or death) then '–' else ''"/>
             <param name="nee" value="persName[@type=&#34;nee&#34;]"/>
             <param name="alter" value="persName[@type=&#34;alternative&#34;]"/>
-            <param name="viaf" value="idno[@type=&#34;VIAF&#34;]"/>
-            <param name="ulan" value="idno[@type=&#34;ULAN&#34;]"/>
+            <param name="idno" value="idno"/>
             <pb:template xmlns="" xml:space="preserve">
                             <h1 class="index-entry-title">[[name]]</h1>
                             <div class="index-entry-content">
@@ -174,7 +172,7 @@
                               <p>[[alter]]</p>
                                 <p>[[birth]] [[dash]] [[death]]</p>
                                 <p>[[note]]</p>
-                                <p>[[gnd]] [[viaf]] [[ulan]]</p>
+                              [[idno]]
                             </div>
                         </pb:template>
         </model><model predicate="parent::listPerson" behaviour="listItem" cssClass="index-entry">
@@ -197,36 +195,57 @@
 
                 <elementSpec ident="object" mode="change"><model predicate="$parameters?mode='entryview'" behaviour="block">
             <param name="title" value="head[@type='main']/string()"/>
-            <param name="author" value="note/persName/string()"/>
             <param name="city" value="note/placeName[@type='settlement']/string()"/>
-            <param name="building" value="if (note/placeName[@type='address']) then concat(': ', note/placeName[@type='address']/string()) else ''"/>
             <param name="desc" value="note/p/string()"/>
-            <param name="larger" value="if (note/objectName) then concat(': ', note/objectName/string()) else ''"/>
-            <param name="term" value="note/term/string()"/>
             <param name="hwtitle" value="if (head[@type='hw']) then concat(' {HW: ', head[@type='hw']/string(), '}') else ''"/>
             <param name="date" value="note/date/string()"/>
+            <param name="object-tree" value="ancestor::listObject"/>
+            <param name="idno" value="note/idno"/>
             <pb:template xmlns="" xml:space="preserve"><h1 class="index-entry-title">[[title]]</h1>
 <div class="index-entry-content">
 <p>[[hwtitle]]</p>
 <p>[[author]]</p>
 <p>[[date]]</p>
 <p>[[desc]]</p>
-<p>[[term]][[city]][[building]][[larger]]</p>
+  [[idno]]
+<p>[[object-tree]]</p>
 </div></pb:template>
         </model><model predicate="parent::listObject" behaviour="listItem" cssClass="index-entry">
             <param name="title" value="head[@type='main']/string()"/>
-            <param name="author" value="if (note/persName) then concat(note/persName/string(), ': ') else ''"/>
-            <param name="city" value="note/placeName[@type='settlement']/string()"/>
-            <param name="building" value="if (note/placeName[@type='address']) then concat(': ', note/placeName[@type='address']/string()) else ''"/>
-            <param name="larger" value="if (note/term and note/objectName) then note/objectName/string() else if (note/objectName) then concat(': ', note/objectName/string()) else ''"/>
             <param name="id" value="@xml:id"/>
             <param name="hwtitle" value="if (head[@type='hw']) then concat(' {HW: ', head[@type='hw']/string(), '}') else ''"/>
-            <param name="date" value="if (note/date) then concat(note/date/string(), &#34;, &#34;) else ''"/>
-            <pb:template xmlns="" xml:space="preserve"><span><a href="../register.xml#[[id]]">[[title]]</a>[[hwtitle]], [[author]][[date]][[city]][[building]][[larger]]</span>
+            <param name="date" value="if (note/date) then concat(note/date/string(), &#34;, &#34;) else ' '"/>
+            <param name="author" value="if (note/persName) then concat(note/persName[1]/string(), ': ') else ''"/>
+            <param name="object-tree" value="string-join(ancestor::listObject/@n, ', ')"/>
+            <pb:template xmlns="" xml:space="preserve"><span><a href="../register.xml#[[id]]">[[title]]</a>[[hwtitle]], [[author]][[date]][[object-tree]]</span>
                         </pb:template>
         </model></elementSpec>
 
-                <elementSpec ident="listObject" mode="add"><model behaviour="list" cssClass="index-list">
+                <elementSpec ident="listObject" mode="add"><model predicate="$parameters?mode='entryview' and @type='bibl' and @corresp" behaviour="inline">
+            <param name="target" value="concat('bibliography.xml#', @corresp)"/>
+            <param name="label" value="@n"/>
+            <param name="comma" value="if (parent::listObject/parent::listObject) then ', ' else ''"/>
+            <pb:template xmlns="" xml:space="preserve"><span>[[comma]]<a href="[[target]]" class="hw-bibl">[[label]]</a></span></pb:template>
+        </model><model predicate="$parameters?mode='entryview' and @type='object' and @corresp" behaviour="inline">
+            <param name="target" value="concat('objects.xml#', @corresp)"/>
+            <param name="label" value="@n"/>
+            <param name="comma" value="if (parent::listObject/parent::listObject) then ', ' else ''"/>
+            <pb:template xmlns="" xml:space="preserve"><span>[[comma]]<a href="[[target]]" class="hw-object">[[label]]</a></span></pb:template>
+        </model><model predicate="$parameters?mode='entryview' and @type='organisation' and @corresp" behaviour="inline">
+            <param name="target" value="concat('organizations.xml#', @corresp)"/>
+            <param name="label" value="@n"/>
+            <param name="comma" value="if (parent::listObject/parent::listObject) then ', ' else ''"/>
+            <pb:template xmlns="" xml:space="preserve"><span>[[comma]]<a href="[[target]]" class="hw-organisation">[[label]]</a></span></pb:template>
+        </model><model predicate="$parameters?mode='entryview' and @type='place' and @corresp" behaviour="inline">
+            <param name="target" value="concat('places.xml#', @corresp)"/>
+            <param name="label" value="@n"/>
+            <param name="comma" value="if (parent::listObject/parent::listObject) then ', ' else ''"/>
+            <pb:template xmlns="" xml:space="preserve"><span>[[comma]]<a href="[[target]]" class="hw-place">[[label]]</a></span></pb:template>
+        </model><model predicate="$parameters?mode='entryview'" behaviour="inline">
+            <param name="label" value="@n"/>
+            <param name="comma" value="if (parent::listObject/parent::listObject) then ', ' else ''"/>
+            <pb:template xmlns="" xml:space="preserve"><span>[[comma]][[label]]</span></pb:template>
+        </model><model behaviour="list" cssClass="index-list">
             <param name="content" value="for $n in .//object let $title := translate($n/head[@type='main'], &#34;ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü«»&#34;, &#34;abcdefghijklmnopqrstuvwxyzaouaou&#34;) order by $title return $n"/>
         </model></elementSpec>
 
@@ -242,7 +261,7 @@
                             <h1 class="index-entry-title">[[name]]</h1>
                             <div class="index-entry-content">
                                 <p>[[note]]</p>
-                                <p>[[idno]]</p>
+                                [[idno]]
                             </div>
                         </pb:template>
         </model><model predicate="parent::listPlace" behaviour="listItem" cssClass="index-entry">
@@ -268,7 +287,7 @@
                             <h1 class="index-entry-title">[[name]]</h1>
                             <div class="index-entry-content">
                               <p>[[desc]]</p>
-                              <p>[[idno]]</p>
+                              [[idno]]
                             </div>
                         </pb:template>
         </model><model predicate="parent::listOrg" behaviour="block" cssClass="index-entry">
@@ -282,16 +301,25 @@
             <model behaviour="link" cssClass="hw-external-link">
                 <param name="uri" value="concat('https://explore.gnd.network/gnd/', string())"/>
                 <param name="content" value="concat('GND: ', string())"/>
+                <outputRendition xml:space="preserve">
+                display: block;
+                </outputRendition>
             </model>
         </modelSequence><modelSequence predicate="@type='VIAF'">
             <model behaviour="link" cssClass="hw-external-link">
                 <param name="uri" value="concat('https://viaf.org/de/viaf/', string())"/>
                 <param name="content" value="concat('VIAF: ', string())"/>
+                <outputRendition xml:space="preserve">
+                display: block;
+                </outputRendition>
             </model>
         </modelSequence><modelSequence predicate="@type='ULAN'">
             <model behaviour="link" cssClass="hw-external-link">
                 <param name="uri" value="concat('https://vocab.getty.edu/ulan/', string())"/>
                 <param name="content" value="concat('ULAN: ', string())"/>
+                <outputRendition xml:space="preserve">
+                display: block;
+                </outputRendition>
             </model>
         </modelSequence></elementSpec>
             <elementSpec ident="relatedItem" mode="change"><model behaviour="inline"/></elementSpec>

@@ -2,7 +2,7 @@
             <titleStmt><title>Wölfflin - index entry list                                                                                                                     
                  
                    
-                           <desc>Specific ODD extension for the edition of Wölfflin's volumes. This configuration handles the interaction of the original texts with the comments, page images and the editorial notes. Elements with a specific behaviour are overwritten with this file.</desc></title></titleStmt>
+                            <desc>Specific ODD extension for the edition of Wölfflin's volumes. This configuration handles the interaction of the original texts with the comments, page images and the editorial notes. Elements with a specific behaviour are overwritten with this file.</desc></title></titleStmt>
             <publicationStmt>
                 <publisher>eXistSolutions GmbH</publisher>
                 <availability>
@@ -92,19 +92,17 @@
                 <elementSpec ident="object" mode="change"><model behaviour="listItem" cssClass="hw-annotation-dropdown-content">
             <param name="title" value="head[@type='main']/string()"/>
             <param name="author" value="note/persName/string()"/>
-            <param name="city" value="note/placeName[@type='settlement']/string()"/>
-            <param name="building" value="if (note/placeName[@type='address']) then concat(': ', note/placeName[@type='address']/string()) else ''"/>
             <param name="desc" value="note/p/string()"/>
             <param name="link" value="concat(&#34;../registers/objects.xml#&#34;, @xml:id)"/>
             <param name="hwtitle" value="if (head[@type='hw']) then concat(' {HW: ', head[@type='hw']/string(), '}') else ''"/>
             <param name="date" value="note/date/string()"/>
-            <param name="larger" value="if (note/term and note/objectName) then note/objectName/string() else if (note/objectName) then concat(': ', note/objectName/string()) else ''"/>
+            <param name="object-tree" value="string-join(ancestor::listObject/@n, ', ')"/>
             <pb:template xmlns="" xml:space="preserve"><p style="margin-bottom: 0;"><strong>[[title]]</strong></p>
 <p style="margin: 0;">[[hwtitle]]</p>
 <p style="margin: 0;">[[author]]</p>
 <p style="margin: 0;">[[date]]</p>
 <p style="margin: 0;">[[desc]]</p>
-<p style="margin: 0;">[[city]][[building]][[larger]]</p>
+<p style="margin: 0;">[[object-tree]]</p>
 <p style="margin: 0;"><a href="[[link]]" class="hw-internal-link">Index</a></p>                   </pb:template>
         </model></elementSpec>
                 <elementSpec ident="org" mode="change"><model behaviour="listItem" cssClass="hw-annotation-dropdown-content">

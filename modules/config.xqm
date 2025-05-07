@@ -145,7 +145,21 @@ declare variable $config:facets := [
     map {
         "dimension": "type",
         "heading": "Indexkategorie",
-        "hierarchical": false()
+        "hierarchical": false(),
+        "output": function($id) {
+            let $entry := collection($config:data-root || "/registers" )/id($id)
+            return (
+                data($entry/tei:persName[@type="main"]),
+                data($entry/tei:placeName[@type="short"]),
+                data($entry/tei:placeName[@type="main"]),
+                data($entry/tei:orgName[@type="short"]),
+                data($entry/tei:orgName[@type="main"]),
+                data($entry/tei:head[@type="short"]),
+                data($entry/tei:head[@type="main"]),
+                data($entry/tei:title[@type="short"]),
+                $id
+            )[1]
+        }
     }
     (: 
     ,

@@ -34,15 +34,15 @@ declare function api:search($request as map(*)) {
                 for $hit in query:query-default($request?parameters?field, $request?parameters?query, $request?parameters?doc, ())
                 let $ordering := switch ($hit/name())
                     case 'bibl' return 
-                        translate($hit/tei:title[@type='short'], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü[]", "abcdefghijklmnopqrstuvwxyzaouaou")
+                        translate($hit/tei:title[@type='short'][1], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü[]", "abcdefghijklmnopqrstuvwxyzaouaou")
                     case 'object' return 
-                        translate($hit/tei:head[@type='main'], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü«»", "abcdefghijklmnopqrstuvwxyzaouaou") 
+                        translate($hit/tei:head[@type='main'][1], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü«»", "abcdefghijklmnopqrstuvwxyzaouaou") 
                     case 'org' return 
-                        translate($hit/tei:orgName[@type='main'], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü", "abcdefghijklmnopqrstuvwxyzaouaou") 
+                        translate($hit/tei:orgName[@type='main'][1], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü", "abcdefghijklmnopqrstuvwxyzaouaou") 
                     case 'person' return 
-                        translate($hit/tei:persName[@type='main'], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü", "abcdefghijklmnopqrstuvwxyzaouaou") 
+                        translate($hit/tei:persName[@type='main'][1], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü", "abcdefghijklmnopqrstuvwxyzaouaou") 
                     case 'place' return 
-                        translate($hit/tei:placeName[@type='main'], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü", "abcdefghijklmnopqrstuvwxyzaouaou") 
+                        translate($hit/tei:placeName[@type='main'][1], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü", "abcdefghijklmnopqrstuvwxyzaouaou") 
                     default return 
                         "◼︎"
                 order by $ordering ascending
@@ -149,26 +149,7 @@ declare %private function api:show-hits($request as map(*), $hits as item()*, $d
                         else
                             <span></span>
                     }
-                    {
-                        if ($hit/tei:note/tei:placeName[@type='settlement']) then
-                            <span>{$hit/tei:note/tei:placeName[@type='settlement']/string()}</span>
-                        else
-                            ''
-                    }
-                    {
-                        if ($hit/tei:note/tei:placeName[@type='address']) then
-                            (', ', <span>{$hit/tei:note/tei:placeName[@type='address']/string()}</span>)
-                        else
-                            ''
-                    }
-                    {
-                        if ($hit/tei:note/tei:objectName and $hit/tei:note/tei:term) then
-                            <span>{$hit/tei:note/tei:objectName/string()}</span>
-                        else if ($hit/tei:note/tei:objectName) then
-                            (', ', <span>{$hit/tei:note/tei:objectName/string()}</span>)
-                        else
-                            <span></span>
-                    }.
+                    <span>{string-join($hit/ancestor::tei:listObject/@n, ', ')}</span>.
                     </p>
                 </div>
             </div>
@@ -177,8 +158,8 @@ declare %private function api:show-hits($request as map(*), $hits as item()*, $d
                 <div>
                     <div class="breadcrumbs">
                         <a class="breadcrumb" href="./">HWGW</a>
-                        <a class="breadcrumb" href="registers/organisations.xml#{$hit/@xml:id}">Index</a>
-                        <a class="breadcrumb" href="registers/organisations.xml#{$hit/@xml:id}">
+                        <a class="breadcrumb" href="registers/organizations.xml#{$hit/@xml:id}">Index</a>
+                        <a class="breadcrumb" href="registers/organizations.xml#{$hit/@xml:id}">
                             <span class="hw-organisation">{$hit/tei:orgName[@type='main']/data()}</span>
                         </a>
                     </div>

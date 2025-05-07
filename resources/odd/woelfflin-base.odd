@@ -407,19 +407,17 @@
                 <elementSpec ident="object" mode="add"><model behaviour="block" cssClass="hw-annotation-dropdown-content">
             <param name="title" value="head[@type='main']/string()"/>
             <param name="author" value="note/persName/string()"/>
-            <param name="city" value="note/placeName[@type='settlement']/string()"/>
-            <param name="building" value="if (note/placeName[@type='address']) then concat(': ', note/placeName[@type='address']/string()) else ''"/>
             <param name="desc" value="note/p/string()"/>
             <param name="link" value="concat(&#34;../registers/objects.xml#&#34;, @xml:id)"/>
             <param name="hwtitle" value="if (head[@type='hw']) then concat(' {HW: ', head[@type='hw']/string(), '}') else ''"/>
             <param name="date" value="note/date/string()"/>
-            <param name="larger" value="if (note/term and note/objectName) then note/objectName/string() else if (note/objectName) then concat(': ', note/objectName/string()) else ''"/>
+            <param name="object-tree" value="string-join(ancestor::listObject/@n, ', ')"/>
             <pb:template xmlns="" xml:space="preserve"><p><strong>[[title]]</strong></p>
 <p>[[hwtitle]]</p>
 <p>[[author]]</p>
 <p>[[date]]</p>
 <p>[[desc]]</p>
-<p>[[city]][[building]][[larger]]</p>
+<p>[[object-tree]]</p>
 <p><a href="[[link]]" class="hw-internal-link">Index</a></p>                  </pb:template>
         </model></elementSpec>
 
@@ -556,9 +554,11 @@
             
             
             
+            
             padding-left: 0;
             list-style-type: none;
                         
+            
             
             
             
@@ -611,9 +611,11 @@
             
             
             
+            
             padding-left: 0;
             list-style-type: none;
                         
+            
             
             
             
@@ -711,8 +713,10 @@
             
             
             
+            
             font-size: 50%;
 vertical-align: top;
+            
             
             
             
