@@ -198,8 +198,14 @@ declare variable $config:facets := [
 declare function config:volume-title($key as xs:string) as xs:string {
     switch($key)
         case "s01" return "Schriften 1 Prolegomena"
+        case "s02" return "Schriften 2 Renaissance u. Barock"
         case "s03" return "Schriften 3 Geßner"
         case "s04" return "Schriften 4 Jugendwerke"
+        case "s05" return "Schriften 5 Klassische Kunst"
+        case "s06" return "Schriften 6 Dürer"
+        case "s07" return "Schriften 7 Grundbegriffe"
+        case "s08" return "Schriften 8 Formgefühl"
+        case "s09" return "Schriften 9 Gedanken"
         default return $key
 };
 
