@@ -254,7 +254,7 @@
         </model></elementSpec>
                 
                 <elementSpec ident="place" mode="change"><model predicate="$parameters?mode='entryview'" behaviour="block">
-            <param name="name" value="placeName/string()"/>
+            <param name="name" value="placeName[@type='main']/string()"/>
             <param name="note" value="note/string()"/>
             <param name="idno" value="idno"/>
             <pb:template xmlns="" xml:space="preserve">
@@ -280,7 +280,7 @@
         </model></elementSpec>
                 
                 <elementSpec ident="org" mode="change"><model predicate="$parameters?mode='entryview'" behaviour="block">
-            <param name="name" value="orgName/string()"/>
+            <param name="name" value="orgName[@type='main']/string()"/>
             <param name="idno" value="idno"/>
             <param name="desc" value="p/node()"/>
             <pb:template xmlns="" xml:space="preserve">
