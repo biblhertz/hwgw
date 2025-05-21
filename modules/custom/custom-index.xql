@@ -29,7 +29,7 @@ declare function api:occurrences($entryId) {
     }
     let $query := ()
     let $entry := collection($config:data-root)//*[@xml:id=$entryId]
-    let $volumes := ('s01', 's03', 's04')
+    let $volumes := ('s03', 's04')
     return
         <div>{
             if (exists(collection($config:data-root)//tei:div[ft:query(., $query, $facets)])) then
@@ -120,9 +120,9 @@ declare function api:objects-per-person($entryId) {
                 <h2>Werke</h2> 
                 <ul class="obj-list">{
                     for $d in $entries
-                    let $entryHtml := $pm-config:web-transform($d/tei:head, map { }, "woelfflin-base.odd")
+                    let $entryHtml := $pm-config:web-transform($d/tei:head[@type="main"], map { }, "woelfflin-base.odd")
                     let $target := $d/@xml:id
-                    return <li><a href="#{$target}" class="hw-unmarked-link">{$entryHtml}</a></li>
+                    return <li><a href="#{$target}" class="hw-object">{$entryHtml}</a></li>
                 }</ul>
             </div>
         else
@@ -147,9 +147,59 @@ declare function api:bibl-per-person($entryId) {
                 <h2>Literarische Werke</h2>
                 <ul class="obj-list">{
                     for $d in $entries
-                    let $entryHtml := $pm-config:web-transform($d/tei:title[@type='short'], map { }, "woelfflin-base.odd")
-                    let $target := $d/@xml:id
-                    return <li><a href="#{$target}" class="hw-unmarked-link">{data($d/tei:title[@type='short'])}</a></li>
+                    return <li><a href="#{$d/@xml:id}" class="hw-bibl">{data($d/tei:title[@type='short'])}</a></li>
+                }</ul>
+            </div>
+        else
+            ()
+};
+
+(: Organisations at a place :)
+declare function api:org-per-place-or-org($entryId) {
+    let $orgs := doc($config:data-root || "/registers/objects.xml")//tei:listObject[@corresp=$entryId]/tei:listObject[@type="organisation"][@corresp]
+    return 
+        if (count($orgs) > 0) then
+            <div>
+                <h2>Organisationen</h2>
+                <ul class="org-list">{
+                    for $o in $orgs
+                    return <li><a href="organizations.xml#{data($o/@corresp)}" class="hw-organisation">{data($o/@n)}</a></li>
+                }</ul>
+            </div>
+        else
+            ()
+};
+
+(: Objects at a place :)
+declare function api:obj-per-place-or-org($entryId) {
+    let $objs := doc($config:data-root || "/registers/objects.xml")//tei:listObject[@corresp=$entryId]/tei:object | doc($config:data-root || "/registers/objects.xml")//tei:listObject[@corresp=$entryId]/tei:listObject[not(@corresp)]/tei:object
+    return 
+        if (count($objs) > 0) then
+            <div>
+                <h2>Objekte</h2>
+                <ul class="obj-list">{
+                    for $o in $objs
+                    let $entryHtml := $pm-config:web-transform($o/tei:head[@type="main"], map { }, "woelfflin-base.odd")
+                    let $target := $o/@xml:id
+                    return <li><a href="objects.xml#{$target}" class="hw-object">{$entryHtml}</a></li>
+                }</ul>
+            </div>
+        else
+            ()
+};
+
+(: Objects in objects :)
+declare function api:obj-per-object($entryId) {
+    let $objs := doc($config:data-root || "/registers/objects.xml")//tei:listObject[@corresp=$entryId]/tei:object | doc($config:data-root || "/registers/objects.xml")//tei:listObject[@corresp=$entryId]/tei:listObject[not(@corresp)]/tei:object
+    return 
+        if (count($objs) > 0) then
+            <div>
+                <h2>Objekte</h2>
+                <ul class="obj-list">{
+                    for $o in $objs
+                    let $entryHtml := $pm-config:web-transform($o/tei:head[@type="main"], map { }, "woelfflin-base.odd")
+                    let $target := $o/@xml:id
+                    return <li><a href="#{$target}" class="hw-object">{$entryHtml}</a></li>
                 }</ul>
             </div>
         else
@@ -163,6 +213,14 @@ declare function api:register-entry($request as map(*)) {
     let $entryHtml := $pm-config:web-transform($entry, map { "mode": "entryview" }, "woelfflin-index.odd")
     
     return <div>
+        <style>{"
+            .hw-person {color: var(--hw-person-color);}
+            .hw-place {color: var(--hw-place-color);}
+            .hw-object {color: var(--hw-object-color);}
+            .hw-bibl {color: var(--hw-bibl-color);}
+            .hw-organisation {color: var(--hw-organisation-color);}
+            "}
+        </style>
         <div class="text-section">
             { $entryHtml }
         </div>
@@ -176,6 +234,24 @@ declare function api:register-entry($request as map(*)) {
         { if (local-name($entry)="person") then
         <div class="text-section">
             {api:bibl-per-person($entryId)}
+        </div> else ()
+        }
+        
+        { if (local-name($entry)=("place", "org")) then
+        <div class="text-section">
+            {api:org-per-place-or-org($entryId)}
+        </div> else ()
+        }
+        
+        { if (local-name($entry)=("place", "org")) then
+        <div class="text-section">
+            {api:obj-per-place-or-org($entryId)}
+        </div> else ()
+        }
+        
+        { if (local-name($entry)="object") then
+        <div class="text-section">
+            {api:obj-per-object($entryId)}
         </div> else ()
         }
 
