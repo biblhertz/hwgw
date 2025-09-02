@@ -35,8 +35,8 @@ main {
 .search-panel,
 pb-search {
   --paper-checkbox-label-color: var(--hw-search-checkbox-color);
-  --paper-checkbox-unchecked-background-color: var(--hw-search-checkbox-color),
-    var(--hw-search-checkbox-bg-color);
+  --paper-checkbox-unchecked-background-color:
+    var(--hw-search-checkbox-color), var(--hw-search-checkbox-bg-color);
   --paper-checkbox-unchecked-color: var(--hw-search-checkbox-color);
   --paper-checkbox-checked-color: var(--hw-search-checkbox-color);
 
