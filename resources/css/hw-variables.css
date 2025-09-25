@@ -1,7 +1,7 @@
 body {
   --pb-base-font-family: "Noto Sans", "Roboto", "Noto", sans-serif;
-  --pb-serif-font-family: "Noto Serif", "Junicode", "Georgia", "Times New Roman",
-    serif;
+  --pb-serif-font-family:
+    "Noto Serif", "Junicode", "Georgia", "Times New Roman", serif;
   --pb-heading-font-family: "Noto Sans", Verdana, "Helvetica", sans-serif;
 
   --pb-base-font-size: 16px;
