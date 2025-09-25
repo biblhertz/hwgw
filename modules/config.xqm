@@ -148,49 +148,25 @@ declare variable $config:facets := [
         "hierarchical": false(),
         "output": function($id) {
             let $entry := collection($config:data-root || "/registers" )/id($id)
-            return (
-                data($entry/tei:persName[@type="main"]),
-                data($entry/tei:placeName[@type="short"]),
-                data($entry/tei:placeName[@type="main"]),
-                data($entry/tei:orgName[@type="short"]),
-                data($entry/tei:orgName[@type="main"]),
-                data($entry/tei:head[@type="short"]),
-                data($entry/tei:head[@type="main"]),
-                data($entry/tei:title[@type="short"]),
-                $id
-            )[1]
-        }
+            return 
+                if ($id = "diverse") then
+                    "Verschiedene Orte"
+                else if ($id = "no_place") then
+                    "Kein Ort"
+                else
+                    (
+                        data($entry/tei:persName[@type="main"]),
+                        data($entry/tei:placeName[@type="short"]),
+                        data($entry/tei:placeName[@type="main"]),
+                        data($entry/tei:orgName[@type="short"]),
+                        data($entry/tei:orgName[@type="main"]),
+                        data($entry/tei:head[@type="short"]),
+                        data($entry/tei:head[@type="main"]),
+                        data($entry/tei:title[@type="short"]),
+                        $id
+                    )[1]
+            }
     }
-    (: 
-    ,
-    map {
-        "dimension": "person",
-        "heading": "hwgw.index.people",
-        "source": "api/search/facets/person",
-        "max": 1,
-        "hierarchical": false(),
-        "output": function($id) {
-            let $entry := doc($config:data-root || "/register.xml")//tei:person[@xml:id=$id]
-            return data($entry/tei:persName)
-        }
-    }
-    ,
-    map {
-        "dimension": "object",
-        "heading": "hwgw.index.objects",
-        "max": 15,
-        "hierarchical": false(),
-        "output": function($corresp) {
-            let $id := substring-after($corresp, '#')
-            let $entry := doc($config:data-root || "/register.xml")//tei:object[@xml:id=$id]
-            return data($entry/tei:head)
-        }
-    },
-    map {
-        "dimension": "provenience",
-        "heading": "Standort",
-        "hierarchical": true()
-    } :)
 ];
 
 (: Volume label :)
