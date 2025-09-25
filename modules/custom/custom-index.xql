@@ -29,7 +29,7 @@ declare function api:occurrences($entryId) {
     }
     let $query := ()
     let $entry := collection($config:data-root)//*[@xml:id=$entryId]
-    let $volumes := ('s03', 's04')
+    let $volumes := ('s01', 's03', 's04')
     return
         <div>{
             if (exists(collection($config:data-root)//tei:div[ft:query(., $query, $facets)])) then
