@@ -29,7 +29,17 @@ declare function facets:sort($config as map(*), $lang as xs:string?, $facets as 
             for $key in map:keys($facets)
             let $value := map:get($facets, $key)
             let $sortKey := facets:translate($config, $lang, $key)
-            order by $sortKey ascending
+            (: HWGW CUSTOMISATION :)
+            let $sortKeyDiacritics := translate(
+                                replace($sortKey,
+                                "^«?(Der|Die|Das|Il|La|Le|The) |^«?L’", 
+                                ""
+                            ), 
+                            "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü’«»[]", 
+                            "abcdefghijklmnopqrstuvwxyzaouaou"
+                        ) 
+            order by $sortKeyDiacritics ascending
+            (: END HWGW CUSTOMISATION :)
             return
                 map { $key: $value }
         else
