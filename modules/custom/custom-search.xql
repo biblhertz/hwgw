@@ -36,7 +36,14 @@ declare function api:search($request as map(*)) {
                     case 'bibl' return 
                         translate($hit/tei:title[@type='short'][1], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü[]", "abcdefghijklmnopqrstuvwxyzaouaou")
                     case 'object' return 
-                        translate($hit/tei:head[@type='main'][1], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü«»", "abcdefghijklmnopqrstuvwxyzaouaou") 
+                        translate(
+                                replace($hit/tei:head[@type='main'][1],
+                                "^«?(Der|Die|Das|Il|La|Le|The) |^«?L’", 
+                                ""
+                            ), 
+                            "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü’«»", 
+                            "abcdefghijklmnopqrstuvwxyzaouaou"
+                        ) 
                     case 'org' return 
                         translate($hit/tei:orgName[@type='main'][1], "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜäöü", "abcdefghijklmnopqrstuvwxyzaouaou") 
                     case 'person' return 
