@@ -1,0 +1,405 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>Heinrich Wölfflin: Die Kunst Albrecht Dürers</title>
+    <meta name="description" content="Wölfflin - books" />
+    <meta name="dc.identifier" content="10.48431/hwgw.s06" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="resources/images/favicon.ico"
+    />
+    <link rel="icon" type="image/png" href="resources/images/favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="resources/fonts/font.css" />
+
+    <link rel="stylesheet" href="resources/css/theme.css" />
+    <link rel="stylesheet" href="resources/css/hw-variables.css" />
+    <link rel="stylesheet" href="resources/css/hw-colour.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-core.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-header-colour.css" />
+    <link rel="stylesheet" href="resources/css/volume-header-layout.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-footer.css" />
+
+    <link rel="stylesheet" href="resources/css/volume-main-colour.css" />
+    <link rel="stylesheet" href="resources/css/volume-main-layout.css" />
+    <link rel="stylesheet" href="resources/css/volume-index.css" />
+
+    <link rel="stylesheet" href="resources/css/hw-responsive.css" />
+
+    <script src="resources/scripts/hwgw/hamburger.js" />
+
+    <!-- webfont tied to Adobe-->
+    <link rel="stylesheet" href="https://use.typekit.net/mkk8aec.css" />
+    <!-- Google icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="pb-components-bundle.js"
+      data-template="pages:load-components"
+    />
+  </head>
+
+  <body>
+    <pb-page
+      data-template="pages:pb-page"
+      unresolved="unresolved"
+      locales="resources/i18n/{{ns}}/{{lng}}.json"
+    >
+      <header>
+        <div class="header">
+          <a
+            href="${app}/index.html"
+            class="logo"
+            data-template="pages:parse-params"
+            aria-label="Startseite der Serie"
+          />
+          <div
+            data-template="lib:include"
+            data-template-path="templates/s06/header-title.html"
+          />
+          <div>
+            <a class="skip-link" href="#main">Springe zum Inhalt</a>
+            <a
+              class="skip-link"
+              href="${app}/s06/sitemap.html"
+              data-template="pages:parse-params"
+              >Band-Sitemap</a
+            >
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <nav role="navigation">
+            <ul>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Einleitung</a
+                >
+                <div class="dropdown-content">
+                  <div class="toc">
+                    <a href="../s06/s06-in.xml" class="toc-other-part-title"
+                      >Wölfflins Dürer</a
+                    >
+                    <ul
+                      data-template="lib:include"
+                      data-template-path="templates/s06/toc-in.html"
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Text</a
+                >
+                <div class="dropdown-content">
+                  <div class="toc">
+                    <a href="../s06/s06-ed.xml" class="toc-other-part-title"
+                      >Die Kunst Albrecht Dürers</a
+                    >
+                    <ul
+                      data-template="lib:include"
+                      data-template-path="templates/s06/toc-ed.html"
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Apparat</a
+                >
+                <div class="dropdown-content">
+                  <div class="toc">
+                    <a href="../s06/s06-app.xml" class="toc-other-part-title"
+                      >Apparat</a
+                    >
+                    <ul
+                      data-template="lib:include"
+                      data-template-path="templates/s06/toc-app.html"
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown toolbar-item">
+                <a class="nav-head structure-link nav-head-button" href="#"
+                  >Index</a
+                >
+                <div class="dropdown-content">
+                  <ul aria-label="submenu" class="toc">
+                    <li>
+                      <a
+                        href="${app}/search.html?query=&amp;facet-type=Bibliografie&amp;facet-volume=s06"
+                        data-template="pages:parse-params"
+                        >Bibliografie</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="${app}/search.html?query=&amp;facet-type=Objekte&amp;facet-volume=s06"
+                        data-template="pages:parse-params"
+                        >Objekte</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="${app}/search.html?query=&amp;facet-type=Organisationen&amp;facet-volume=s06"
+                        data-template="pages:parse-params"
+                        >Organisationen</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="${app}/search.html?query=&amp;facet-type=Orte&amp;facet-volume=s06"
+                        data-template="pages:parse-params"
+                        >Orte</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="${app}/search.html?query=&amp;facet-type=Personen&amp;facet-volume=s06"
+                        data-template="pages:parse-params"
+                        >Personen</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="burger-dropdown">
+            <div class="hamburger">
+              <i class="material-icons" id="material-icons">menu</i>
+            </div>
+            <div class="burger-dropdown-content">
+              <ul>
+                <li>
+                  <a
+                    href="${app}/s06/s06-in.xml"
+                    data-template="pages:parse-params"
+                    >Einleitung<span class="arrow-link-white" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="${app}/s06/s06-ed.xml"
+                    data-template="pages:parse-params"
+                    >Text<span class="arrow-link-white" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="${app}/s06/s06-app.xml"
+                    data-template="pages:parse-params"
+                    >Apparat<span class="arrow-link-white" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="${app}/search.html?query=&amp;facet-environment=Index&amp;facet-volume=s06"
+                    data-template="pages:parse-params"
+                    >Index<span class="arrow-link-white" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="${app}/search.html?query=&amp;facet-environment=Text&amp;facet-volume=s06"
+                    data-template="pages:parse-params"
+                    >Suche<span class="arrow-link-white" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <menu>
+            <ul>
+              <li class="dropdown toolbar-item">
+                <div style="display: flex">
+                  <a
+                    href="#"
+                    class="menu-head structure-link menu-head-button"
+                    style="flex: 1"
+                    >Seiten</a
+                  >
+                  <a
+                    href="${app}/s06/s06-in.xml"
+                    id="nextPart"
+                    class="btn-pages"
+                    data-template="pages:parse-params"
+                  >
+                    <i class="material-icons">chevron_right</i>
+                  </a>
+                </div>
+                <div class="dropdown-content">
+                  <div id="page-list">
+                    <ul
+                      data-template="lib:include"
+                      data-template-path="templates/s06/pages.html"
+                    />
+                  </div>
+                </div>
+              </li>
+              <!--
+              <li class="toolbar-item">
+                <div class="menu-head menu-head-button zoom-wrapper" style="display: flex">
+                  <pb-zoom class="btn-zoom" emit="transcription" direction="out" icon="icons:remove" aria-label="Decrease font size"/>
+                  <span style="margin-inline: 8px">Zoom</span>
+                  <pb-zoom class="btn-zoom" emit="transcription" direction="in" icon="icons:add" aria-label="Increase font size"/>
+                </div>
+              </li>-->
+              <li class="toolbar-item">
+                <div style="display: flex; justify-content: center">
+                  <a
+                    href="${app}/search.html?query=&amp;facet-environment=Text&amp;facet-volume=s06"
+                    class="menu-head structure-link menu-head-button"
+                    data-template="pages:parse-params"
+                    >Suche</a
+                  >
+                  <i
+                    class="material-icons"
+                    style="transform: rotate(90deg); font-size: 20px !important"
+                    >search</i
+                  >
+                </div>
+              </li>
+            </ul>
+          </menu>
+        </div>
+      </header>
+
+      <main class="content-body volume-overview-main" id="main">
+        <article>
+          <div style="height: 1px; overflow: hidden">
+            <h1>Die Kunst Albrecht Dürers 1905</h1>
+          </div>
+          <h2 id="klappentext-dig-h">Digitale Ausgabe</h2>
+          <div class="volume-description-container">
+            <div class="volume-cover">
+              <div class="volume-cover-logo" />
+            </div>
+            <div id="klappentext-dig">
+              <ul>
+                <li>
+                  <a class="hw-internal-link" href="s06-in.xml"
+                    >Einleitung <br />Oskar Bätschmann : Wölfflins Dürer</a
+                  >
+                </li>
+                <li>
+                  <a class="hw-internal-link" href="s06-ed.xml"
+                    >Text <br />Heinrich Wölfflin: Die Kunst Albrecht Dürers</a
+                  >
+                </li>
+                <li>
+                  <a class="hw-internal-link" href="s06-app.xml">Apparat</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h2 id="klappentext-ed-h">Gedruckte Ausgabe, 2025</h2>
+          <div class="volume-description-container">
+            <div class="volume-cover">
+              <img
+                src="${app}/resources/images/schwabe/s06-cover.png"
+                data-template="pages:parse-params"
+                alt=""
+              />
+            </div>
+            <div id="klappentext-ed">
+              <p></p>
+            </div>
+          </div>
+
+          <h2 id="klappentext-or-h">Die Kunst Albrecht Dürers, 1905</h2>
+          <div class="volume-description-container">
+            <div class="volume-cover">
+              <img
+                src="${app}/resources/images/original/s06-cover.jpg"
+                data-template="pages:parse-params"
+                alt=""
+              />
+            </div>
+            <div id="klappentext-or">
+              <p></p>
+            </div>
+          </div>
+
+          <h2 id="klappentext-pr-h">Metadaten</h2>
+          <div
+            id="klappentext-pr"
+            vocab="https://schema.org/"
+            typeof="Dataset"
+            about="."
+          >
+            <table>
+              <tr property="hasPart" typeof="Article">
+                <th>Einleitung:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Kommentar und Bearbeitung:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Annotation:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>DOI:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Publisher:</th>
+                <td>
+                  Bibliotheca Hertziana - Max-Planck-Institut für
+                  Kunstgeschichte
+                </td>
+              </tr>
+              <tr rel="isBasedOn">
+                <th>Originalausgabe (1905):</th>
+                <td typeOf="Book"></td>
+              </tr>
+              <tr rel="isBasedOn">
+                <th>Printedition (2025):</th>
+                <td typeOf="Book"></td>
+              </tr>
+              <tr>
+                <th>Digitialisat des Originalexemplars:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>TEI/XML-Daten:</th>
+                <td>
+                  Download über
+                  <a
+                    class="hw-external-link"
+                    href="https://doi.org/10.17617/3.QHJW4D"
+                    >Edmond</a
+                  >
+                </td>
+              </tr>
+            </table>
+          </div>
+        </article>
+      </main>
+      <footer
+        data-template="lib:include"
+        data-template-path="templates/volume-footer.html"
+      />
+    </pb-page>
+
+    <div class="splash" />
+  </body>
+</html>
