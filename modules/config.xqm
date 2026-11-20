@@ -391,6 +391,13 @@ declare variable $config:allowed-xpath := (
     "//teiHeader/fileDesc/titleStmt/title",
     "//teiHeader/fileDesc/titleStmt/title[1]",
     "//teiHeader/fileDesc/titleStmt/title[@type='main']",
+    "//teiHeader/revisionDesc/listChange/change[1]",
+    "//listBibl[1]",
+    "//listBibl[2]",
+    "//listObject",
+    "//listOrg",
+    "//listPerson",
+    "//listPlace",
     "//div"
 );
 
