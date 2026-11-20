@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" href="resources/css/hw-responsive.css" />
 
-    <script src="resources/scripts/hwgw/hamburger.js" />
+    <script src="resources/scripts/hwgw/hamburger.js"></script>
 
     <!-- webfont tied to Adobe-->
     <link rel="stylesheet" href="https://use.typekit.net/mkk8aec.css" />
@@ -51,7 +51,7 @@
       type="module"
       src="pb-components-bundle.js"
       data-template="pages:load-components"
-    />
+    ></script>
   </head>
 
   <body>
@@ -67,11 +67,11 @@
             class="logo"
             data-template="pages:parse-params"
             aria-label="Startseite der Serie"
-          />
+          ></a>
           <div
             data-template="lib:include"
             data-template-path="templates/s01/header-title.html"
-          />
+          ></div>
           <div>
             <a class="skip-link" href="#main">Springe zum Inhalt</a>
             <a
@@ -99,7 +99,7 @@
                     <ul
                       data-template="lib:include"
                       data-template-path="templates/s01/toc-in.html"
-                    />
+                    ></ul>
                   </div>
                 </div>
               </li>
@@ -115,7 +115,7 @@
                     <ul
                       data-template="lib:include"
                       data-template-path="templates/s01/toc-ed.html"
-                    />
+                    ></ul>
                   </div>
                 </div>
               </li>
@@ -131,7 +131,7 @@
                     <ul
                       data-template="lib:include"
                       data-template-path="templates/s01/toc-app.html"
-                    />
+                    ></ul>
                   </div>
                 </div>
               </li>
@@ -192,35 +192,35 @@
                   <a
                     href="${app}/s01/s01-in.xml"
                     data-template="pages:parse-params"
-                    >Einleitung<span class="arrow-link-white" />
+                    >Einleitung<span class="arrow-link-white"></span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="${app}/s01/s01-ed.xml"
                     data-template="pages:parse-params"
-                    >Text<span class="arrow-link-white" />
+                    >Text<span class="arrow-link-white"></span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="${app}/s01/s01-app.xml"
                     data-template="pages:parse-params"
-                    >Apparat<span class="arrow-link-white" />
+                    >Apparat<span class="arrow-link-white"></span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="${app}/search.html?query=&amp;facet-environment=Index&amp;facet-volume=s01"
                     data-template="pages:parse-params"
-                    >Index<span class="arrow-link-white" />
+                    >Index<span class="arrow-link-white"></span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="${app}/search.html?query=&amp;facet-environment=Text&amp;facet-volume=s01"
                     data-template="pages:parse-params"
-                    >Suche<span class="arrow-link-white" />
+                    >Suche<span class="arrow-link-white"></span>
                   </a>
                 </li>
               </ul>
@@ -251,7 +251,7 @@
                     <ul
                       data-template="lib:include"
                       data-template-path="templates/s01/pages.html"
-                    />
+                    ></ul>
                   </div>
                 </div>
               </li>
@@ -291,7 +291,7 @@
           <h2 id="klappentext-dig-h">Digitale Ausgabe</h2>
           <div class="volume-description-container">
             <div class="volume-cover">
-              <div class="volume-cover-logo" />
+              <div class="volume-cover-logo"></div>
             </div>
             <div id="klappentext-dig">
               <ul>
@@ -447,9 +447,9 @@
       <footer
         data-template="lib:include"
         data-template-path="templates/volume-footer.html"
-      />
+      ></footer>
     </pb-page>
 
-    <div class="splash" />
+    <div class="splash"></div>
   </body>
 </html>

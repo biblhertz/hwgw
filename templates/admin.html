@@ -28,7 +28,7 @@
       type="module"
       src="pb-components-bundle.js"
       data-template="pages:load-components"
-    />
+    ></script>
 
     <style>
       main {
@@ -54,20 +54,20 @@
           class="series-logo"
           href="${app}/index.html"
           data-template="pages:parse-params"
-        />
+        ></a>
       </header>
 
       <main>
         <h1>Admin page</h1>
         <pb-login id="login" group="woelfflin">
-          <iron-icon slot="icon" icon="account-circle" />
+          <iron-icon slot="icon" icon="account-circle"></iron-icon>
         </pb-login>
         <pb-restricted class="upload-panel" login="login">
           <paper-card>
             <div class="card-content">
               <h2>Edit ODD</h2>
               <paper-listbox slot="dropdown-content">
-                <paper-item data-template="pages:edit-odd-list" />
+                <paper-item data-template="pages:edit-odd-list"></paper-item>
               </paper-listbox>
               <pb-ajax
                 subscribe="transcription"
@@ -80,9 +80,9 @@
                 data-i18n="[title]menu.admin.recompile"
               >
                 <h3 slot="title">
-                  <pb-i18n key="menu.admin.recompile" />
+                  <pb-i18n key="menu.admin.recompile"></pb-i18n>
                 </h3>
-                <paper-icon-button icon="icons:refresh" />
+                <paper-icon-button icon="icons:refresh"></paper-icon-button>
                 Recompile ODD
               </pb-ajax>
             </div>
@@ -100,7 +100,7 @@
                 id="upload"
                 emit="docs"
                 accept=".xml, .tei, .odd, .docx, .mei"
-              />
+              ></pb-upload>
             </div>
             <div class="card-content">
               <h2>API endpoints</h2>
@@ -120,8 +120,8 @@
       <footer
         data-template="lib:include"
         data-template-path="templates/series-footer.html"
-      />
+      ></footer>
     </pb-page>
-    <div class="splash" />
+    <div class="splash"></div>
   </body>
 </html>

@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
 
-    <script src="resources/scripts/hwgw/compress-header.js" />
+    <script src="resources/scripts/hwgw/compress-header.js"></script>
   </head>
   <body>
     <pb-page
@@ -40,7 +40,7 @@
           href="${app}/index.html"
           data-template="pages:parse-params"
           aria-label="Startseite der Serie"
-        />
+        ></a>
         <a class="skip-link" href="#main">Springe zum Inhalt</a>
         <a
           class="skip-link"
@@ -59,7 +59,7 @@
                   <ul
                     data-template="lib:include"
                     data-template-path="templates/series-volume-navigation.html"
-                  />
+                  ></ul>
                 </div>
               </li>
               <li>
@@ -777,8 +777,8 @@
       <footer
         data-template="lib:include"
         data-template-path="templates/series-footer.html"
-      />
+      ></footer>
     </pb-page>
-    <div class="splash" />
+    <div class="splash"></div>
   </body>
 </html>

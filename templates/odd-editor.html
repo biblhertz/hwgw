@@ -11,18 +11,18 @@
       href="resources/images/favicon.ico"
     />
 
-    <title data-template="config:app-title" />
+    <title data-template="config:app-title"></title>
     <link rel="stylesheet" href="resources/css/theme.css" />
     <script
       type="module"
       src="pb-components-bundle.js"
       data-template="pages:load-components"
-    />
+    ></script>
     <script
       type="module"
       src="pb-odd-editor.js"
       data-template="pages:load-components"
-    />
+    ></script>
     <style>
       main {
           margin: 0 20px;
@@ -91,13 +91,13 @@
 
             <pb-media-query query="min-width: 1024px">
               <!-- language selector -->
-              <pb-lang name="lang" data-template="pages:languages" />
+              <pb-lang name="lang" data-template="pages:languages"></pb-lang>
             </pb-media-query>
             <pb-login id="login" group="woelfflin"> </pb-login>
             <pb-progress
               indeterminate="indeterminate"
               bottom-item="bottom-item"
-            />
+            ></pb-progress>
           </app-toolbar>
         </app-header>
         <main>
@@ -105,6 +105,6 @@
         </main>
       </app-header-layout>
     </pb-page>
-    <div class="splash" />
+    <div class="splash"></div>
   </body>
 </html>

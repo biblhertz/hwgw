@@ -26,12 +26,12 @@
 
     <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
 
-    <script src="resources/scripts/hwgw/compress-header.js" />
+    <script src="resources/scripts/hwgw/compress-header.js"></script>
     <script
       type="module"
       src="pb-components-bundle.js"
       data-template="pages:load-components"
-    />
+    ></script>
 
     <style>
       div ul a {
@@ -59,7 +59,7 @@
           href="${app}/index.html"
           data-template="pages:parse-params"
           aria-label="Startseite der Serie"
-        />
+        ></a>
       </header>
       <main>
         <div class="text-section">
@@ -180,8 +180,8 @@
       <footer
         data-template="lib:include"
         data-template-path="templates/series-footer.html"
-      />
+      ></footer>
     </pb-page>
-    <div class="splash" />
+    <div class="splash"></div>
   </body>
 </html>

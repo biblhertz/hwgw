@@ -36,8 +36,8 @@
 
     <link rel="stylesheet" href="resources/css/hw-responsive.css" />
 
-    <script src="resources/scripts/hwgw/hamburger.js" />
-    <script src="resources/scripts/hwgw/page-title.js" />
+    <script src="resources/scripts/hwgw/hamburger.js"></script>
+    <script src="resources/scripts/hwgw/page-title.js"></script>
 
     <!-- webfont tied to Adobe-->
     <link rel="stylesheet" href="https://use.typekit.net/mkk8aec.css" />
@@ -51,12 +51,12 @@
       type="module"
       src="pb-components-bundle.js"
       data-template="pages:load-components"
-    />
+    ></script>
     <script
       type="module"
       src="pb-tify.js"
       data-template="pages:load-components"
-    />
+    ></script>
 
     <style>
       pb-navigation:not([disabled]) + #previousPart {
@@ -77,7 +77,10 @@
       id-hash="true"
       url-ignore="selectors,odd,tab"
     >
-      <pb-document id="document1" data-template="pages:pb-document" />
+      <pb-document
+        id="document1"
+        data-template="pages:pb-document"
+      ></pb-document>
 
       <header>
         <div class="header">
@@ -86,11 +89,11 @@
             class="logo"
             data-template="pages:parse-params"
             aria-label="Startseite der Serie"
-          />
+          ></a>
           <div
             data-template="lib:include"
             data-template-path="templates/s04/header-title.html"
-          />
+          ></div>
           <div>
             <a class="skip-link" href="#main-text">Springe zum Haupttext</a>
             <a class="skip-link" href="#comments">Springe zu Kommentaren</a>
@@ -140,7 +143,7 @@
                     <ul
                       data-template="lib:include"
                       data-template-path="templates/s04/toc-ed.html"
-                    />
+                    ></ul>
                   </div>
                 </div>
               </li>
@@ -156,7 +159,7 @@
                     <ul
                       data-template="lib:include"
                       data-template-path="templates/s04/toc-app.html"
-                    />
+                    ></ul>
                   </div>
                 </div>
               </li>
@@ -167,7 +170,7 @@
                 <div
                   data-template="lib:include"
                   data-template-path="templates/volume-header-index-links.html"
-                />
+                ></div>
               </li>
             </ul>
           </nav>
@@ -204,28 +207,28 @@
                   <a
                     href="${app}/${collection}/${collection}-ed.xml"
                     data-template="pages:parse-params"
-                    >Text<span class="arrow-link-white" />
+                    >Text<span class="arrow-link-white"></span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="${app}/${collection}/${collection}-app.xml"
                     data-template="pages:parse-params"
-                    >Apparat<span class="arrow-link-white" />
+                    >Apparat<span class="arrow-link-white"></span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="${app}/search.html?query=&amp;facet-environment=Index&amp;facet-volume=${collection}"
                     data-template="pages:parse-params"
-                    >Index<span class="arrow-link-white" />
+                    >Index<span class="arrow-link-white"></span>
                   </a>
                 </li>
                 <li>
                   <a
                     href="${app}/search.html?query=&amp;facet-environment=Text&amp;facet-volume=${collection}"
                     data-template="pages:parse-params"
-                    >Suche<span class="arrow-link-white" />
+                    >Suche<span class="arrow-link-white"></span>
                   </a>
                 </li>
               </ul>
@@ -299,7 +302,7 @@
                     <ul
                       data-template="lib:include"
                       data-template-path="templates/s04/pages.html"
-                    />
+                    ></ul>
                   </div>
                 </div>
               </li>
@@ -311,7 +314,7 @@
                     direction="out"
                     icon="icons:remove"
                     aria-label="Decrease font size"
-                  />
+                  ></pb-zoom>
                   <span style="margin-inline: 8px">Zoom</span>
                   <pb-zoom
                     class="btn-zoom"
@@ -319,7 +322,7 @@
                     direction="in"
                     icon="icons:add"
                     aria-label="Increase font size"
-                  />
+                  ></pb-zoom>
                 </div>
               </li>
               <li class="dropdown toolbar-item">
@@ -330,7 +333,7 @@
                   <form
                     data-template="lib:include"
                     data-template-path="templates/volume-header-settings.html"
-                  />
+                  ></form>
                 </div>
               </li>
               <li class="toolbar-item">
@@ -362,7 +365,7 @@
           odd="woelfflin-meta"
           disable-history="true"
         >
-          <pb-param name="mode" value="breadcrumbs" />
+          <pb-param name="mode" value="breadcrumbs"></pb-param>
         </pb-view>
       </div>
 
@@ -377,7 +380,7 @@
               subscribe="transcription"
               emit="transcription"
               odd="woelfflin-introduction"
-            />
+            ></pb-view>
           </div>
 
           <pb-navigation
@@ -407,7 +410,7 @@
                 src="document1"
                 subscribe="transcription"
                 odd="woelfflin-introduction-comments"
-              />
+              ></pb-view>
             </div>
             <div slot="page" class="hw-tabs">
               <pb-tify
@@ -428,7 +431,7 @@
                 src="document1"
                 subscribe="transcription"
                 odd="woelfflin-index-entry-list"
-              />
+              ></pb-view>
             </div>
           </pb-tabs>
         </aside>
@@ -436,10 +439,10 @@
       <footer
         data-template="lib:include"
         data-template-path="templates/volume-footer.html"
-      />
+      ></footer>
     </pb-page>
 
-    <div class="splash" />
+    <div class="splash"></div>
   </body>
 
   <script>

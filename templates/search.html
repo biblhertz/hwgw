@@ -31,7 +31,7 @@
       type="module"
       src="pb-components-bundle.js"
       data-template="pages:load-components"
-    />
+    ></script>
   </head>
 
   <body>
@@ -46,7 +46,7 @@
           href="${app}/index.html"
           data-template="pages:parse-params"
           aria-label="Startseite der Serie"
-        />
+        ></a>
         <a class="skip-link" href="#search-options">Springe zum Suchformular</a>
         <a class="skip-link" href="#result-marks">Springe zu den Resultaten</a>
         <a
@@ -66,7 +66,7 @@
                   <ul
                     data-template="lib:include"
                     data-template-path="templates/series-volume-navigation.html"
-                  />
+                  ></ul>
                 </div>
               </li>
               <li>
@@ -114,7 +114,7 @@
                             </div>
                    -->
                   <details open="true()" id="details-filter">
-                    <summary />
+                    <summary></summary>
                     <h2>FILTER</h2>
                     <pb-custom-form
                       id="facets"
@@ -122,7 +122,7 @@
                       subscribe="results"
                       event="pb-results-received"
                       emit="search"
-                    />
+                    ></pb-custom-form>
 
                     <!--
                                     <pb-select-feature id="search-sort" name="sort" label="Sortierung" subscribe="search" emit="search" selected="0" items="[    
@@ -144,11 +144,11 @@
               range="5"
               subscribe="results"
               found-label="{{count}} Einträge"
-            />
+            ></pb-paginate>
 
-            <div id="paginate-rule" />
+            <div id="paginate-rule"></div>
 
-            <pb-load id="results" url="api/search" emit="results" />
+            <pb-load id="results" url="api/search" emit="results"></pb-load>
           </div>
         </div>
       </main>
@@ -181,7 +181,7 @@
         </ul>
       </footer>
     </pb-page>
-    <div class="splash" />
+    <div class="splash"></div>
     <script>
                   const facets = document.getElementById('facets');
                   if (facets) {

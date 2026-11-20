@@ -26,12 +26,12 @@
 
     <link rel="stylesheet" href="resources/css/hw-series-responsive.css" />
 
-    <script src="resources/scripts/hwgw/compress-header.js" />
+    <script src="resources/scripts/hwgw/compress-header.js"></script>
     <script
       type="module"
       src="pb-components-bundle.js"
       data-template="pages:load-components"
-    />
+    ></script>
 
     <style>
       div ul a {
@@ -52,7 +52,7 @@
     </style>
   </head>
   <body>
-    <pb-document id="document1" path="register.xml" />
+    <pb-document id="document1" path="register.xml"></pb-document>
     <pb-page
       data-template="pages:pb-page"
       unresolved="unresolved"
@@ -64,7 +64,7 @@
           href="${app}/index.html"
           data-template="pages:parse-params"
           aria-label="Startseite der Serie"
-        />
+        ></a>
       </header>
       <main>
         <div class="text-section">
@@ -83,15 +83,15 @@
               odd="woelfflin-index"
               disable-history="true"
               xpath="//listObject"
-            />
+            ></pb-view>
           </div>
         </div>
       </main>
       <footer
         data-template="lib:include"
         data-template-path="templates/series-footer.html"
-      />
+      ></footer>
     </pb-page>
-    <div class="splash" />
+    <div class="splash"></div>
   </body>
 </html>
